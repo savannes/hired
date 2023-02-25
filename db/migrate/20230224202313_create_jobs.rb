@@ -9,7 +9,7 @@ class CreateJobs < ActiveRecord::Migration[7.0]
       t.string :status
       t.string :type
       t.integer :salary
-      t.string :applycation_link
+      t.string :application_link
 
       t.timestamps
     end
