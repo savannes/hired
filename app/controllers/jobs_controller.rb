@@ -1,4 +1,5 @@
 class JobsController < ApplicationController
+  skip_before_action :authenticate_user!
   def edit
     @job = Job.find(params[:id])
   end
@@ -26,15 +27,19 @@ class JobsController < ApplicationController
   end
 
   def create
-    @job = Job.new(params[:job])
-    # @job = Job.new(job_params)
-    redirect_to job_path(@job)
+    @job = Job.new(job_params)
+    @job.user = current_user
+    if @job.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private
 
   def job_params
-    params.require(:job).permit(:role, :level, :status, :type, :applycation_link)
+    params.require(:job).permit(:user_id, :company, :description, :role, :level, :status, :job_type, :salary, :application_link)
   end
 
   def set_job

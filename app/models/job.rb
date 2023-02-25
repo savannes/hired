@@ -1,5 +1,5 @@
 class Job < ApplicationRecord
   belongs_to :user
-  validates :role, :level, :status, :type, :applycation_link, presence: true
+  validates :company, :role, :level, :status, :job_type, :application_link, presence: true
   validates :salary, numericality: { only_integer: true }, allow_nil: true
 end
