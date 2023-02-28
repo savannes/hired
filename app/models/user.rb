@@ -5,4 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :jobs
   validates :first_name, :last_name, presence: true
+  # has_one_attached :avatar
+
+  # def avatar_thumbnail
+  #   avatar.variant(resize: "80x80!").processed
+  # end
 end
