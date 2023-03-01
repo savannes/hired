@@ -17,7 +17,7 @@
 //   background-color: #050505;
 // }
 
-.btn {
+.btn-cl {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,13 +44,13 @@
   box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
 }
 
-.masthead .btn {
+.masthead .btn-cl {
   background-color: #050505;
   border-radius: 0.3rem;
   transition: background-color 150ms;
 }
 
-.masthead .btn:hover {
+.masthead .btn-cl:hover {
   background-color: #454545;
 }
 
@@ -154,15 +154,15 @@
   display: flex;
 }
 
-.board-controls .btn {
+.board-controls .btn-cl {
   margin-right: 1rem;
 }
 
-.board-controls .btn:last-of-type {
+.board-controls .btn-cl:last-of-type {
   margin-right: 0;
 }
 
-.board-info-bar .btn {
+.board-info-bar .btn-cl {
   font-size: 1.4rem;
   font-weight: 400;
   transition: background-color 150ms;
@@ -171,7 +171,7 @@
   height: 3rem;
 }
 
-.board-info-bar .btn:hover {
+.board-info-bar .btn-cl:hover {
   background-color: #006aa8;
 }
 
@@ -368,7 +368,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
   .list-items li,
   .boards-btn,
   .board-info-bar,
-  .board-controls .btn,
+  .board-controls .btn-cl,
   .user-settings-btn {
       margin: 0;
   }
