@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "hired2.png" %>
     <% end %>
 
@@ -11,12 +11,12 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
+          <%# <li class="nav-item active">
             <%= link_to "Home", root_path , class: "nav-link" %>
-          </li>
+          <%# </li> %>
           <li class="nav-item dropdown">
             <% if current_user.avatar.present? %>
-              <%= cl_image_tag(current_user.avatar.key, width: 40, height: 40, crop: :thumb, gravity: :face, radius: 50, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
+              <%= cl_image_tag(current_user.avatar.key, width: 50, height: 50, crop: :thumb, gravity: :face, radius: :max, class: "dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
             <% else %>
               <%= image_tag asset_path("hired.png"), class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% end %>

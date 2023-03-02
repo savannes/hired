@@ -74,6 +74,7 @@
 }
 
 .board-search {
+  padding: 10px 0;
   flex-basis: 18rem;
   position: relative;
 }
@@ -88,9 +89,9 @@
   color: #fff;
 }
 
-.board-search-input:hover {
-  background-color: #66a4c8;
-}
+// .board-search-input:hover {
+//   background-color: #66a4c8;
+// }
 
 .search-icon {
   font-size: 1.5rem;
@@ -124,14 +125,20 @@
 
 .user-settings {
   display: flex;
-  height: 3rem;
+  // height: 3rem;
   color: #fff;
 }
 
 .user-settings-btn {
+  color: #fff;
+  padding: 0 0 0 10px;
+  text-decoration: none;
   font-size: 1.5rem;
-  width: 3rem;
+  // width: 3rem;
   margin-right: 0.8rem;
+  &:hover {
+    color: #838c91;
+  }
 }
 
 .user-settings-btn:last-of-type {
@@ -175,9 +182,9 @@
   height: 3rem;
 }
 
-.board-info-bar .btn-cl:hover {
-  background-color: #006aa8;
-}
+// .board-info-bar .btn-cl:hover {
+//   background-color: #006aa8;
+// }
 
 .private-btn-icon,
 .menu-btn-icon {
@@ -320,17 +327,13 @@ Remove or comment-out the code block below to see how the browser will fall-back
 */
 
 @supports (display: grid) {
-  body {
-      display: grid;
-      grid-template-rows: 4rem 3rem auto;
-      grid-row-gap: 0.8rem;
-  }
 
-  .masthead {
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      grid-column-gap: 2rem;
-  }
+
+  // .masthead {
+  //     display: grid;
+  //     grid-template-columns: auto 1fr auto;
+  //     grid-column-gap: 2rem;
+  // }
 
   .boards-menu {
       display: grid;
@@ -338,11 +341,11 @@ Remove or comment-out the code block below to see how the browser will fall-back
       grid-column-gap: 0.8rem;
   }
 
-  .user-settings {
-      display: grid;
-      grid-template-columns: repeat(4, auto);
-      grid-column-gap: 0.8rem;
-  }
+  // .user-settings {
+  //     display: grid;
+  //     grid-template-columns: repeat(4, auto);
+  //     grid-column-gap: 0.8rem;
+  // }
 
   .board-controls {
       display: grid;
