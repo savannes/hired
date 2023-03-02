@@ -4,11 +4,11 @@
 //   font-size: 10px;
 // }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+// *,
+// *::before,
+// *::after {
+//   box-sizing: border-box;
+// }
 
 // body {
 //   font-family: Arial, sans-serif;
@@ -29,9 +29,9 @@
   cursor: pointer;
 }
 
-:focus {
-  outline-color: #fa0;
-}
+// :focus {
+//   outline-color: #fa0;
+// }
 
 /* Masthead */
 
@@ -80,7 +80,7 @@
 
 .board-search-input {
   height: 3rem;
-  border: none;
+  border:rgba(0, 0, 0, 0.3);
   border-radius: 0.3rem;
   background-color: #f8f9fa;
   width: 100%;
@@ -136,6 +136,10 @@
 
 .user-settings-btn:last-of-type {
   margin-right: 0;
+}
+
+.label-add {
+  justify-content: center;
 }
 
 /* Board info bar */
