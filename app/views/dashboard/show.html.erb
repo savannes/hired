@@ -1,2 +1,27 @@
-<h1>Dashboard 🚀</h1>
-<%= pie_chart Job.group(:status).count %>
+<div class="container dashboard" style="background-color: transparent; border: none">
+
+  <div class="d-flex flex-direction-column" style="background-color: transparent; border: none">
+
+    <div class="col col-12 card" style="background-color: transparent; border: none">
+      <% if current_user? %>
+        <div class="welcome text-center"> <%= "Hi, #{current_user.first_name}. Welcome to your Job's Dashboard!" %> </div>
+      <% end %>
+      <div class="row justify-content-evenly">
+
+        <div class="col col-4 card" style="background-color: transparent; border: none">
+
+          <%= bar_chart Job.group(:status).count, library: {backgroundColor: "transparent"}, title: "Awesome chart" %>
+        </div>
+
+        <div class="col col-4 card" style="background-color: transparent; border: none">
+          <%= pie_chart Job.group(:role).count, library: {backgroundColor: "transparent"} %>
+        </div>
+
+        <div class="col col-4 card" style="background-color: transparent; border: none">
+          <%= column_chart Job.group(:salary).count, library: {backgroundColor: "transparent"} %>
+        </div>
+    </div>
+
+  </div>
+
+</div>
