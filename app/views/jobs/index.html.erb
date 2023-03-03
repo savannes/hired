@@ -1,1 +1,9 @@
+<h1> Vagas </h1>
+
+<% @jobs.each do |job| %>
+<h3>Empresa: <%= job.company %> </h3>
+<h3>Status: <%= job.status %> </h3>
+<h3>Salário: R$ <%= job.salary %> </h3>
+<h3>-------------------</h3>
+<% end %>
 <%= render "kanban" %>
