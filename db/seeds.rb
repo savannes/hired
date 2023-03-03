@@ -14,10 +14,14 @@ puts"Creating Users"
 
 user_valentina = User.create!(first_name: "Valentina", last_name: "Hired", email: "valentina@gmail.com", password: "1234abc")
 
+puts"Users Created"
+
 puts"Creating Jobs"
 
-google_dev = Job.new(user: user_valentina, company: "Google", role: "Front-end web developer", level: "Junior", description: "The role will include coding signed off designs into working web page templates in HTML5, CSS and JavaScript and then integrating those into content management systems.", status: "tries", job_type: "remote", salary: 4000, application_link: "www.google/jobs")
-google_dev.save!
+google_dev = Job.create(user: user_valentina, company: "Google", role: "Front-end web developer", level: "Junior", description: "The role will include coding signed off designs into working web page templates in HTML5, CSS and JavaScript and then integrating those into content management systems.", status: 1, job_type: "remote", salary: 4000, application_link: "www.google/jobs")
 
-amazon_dev = Job.new(user: user_valentina, company: "Amazon", role: "Back-end web developer", level: "Junior", description: "You'll be involved in the entire product development lifecycle including the design, development, deployment and maintenance of new and existing features.", status: "replies", job_type: "remote", salary: 5000, application_link: "www.amazon/jobs")
-amazon_dev.save!
+amazon_dev = Job.create(user: user_valentina, company: "Amazon", role: "Back-end web developer", level: "Junior", description: "You'll be involved in the entire product development lifecycle including the design, development, deployment and maintenance of new and existing features.", status: 2, job_type: "remote", salary: 5000, application_link: "www.amazon/jobs")
+
+face_dev = Job.create(user: user_valentina, company: "Face", role: "Back-end web developer", level: "Junior", description: "You'll be involved in the entire product development lifecycle including the design, development, deployment and maintenance of new and existing features.", status: 3, job_type: "remote", salary: 5000, application_link: "www.amazon/jobs")
+
+puts"Jobs Created"

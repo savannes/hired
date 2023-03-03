@@ -1,5 +1,6 @@
 class JobsController < ApplicationController
-  skip_before_action :authenticate_user!
+  before_action :authenticate_user!
+  
   def edit
     @job = Job.find(params[:id])
   end
@@ -29,8 +30,8 @@ class JobsController < ApplicationController
   def create
     @job = Job.new(job_params)
     @job.user = current_user
-    if @job.save
-      redirect_to root_path
+    if @job.save!
+      redirect_to jobs_path
     else
       render :new
     end

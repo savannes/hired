@@ -6,7 +6,7 @@ class CreateJobs < ActiveRecord::Migration[7.0]
       t.string :role
       t.string :level
       t.string :description
-      t.string :status
+      t.integer :status
       t.string :type
       t.integer :salary
       t.string :application_link

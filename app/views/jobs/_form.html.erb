@@ -6,7 +6,7 @@
       <%= f.input :role %>
       <%= f.input :level %>
       <%= f.input :description %>
-      <%= f.input :status %>
+      <%= f.input :status, collection: Job.statuses.keys %>
       <%= f.input :job_type %>
       <%= f.input :salary %>
       <%= f.input :application_link %>
