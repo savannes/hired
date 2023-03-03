@@ -27,17 +27,17 @@
                   <%= f.input :email, required: true, autofocus: true, :label => "Current email:" %>
 
                   <%= f.input :email, :label => "New email if you want to change:",
-                              required: false, placeholder: "leave it blank if you don't want to change",
+                              required: false, placeholder: "Leave it blank if you don't want to change",
                               input_html: { autocomplete: "new-email" } %>
                   
                   <%= f.input :password, :label => "Password you want to change:",
-                              required: false, placeholder: "leave it blank if you don't want to change",
+                              required: false, placeholder: "Leave it blank if you don't want to change",
                               input_html: { autocomplete: "new-password" } %>
                   <%= f.input :password_confirmation, :label => "Password confirmation:",
-                              required: false,placeholder: "leave it blank if you don't want to change",
+                              required: false,placeholder: "Leave it blank if you don't want to change",
                               input_html: { autocomplete: "new-password" } %>
                   <%= f.input :current_password, :label => "Current password:",
-                              required: true, placeholder: "Type current password to confirm changes",
+                              required: true, placeholder: "Type password to confirm changes",
                               input_html: { autocomplete: "current-password" } %>
                 </div>
 
