@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="justify-content-center">
+    <div class="card-job">
+      <div class="card-job-infos">
+          <div class="justify-content-center">
+            <h2><%= "Vaga:" %></h2>
+            <p><%= @job.company %></p>
+            <p><%= @job.role %></p>
+            <p><%= @job.status %></p>
+            <p><%= @job.salary %></p>
+            <p><%= @job.level %></p>
+            <p><%= @job.description %></p>
+            <p><%= @job.job_type %></p>
+            <p><%= @job.application_link %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <%= link_to "X", jobs_path, method: :get, class: "btn btn-primary" %>
+</div>

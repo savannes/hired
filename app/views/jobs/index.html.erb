@@ -2,3 +2,9 @@
 
 
 <%= render "kanban", jobs: @jobs %>
+<% @jobs.each do |job| %>
+<h3>Empresa: <%= job.company %> </h3>
+<h3>Status: <%= job.status %> </h3>
+<h3>Salário: R$ <%= job.salary %> </h3>
+<h3>-------------------</h3>
+<% end %>
