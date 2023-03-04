@@ -1,22 +1,5 @@
 /* Base styles */
 
-// :root {
-//   font-size: 10px;
-// }
-
-// *,
-// *::before,
-// *::after {
-//   box-sizing: border-box;
-// }
-
-// body {
-//   font-family: Arial, sans-serif;
-//   display: flex;
-//   flex-direction: column;
-//   background-color: #050505;
-// }
-
 .btn-cl {
   display: flex;
   justify-content: center;
@@ -29,9 +12,6 @@
   cursor: pointer;
 }
 
-// :focus {
-//   outline-color: #fa0;
-// }
 
 /* Masthead */
 
@@ -89,9 +69,6 @@
   color: #fff;
 }
 
-// .board-search-input:hover {
-//   background-color: #66a4c8;
-// }
 
 .search-icon {
   font-size: 1.5rem;
@@ -125,7 +102,6 @@
 
 .user-settings {
   display: flex;
-  // height: 3rem;
   color: #fff;
 }
 
@@ -134,7 +110,6 @@
   padding: 0 0 0 10px;
   text-decoration: none;
   font-size: 1.5rem;
-  // width: 3rem;
   margin-right: 0.8rem;
   &:hover {
     color: #838c91;
@@ -182,9 +157,6 @@
   height: 3rem;
 }
 
-// .board-info-bar .btn-cl:hover {
-//   background-color: #006aa8;
-// }
 
 .private-btn-icon,
 .menu-btn-icon {
@@ -201,12 +173,12 @@
 /* Lists */
 
 .lists-container::-webkit-scrollbar {
-  height: 2.4rem;
+  height: 1rem;
 }
 
 .lists-container::-webkit-scrollbar-thumb {
   background-color: #000000;
-  border: 0.8rem solid #424141;
+  border: 1rem solid #000000;
   border-top-width: 0;
 }
 
@@ -328,24 +300,11 @@ Remove or comment-out the code block below to see how the browser will fall-back
 
 @supports (display: grid) {
 
-
-  // .masthead {
-  //     display: grid;
-  //     grid-template-columns: auto 1fr auto;
-  //     grid-column-gap: 2rem;
-  // }
-
   .boards-menu {
       display: grid;
       grid-template-columns: 9rem 18rem;
       grid-column-gap: 0.8rem;
   }
-
-  // .user-settings {
-  //     display: grid;
-  //     grid-template-columns: repeat(4, auto);
-  //     grid-column-gap: 0.8rem;
-  // }
 
   .board-controls {
       display: grid;
@@ -354,6 +313,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
   }
 
   .lists-container {
+      border: 5px solid black;
       display: grid;
       grid-auto-columns: 27rem;
       grid-auto-flow: column;
