@@ -19,7 +19,7 @@ class JobsController < ApplicationController
     @jobs = Job.all
     jobs = current_user.jobs
     @wishes = []
-    @application = []
+    @applications = []
     @interviews = []
     @tests = []
     @replies = []
