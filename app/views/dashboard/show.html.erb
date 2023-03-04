@@ -14,11 +14,11 @@
         </div>
 
         <div class="col col-4" style="background-color: transparent; border: none">
-          <%= pie_chart Job.group(:role).count, library: {backgroundColor: "transparent"}, title: "Role" %>
+          <%= pie_chart current_user.jobs.group(:role).count, library: {backgroundColor: "transparent"}, title: "Role" %>
         </div>
 
         <div class="col col-4" style="background-color: transparent; border: none">
-          <%= column_chart Job.group(:salary).count, library: {backgroundColor: "transparent"}, title: "Salary" %>
+          <%= column_chart current_user.jobs.group(:salary).count, library: {backgroundColor: "transparent"}, title: "Salary" %>
         </div>
     </div>
 
