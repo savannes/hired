@@ -81,3 +81,6 @@ end
 gem "chartkick"
 
 gem "cloudinary"
+
+gem "faker"
+
