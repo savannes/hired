@@ -33,6 +33,23 @@
 
 		<h3 class="list-title">Tasks to Do</h3>
 
+
+		<ul class="list-items">
+      <% jobs.each do |job| %>
+      <li>
+          <h3>Empresa: <%= job.company %> </h3>
+          <h3>Status: <%= job.status %> </h3>
+          <h3>Salário: R$ <%= job.salary %> </h3>
+          <h3>-------------------</h3>
+      </li>
+      <% end %>
+		</ul>
+
+		<button class="add-card-btn btn-cl">Add a card</button>
+
+	</div>
+
+
 		<ul class="list-items" data-job-target="listItems" data-job-list-items-target="listItems">
 			<li>Complete mock-up for client website</li>
 		</ul>
