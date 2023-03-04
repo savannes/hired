@@ -10,27 +10,6 @@
 <% end %>
 
 <div>
-  <h2>Wish</h2>
-  <% @wishes.each do |wish| %>
-    <%= render 'jobs/card', job: wish %>
-  <% end %>
-</div>
-
-<div>
-  <h2>Application</h2>
-  <% @applications.each do |application| %>
-    <%= render 'jobs/card', job: application %>
-  <% end %>
-</div>
-
-<div>
-  <h2>Interviews</h2>
-  <% @interviews.each do |interview| %>
-    <%= render 'jobs/card', job: interviews %>
-  <% end %>
-</div>
-
-<div>
   <h2>Tests</h2>
   <% @tests.each do |test| %>
     <%= render 'jobs/card', job: test %>
