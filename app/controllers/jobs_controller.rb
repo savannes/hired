@@ -21,15 +21,15 @@ class JobsController < ApplicationController
   def index
     @jobs = policy_scope(Job)
     jobs = current_user.jobs
-    @wishs = []
-    @candidates = []
+    @wishes = []
+    @application = []
     @interviews = []
     @tests = []
     @replies = []
 
     jobs.each do |job|
       @wish << job if job.status == 0
-      @candidate << job if job.status == 1
+      @application << job if job.status == 1
       @interview << job if job.status == 2
       @test << job if job.status == 3
       @reply << job if job.status == 4
