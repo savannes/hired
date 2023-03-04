@@ -48,7 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_03_220608) do
     t.string "role"
     t.string "level"
     t.string "description"
-    t.string "status"
+    t.integer "status"
     t.string "job_type"
     t.integer "salary"
     t.string "application_link"

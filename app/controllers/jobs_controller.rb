@@ -28,11 +28,11 @@ class JobsController < ApplicationController
     @replies = []
 
     jobs.each do |job|
-      @wish << job if job.status == 0
-      @application << job if job.status == 1
-      @interview << job if job.status == 2
-      @test << job if job.status == 3
-      @reply << job if job.status == 4
+      @wishes << job if job.status == "Wishes"
+      @applications << job if job.status == "Applications"
+      @interviews << job if job.status == "Interviews"
+      @tests << job if job.status == "Tests"
+      @replies << job if job.status == "Replies"
     end
   end
 

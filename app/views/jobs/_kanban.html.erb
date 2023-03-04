@@ -29,9 +29,9 @@
 <div style="width: 100%" data-controller="job">
 <section class="lists-container" style="border: 10px solid black">
 
-	<div class="list" data-controller="job" data-job-list-items-target="listItems">
+	<div class="list" data-controller="job" >
 		<h3 class="list-title">Wishes</h3>
-		<ul class="list-items">
+		<ul class="list-items" data-job-target="listItems" >
       <% wishes.each do |job| %>
       <li>
           <h3>Empresa: <%= job.company %> </h3>
@@ -41,12 +41,12 @@
       </li>
       <% end %>
 		</ul>
-		<button class="add-card-btn btn-cl">Add a card</button>
+		<button class="add-card-btn btn-cl" data-action="click->job#addCard">Add a card</button>
 	</div>
 
-  <div class="list" data-controller="job" data-job-list-items-target="listItems">
+  <div class="list" data-controller="job">
 		<h3 class="list-title">Applications</h3>
-		<ul class="list-items">
+		<ul class="list-items" data-job-target="listItems" >
       <% applications.each do |job| %>
       <li>
           <h3>Empresa: <%= job.company %> </h3>
@@ -56,12 +56,12 @@
       </li>
       <% end %>
 		</ul>
-		<button class="add-card-btn btn-cl">Add a card</button>
+		<button class="add-card-btn btn-cl" data-action="click->job#addCard">Add a card</button>
 	</div>
 
-    <div class="list" data-controller="job" data-job-list-items-target="listItems">
+    <div class="list" data-controller="job">
 		<h3 class="list-title">Interviews</h3>
-		<ul class="list-items">
+		<ul class="list-items" data-job-target="listItems" >
       <% interviews.each do |job| %>
       <li>
           <h3>Empresa: <%= job.company %> </h3>
@@ -71,12 +71,12 @@
       </li>
       <% end %>
 		</ul>
-		<button class="add-card-btn btn-cl">Add a card</button>
+		<button class="add-card-btn btn-cl" data-action="click->job#addCard">Add a card</button>
 	</div>
 
-    <div class="list" data-controller="job" data-job-list-items-target="listItems">
+    <div class="list" data-controller="job">
 		<h3 class="list-title">Tests</h3>
-		<ul class="list-items">
+		<ul class="list-items" data-job-target="listItems" >
       <% tests.each do |job| %>
       <li>
           <h3>Empresa: <%= job.company %> </h3>
@@ -86,12 +86,12 @@
       </li>
       <% end %>
 		</ul>
-		<button class="add-card-btn btn-cl">Add a card</button>
+		<button class="add-card-btn btn-cl" data-action="click->job#addCard">Add a card</button>
 	</div>
 
-      <div class="list" data-controller="job" data-job-list-items-target="listItems">
+      <div class="list" data-controller="job">
 		<h3 class="list-title">Replies</h3>
-		<ul class="list-items">
+		<ul class="list-items" data-job-target="listItems" >
       <% replies.each do |job| %>
       <li>
           <h3>Empresa: <%= job.company %> </h3>
@@ -101,7 +101,7 @@
       </li>
       <% end %>
 		</ul>
-		<button class="add-card-btn btn-cl">Add a card</button>
+		<button class="add-card-btn btn-cl" data-action="click->job#addCard">Add a card</button>
 	</div>
 
 </section>
