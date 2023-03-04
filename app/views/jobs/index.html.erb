@@ -15,15 +15,15 @@
 </div>
 
 <div>
-  <h2>Candidate</h2>
-  <% @candidates.each do |candidate| %>
-    <%= render 'jobs/card', job: candidate %>
+  <h2>Application</h2>
+  <% @applications.each do |application| %>
+    <%= render 'jobs/card', job: application %>
   <% end %>
 </div>
 
 <div>
   <h2>Interviews</h2>
-  <% @interviews.each do |test| %>
+  <% @interviews.each do |interview| %>
     <%= render 'jobs/card', job: interviews %>
   <% end %>
 </div>
@@ -37,10 +37,9 @@
 
 <div>
   <h2>Replies</h2>
-  <% @replies.each do |test| %>
-    <%= render 'jobs/card', job: replies %>
+  <% @replies.each do |reply| %>
+    <%= render 'jobs/card', job: reply %>
   <% end %>
 </div>
 
 <%= render "kanban" %>
-<%=# render "modal" %>
