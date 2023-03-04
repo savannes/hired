@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   before_action :authenticate_user!
-  
+
   def edit
     @job = Job.find(params[:id])
   end
@@ -17,6 +17,20 @@ class JobsController < ApplicationController
 
   def index
     @jobs = Job.all
+    jobs = current_user.jobs
+    @wishs = []
+    @candidates = []
+    @interviews = []
+    @tests = []
+    @replies = []
+
+    jobs.each do |job|
+      @wish << job if job.status == 0
+      @candidate << job if job.status == 1
+      @interview << job if job.status == 2
+      @test << job if job.status == 3
+      @reply << job if job.status == 4
+    end
   end
 
   def show
