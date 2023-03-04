@@ -66,15 +66,21 @@
 		<h3 class="list-title">Tasks to Do</h3>
 
 		<ul class="list-items">
-			<li>Complete mock-up for client website</li>
-			<li>Email mock-up to client for feedback</li>
+      <% jobs.each do |job| %>
+      <li>
+          <h3>Empresa: <%= job.company %> </h3>
+          <h3>Status: <%= job.status %> </h3>
+          <h3>Salário: R$ <%= job.salary %> </h3>
+          <h3>-------------------</h3>
+      </li>
+      <% end %>
 		</ul>
 
 		<button class="add-card-btn btn-cl">Add a card</button>
 
 	</div>
 
-<%# 
+<%#
 	<div class="list">
 
 		<h3 class="list-title">Completed Tasks</h3>
