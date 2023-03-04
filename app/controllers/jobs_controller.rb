@@ -22,7 +22,7 @@ class JobsController < ApplicationController
     @jobs = policy_scope(Job)
     jobs = current_user.jobs
     @wishes = []
-    @application = []
+    @applications = []
     @interviews = []
     @tests = []
     @replies = []
