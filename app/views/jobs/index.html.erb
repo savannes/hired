@@ -1,5 +1,7 @@
 <h1> Vagas </h1>
 
+
+<%= render "kanban", jobs: @jobs %>
 <% @jobs.each do |job| %>
 <h3>Empresa: <%= job.company %> </h3>
 <h3>Status: <%= job.status %> </h3>
@@ -41,5 +43,6 @@
     <%= render 'jobs/card', job: reply %>
   <% end %>
 </div>
+
 
 <%= render "kanban" %>
