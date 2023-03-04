@@ -31,7 +31,26 @@
 
 	<div class="list" data-controller="job" data-job-list-items-target="listItems">
 
-		<h3 class="list-title" data-controller="typed-js">Wish</h3>
+
+		<h3 class="list-title" data-controller="typed-js">Tasks to Do</h3>
+
+
+		<ul class="list-items">
+      <% jobs.each do |job| %>
+      <li>
+          <h3>Empresa: <%= job.company %> </h3>
+          <h3>Status: <%= job.status %> </h3>
+          <h3>Salário: R$ <%= job.salary %> </h3>
+          <h3>-------------------</h3>
+      </li>
+      <% end %>
+		</ul>
+
+		<button class="add-card-btn btn-cl">Add a card</button>
+
+	</div>
+
+
 		<ul class="list-items" data-job-target="listItems" data-job-list-items-target="listItems">
 			<%#@jobs.each do |job| %>
 				<li data-bs-toggle="modal" data-bs-target="#exampleModal"><%= @jobs.first.company %> | <%= @jobs.first.salary %> | <%= @jobs.first.status %></li>
