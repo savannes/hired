@@ -42,19 +42,27 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_03_220608) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "columns", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "name"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_columns_on_user_id"
+  end
+
   create_table "jobs", force: :cascade do |t|
     t.string "company"
-    t.bigint "user_id", null: false
+    t.bigint "column_id", null: false
     t.string "role"
     t.string "level"
     t.string "description"
-    t.string "status"
     t.string "job_type"
     t.integer "salary"
     t.string "application_link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_jobs_on_user_id"
+    t.index ["column_id"], name: "index_jobs_on_column_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -78,5 +86,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_03_220608) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "jobs", "users"
+  add_foreign_key "columns", "users"
+  add_foreign_key "jobs", "columns"
 end

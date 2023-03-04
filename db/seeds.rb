@@ -31,11 +31,10 @@ user = [valentina, marina, taisa, luis, savanne]
 300.times do
   job = Job.new(
     company: Faker::Company.name,
-    user: user.sample,
+    column: Column.all.sample,
     role: roles.sample,
     level: level.sample,
     description: "Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.Paisis, filhis, espiritis santis.Leite de capivaris, leite de mula manquis sem cabeça.Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.",
-    status: rand(0..4),
     job_type: job_type.sample,
     salary: rand(800..1950),
     application_link: Faker::Internet.url

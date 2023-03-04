@@ -1,5 +1,6 @@
 class JobsController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_column, only: %i[index new create]
 
   def edit
     @job = Job.find(params[:id])
@@ -28,11 +29,11 @@ class JobsController < ApplicationController
     @replies = []
 
     jobs.each do |job|
-      @wish << job if job.status == 0
-      @application << job if job.status == 1
-      @interview << job if job.status == 2
-      @test << job if job.status == 3
-      @reply << job if job.status == 4
+      @wishes << job if job.status == "Wishes"
+      @applications << job if job.status == "Applications"
+      @interviews << job if job.status == "Interviews"
+      @tests << job if job.status == "Tests"
+      @replies << job if job.status == "Replies"
     end
   end
 
@@ -48,10 +49,10 @@ class JobsController < ApplicationController
 
   def create
     @job = Job.new(job_params)
-    @job.user = current_user
+    @job.column = @column
     authorize @job
     if @job.save!
-      redirect_to jobs_path
+      redirect_to columns_path
     else
       render :new
     end
@@ -60,10 +61,14 @@ class JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job).permit(:user_id, :company, :description, :role, :level, :status, :job_type, :salary, :application_link)
+    params.require(:job).permit(:company, :description, :role, :level, :job_type, :salary, :application_link)
   end
 
   def set_job
     @job = Job.find(params[:id])
+  end
+
+  def set_column
+    @column = Column.find(params[:column_id])
   end
 end

@@ -6,3 +6,4 @@ import { application } from "./application"
 
 import JobController from "./job_controller"
 application.register("job", JobController)
+
