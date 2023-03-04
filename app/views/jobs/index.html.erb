@@ -8,3 +8,41 @@
 <h3>Salário: R$ <%= job.salary %> </h3>
 <h3>-------------------</h3>
 <% end %>
+
+<div>
+  <h2>Wish</h2>
+  <% @wishes.each do |wish| %>
+    <%= render 'jobs/card', job: wish %>
+  <% end %>
+</div>
+
+<div>
+  <h2>Candidate</h2>
+  <% @candidates.each do |candidate| %>
+    <%= render 'jobs/card', job: candidate %>
+  <% end %>
+</div>
+
+<div>
+  <h2>Interviews</h2>
+  <% @interviews.each do |test| %>
+    <%= render 'jobs/card', job: interviews %>
+  <% end %>
+</div>
+
+<div>
+  <h2>Tests</h2>
+  <% @tests.each do |test| %>
+    <%= render 'jobs/card', job: test %>
+  <% end %>
+</div>
+
+<div>
+  <h2>Replies</h2>
+  <% @replies.each do |test| %>
+    <%= render 'jobs/card', job: replies %>
+  <% end %>
+</div>
+
+
+
