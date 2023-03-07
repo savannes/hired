@@ -6,7 +6,12 @@ export default class extends Controller {
 
   addCard() {
     const li = document.createElement("li")
-    li.textContent = "New card"
+    const form = document.createElement("form")
+    const input = document.createElement("input")
+    input.type = "text"
+    input.name = "cardContent"
+    form.appendChild(input)
+    li.appendChild(form)
     this.listItemsTarget.appendChild(li)
   }
 }
