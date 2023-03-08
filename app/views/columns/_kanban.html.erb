@@ -28,18 +28,23 @@
 <br>
 <div style="width: 100%" data-controller="job">
     <section class="lists-container">
+
       <% columns.each do |column| %>
+
           <div class="list" data-controller="job" >
             <h3 class="list-title"><%= column.name %></h3>
             <span><%= link_to "Add Card", new_column_job_path(column) %></span>
             <ul class="list-items" data-job-target="listItems" >
               <% column.jobs.each do |job| %>
-              <li>
-                  <h3>Empresa: <%= job.company %> </h3>
-                  <h3>Status: <%= job.status %> </h3>
-                  <h3>Salário: R$ <%= job.salary %> </h3>
-                  <h3>-------------------</h3>
-              </li>
+<!-- Button trigger modal -->
+              <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <li>
+                    <h3>Empresa: <%= job.company %> </h3>
+                    <h3>Status: <%= job.status %> </h3>
+                    <h3>Salário: R$ <%= job.salary %> </h3>
+                    <h3>-------------------</h3>
+                </li>
+              </button>
               <% end %>
             </ul>
             <button class="add-card-btn btn-cl" data-action="click->job#addCard">Add note</button>
@@ -48,3 +53,26 @@
     </section>
 </div>
 <!-- End of lists container -->
+
+
+  Launch static backdrop modal
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
