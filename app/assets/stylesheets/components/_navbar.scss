@@ -20,9 +20,17 @@
 }
 
 .nav-link {
-  color: #040404;
+  color: #ffffff;
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.nav-link:hover {
+  color: #b0b0b0;
+}
+
+.nav-item {
+  margin: auto;
 }
