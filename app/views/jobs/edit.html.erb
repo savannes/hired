@@ -1,10 +1,11 @@
 <div class="container">
-<br>
-<br>
-<%= render partial: "form_edit", locals: { job: @job } %>
-
-<%= link_to "Delete",
-  job_path(@job),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
+  <br>
+  <br>
+  <%= render partial: "form_edit", locals: { job: @job } %>
+  <div>
+    <%= link_to "Delete",job_path(@job),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+    <br>
+    <%= link_to "Back to Kanban", columns_path %>
+  </div>
 </div>
