@@ -1,7 +1,7 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon bg-black">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <span>HIRED</span>
+      <span class="hired">HIRED</span>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,8 +13,9 @@
         <% if user_signed_in? %>
           <li class="nav-item active">
             <%= link_to "Kanban", columns_path , class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
             <%= link_to "Dashboard", dashboard_path , class: "nav-link" %>
-
           </li>
           <li class="nav-item dropdown">
             <% if current_user.avatar.present? %>
