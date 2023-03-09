@@ -1,7 +1,7 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon bg-black">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <span>HIRED</span>
+      <span class="hired">HIRED</span>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,9 +11,6 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <%# <li class="nav-item active">
-            <%= link_to "Home", root_path , class: "nav-link" %>
-          <%# </li> %>
           <li class="nav-item dropdown">
             <% if current_user.avatar.present? %>
               <%= cl_image_tag(current_user.avatar.key, width: 50, height: 50, crop: :thumb, gravity: :face, radius: :max, class: "dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>

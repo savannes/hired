@@ -2,14 +2,10 @@
 <header class="masthead">
 
 	<div class="boards-menu">
-
-		<button class="boards-btn btn-cl"><i class="fab fa-trello boards-btn-icon"></i>HIRED</button>
-
 		<div class="board-search">
 			<input type="search" class="board-search-input" aria-label="Board Search">
 			<i class="fas fa-search search-icon" aria-hidden="true"></i>
 		</div>
-
 	</div>
 
 	<div class="user-settings">
@@ -31,7 +27,7 @@
       <% columns.each do |column| %>
           <div class="list" data-controller="job" >
             <h3 class="list-title"><%= column.name %></h3>
-            <span><%= link_to "Add Card", new_column_job_path(column) %></span>
+            <span class="addcard"><%= link_to "Add Card", new_column_job_path(column) %></span>
             <ul class="list-items" data-job-target="listItems" >
               <% column.jobs.each do |job| %>
               <li>
