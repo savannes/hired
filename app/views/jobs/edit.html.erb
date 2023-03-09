@@ -1,5 +1,10 @@
 <div class="container">
 <br>
 <br>
-<%= render partial: "form", locals: { job: @job } %>
+<%= render partial: "form_edit", locals: { job: @job } %>
+
+<%= link_to "Delete",
+  job_path(@job),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
 </div>
