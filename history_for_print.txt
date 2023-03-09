@@ -1,0 +1,2461 @@
+    1  ls
+    2  cd ..
+    3  irb
+    4  ruby demo.rb
+    5  pwd
+    6  ls
+    7  ruby demo.rb
+    8  ruby arrays.md
+    9  ruby
+   10  irb
+   11  \tpwd
+   12  ls
+   13  cd music
+   14  pwd
+   15  ls
+   16  cd Music
+   17  pwd
+   18  cd ..
+   19  cd ..
+   20  ls -l
+   21  cd Music
+   22  ls
+   23  pwd
+   24  cd Music
+   25  ls
+   26  pwd
+   27  cd ..
+   28  cd mus
+   29  ls -l
+   30  cd ..
+   31  ls -l
+   32  ls 
+   33  ls -l
+   34  ls -la
+   35  vf Developer
+   36  ls
+   37  cd Developer
+   38  ls
+   39  mkdir estudod
+   40  cd estudos/ruby
+   41  git clone https://github.com/thanhluanuit/ruby-tutorial.git
+   42  ls
+   43  cd ..
+   44  ls
+   45  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"\n\n
+   46  pwd
+   47  ls
+   48  cd Developer
+   49  pwd
+   50  xcode-select --install
+   51  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   52  brew update
+   53  echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/savannesoares/.zprofile
+   54  brew update
+   55  # ⚠️ Only execute these commands if you saw this warning ☝\necho 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile\neval "$(/opt/homebrew/bin/brew shellenv)"
+   56  # ⚠️ Only execute these commands if you saw this warning ☝\necho 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile\neval "$(/opt/homebrew/bin/brew shellenv)
+   57  brew update
+   58  brew upgrade git || brew install git\nbrew upgrade gh || brew install gh\nbrew upgrade wget || brew install wget\nbrew upgrade imagemagick || brew install imagemagick\nbrew upgrade jq || brew install jq\nbrew upgrade openssl || brew install openssl
+   59  code --install-extension ms-vscode.sublime-keybindings\ncode --install-extension emmanuelbeziat.vscode-great-icons\ncode --install-extension github.github-vscode-theme\ncode --install-extension MS-vsliveshare.vsliveshare\ncode --install-extension rebornix.ruby\ncode --install-extension dbaeumer.vscode-eslint\ncode --install-extension Rubymaniac.vscode-paste-and-indent\ncode --install-extension alexcvzz.vscode-sqlite
+   60  brew install --cask visual-studio-code
+   61  code
+   62  code --install-extension ms-vscode.sublime-keybindings\ncode --install-extension emmanuelbeziat.vscode-great-icons\ncode --install-extension github.github-vscode-theme\ncode --install-extension MS-vsliveshare.vsliveshare\ncode --install-extension rebornix.ruby\ncode --install-extension dbaeumer.vscode-eslint\ncode --install-extension Rubymaniac.vscode-paste-and-indent\ncode --install-extension alexcvzz.vscode-sqlite
+   63  brew install --cask visual-studio-code
+   64  code
+   65  code --install-extension ms-vscode.sublime-keybindings\ncode --install-extension emmanuelbeziat.vscode-great-icons\ncode --install-extension github.github-vscode-theme\ncode --install-extension MS-vsliveshare.vsliveshare\ncode --install-extension rebornix.ruby\ncode --install-extension dbaeumer.vscode-eslint\ncode --install-extension Rubymaniac.vscode-paste-and-indent\ncode --install-extension alexcvzz.vscode-sqlite
+   66  code
+   67  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+   68  gh auth login -s 'user:email' -w
+   69  gh auth status
+   70  export GITHUB_USERNAME=`gh api user | jq -r '.login'`\necho $GITHUB_USERNAME
+   71  mkdir -p ~/code/$GITHUB_USERNAME && cd $_\ngh repo fork lewagon/dotfiles --clone
+   72  cd ~/code/$GITHUB_USERNAME/dotfiles\nzsh install.sh
+   73  gh api user/emails | jq -r '.[].email'
+   74  cd ~/code/$GITHUB_USERNAME/dotfiles && zsh git_setup.sh
+   75  exec zsh
+   76  rvm implode && sudo rm -rf ~/.rvm\n# If you got "zsh: command not found: rvm", carry on. It means `rvm` is not\n# on your computer, that's what we want!\n\nsudo rm -rf $HOME/.rbenv /usr/local/rbenv /opt/rbenv /usr/local/opt/rbenv
+   77  sudo rm -rf $HOME/.rbenv /usr/local/rbenv /opt/rbenv /usr/local/opt/rbenv
+   78  brew uninstall --force rbenv ruby-build\nexec zsh
+   79  brew install rbenv
+   80  rbenv install 3.1.2
+   81  rbenv global 3.1.2
+   82  exec zsh
+   83  ruby -v
+   84  gem install colored faker http pry-byebug rake rails rest-client rspec rubocop-performance sqlite3
+   85  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | zsh\nexec zsh
+   86  nvm -v
+   87  nvm install 16.15.1
+   88  node -v
+   89  nvm cache clear
+   90  npm install --global yarn\nexec zsh
+   91  yarn -v
+   92  brew install sqlite
+   93  sqlite3 -version
+   94  brew install postgresql\nbrew services start postgresql
+   95  psql -d postgres
+   96  exec zsh
+   97  curl -Ls https://raw.githubusercontent.com/lewagon/setup/master/check.rb > _.rb && ruby _.rb && rm _.rb || rm _.rb
+   98  # Expanding the save panel by default\ndefaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true\ndefaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true\ndefaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true\n\n# Save screenshots to the Desktop (or elsewhere)\ndefaults write com.apple.screencapture location "${HOME}/Desktop"\n\n# etc..
+   99  curl -s https://kitt.lewagon.com/camps/1020/setup_script/savannes | bash
+  100  cd ~/code/savannes/fullstack-challenges/
+  101  git status
+  102  git pull upstream master -X ours
+  103  cd 00-Setup/01-Submit-your-code
+  104  code .
+  105  cd
+  106  ls -Ahs
+  107  ls-la
+  108  ls -la
+  109  code .
+  110  code
+  111  brew list code
+  112  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  113  echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/savannesoares/.zprofile\n    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/savannesoares/.zprofile\n    eval "$(/opt/homebrew/bin/brew shellenv)"
+  114  brew
+  115  brew upgrade git || brew install git\nbrew upgrade gh || brew install gh\nbrew upgrade wget || brew install wget\nbrew upgrade imagemagick || brew install imagemagick\nbrew upgrade jq || brew install jq\nbrew upgrade openssl || brew install openssl
+  116  brew install --cask visual-studio-code
+  117  brew reinstall --cask visual-studio-code
+  118  code .
+  119  ruby -v
+  120  git status
+  121  cd ~/code/savannes/fullstack-challenges/
+  122  git status
+  123  git pull upstream master -X ours
+  124  cd 00-Setup/01-Submit-your-code
+  125  code .
+  126  rake
+  127  git status
+  128  git add .
+  129  git comit -m
+  130  git comit - "text changed'\ngit comit -m "text changed"\ngit comit -m "text changed"\ngit push origin main\ngit push origin master\ngit status\ngit commit -m "text changed"\n"
+  131  git commit -m "text changed"
+  132  git push origin master
+  133  cd ~/code/savannes/fullstack-challenges/
+  134  git status
+  135  git pull upstream master -X ours
+  136  cd 00-Setup/00-Demo
+  137  code .
+  138  rake
+  139  irb
+  140  pwd
+  141  cd ~
+  142  pwd
+  143  ls
+  144  cd Developer
+  145  ls
+  146  cd Le\ Wagon
+  147  ls
+  148  mkdir Bootcamp
+  149  ls
+  150  cd PrepWork
+  151  cd ..
+  152  cd Bootcamp
+  153  touch teste.irb
+  154  ls
+  155  stt
+  156  ruby teste.irb
+  157  irb
+  158  ruby teste.rb
+  159  pwd
+  160  ls
+  161  irb
+  162  ls
+  163  irb
+  164  ruby teste.rb
+  165  rake
+  166  git STATUS
+  167  git status
+  168  git add
+  169  git add.
+  170  git add .
+  171  git git status
+  172  git status
+  173  git commit -m "resolved challenge"
+  174  git push origin master
+  175  cd ~/code/savannes/fullstack-challenges/
+  176  git status
+  177  git add .
+  178  git commit -m "comitando arquivo"
+  179  git add
+  180  git add .
+  181  cd ~/code/savannes/fullstack-challenges/
+  182  git status
+  183  git add .
+  184  cd 00-Setup/00-Demo/
+  185  ls
+  186  ls-la
+  187  ls -la
+  188  cd status
+  189  ls -la
+  190  rm -rf .git
+  191  cd ..
+  192  git status
+  193  cd ~/code/savannes/fullstack-challenges/
+  194  git status
+  195  git pull upstream master -X ours
+  196  cd 01-Ruby/01-Programming-basics/01-Buddy
+  197  code .
+  198  rake
+  199  puts "taisa0407"
+  200  irb
+  201  pwd
+  202  git status
+  203  git add .
+  204  git status
+  205  git commit -m "buddy's name added"
+  206  git status
+  207  git push origin master
+  208  rake
+  209  git status
+  210  git add .
+  211  git commit -m "buddy name added"
+  212  git push origin master
+  213  cd ~/code/savannes/fullstack-challenges/
+  214  git status
+  215  git pull upstream master -X ours
+  216  cd 01-Ruby/01-Programming-basics/02-Experiment-methods
+  217  code .
+  218  rake
+  219  irb
+  220  rake
+  221  pwd
+  222  git status
+  223  git add .
+  224  git status
+  225  git commit -m "resolved exercises"
+  226  git push origin master
+  227  cd ~/code/savannes/fullstack-challenges/
+  228  git status
+  229  git pull upstream master -X ours
+  230  cd 01-Ruby/01-Programming-basics/03-Age-in-days
+  231  code .
+  232  rake
+  233  irb
+  234  ate.today - Date.new(26,09,1988) 
+  235  rake
+  236  .code
+  237  code .
+  238  rake
+  239  cd ~/code/savannes/fullstack-challenges/
+  240  git pull upstream master -X ours
+  241  cd 01-Ruby/01-Programming-basics/03-Age-in-days
+  242  code .
+  243  rake
+  244  cd ..
+  245  ls
+  246  cd 02-Experiment-methods
+  247  code .
+  248  irb
+  249  rake
+  250  ruby lib/interface.rb
+  251  cd ..
+  252  ls
+  253  03-Age-in-days
+  254  ruby lib/interface.rb
+  255  lib/interface.rb
+  256  cd ~/code/savannes/fullstack-challenges/
+  257  git status
+  258  rake
+  259  ruby lib/interface.rb
+  260  rake
+  261  ruby lib/interface.rb
+  262  rake
+  263  pwd
+  264  rake
+  265  ruby lib/interface.rb
+  266  rake
+  267  git status
+  268  git add .
+  269  git commit -m "resolved exercise"
+  270  git push origin master
+  271  cd ~/code/savannes/fullstack-challenges/
+  272  git status
+  273  git pull upstream master -X ours
+  274  cd 01-Ruby/01-Programming-basics/03-Age-in-days
+  275  code .
+  276  rake
+  277  cd ~/code/savannes/fullstack-challenges/
+  278  git pull upstream master -X ours
+  279  cd 01-Ruby/01-Programming-basics/04-What-your-name
+  280  code .
+  281  rake
+  282  ruby lib/interface.rb
+  283  irb
+  284  rake
+  285  git status
+  286  git add .
+  287  git commit -m "resolved exercise"
+  288  git push origin master
+  289  cd ~/code/savannes/fullstack-challenges/
+  290  git status
+  291  git pull upstream master -X ours
+  292  cd 01-Ruby/01-Programming-basics/05-Stupid-coaching
+  293  code .
+  294  rake
+  295  cd ~/code/savannes/fullstack-challenges/
+  296  git status
+  297  cd 01-Ruby/02-Flow-Array/01-Can-you-vote
+  298  code .
+  299  rake
+  300  false
+  301  rake
+  302  git status
+  303  git add .
+  304  git commit -m "exercise resolve"
+  305  git push origin main
+  306  git push origin master
+  307  cd ~/code/savannes/fullstack-challenges/
+  308  git status
+  309  git pull upstream master -X ours
+  310  cd 01-Ruby/02-Flow-Array/02-Simple-looping
+  311  code .
+  312  rake
+  313  git status
+  314  git add.
+  315  git add .
+  316  git commit -m "exercise resolved"
+  317  git push origin master
+  318  rake
+  319  git add .
+  320  git commit -m "Exercise resolved"
+  321  git push origin master
+  322  [200~cd ~/code/savannes/fullstack-challenges/~
+  323  cd ~/code/savannes/fullstack-challenges/
+  324  git status
+  325  git pull upstream master -X ours
+  326  cd 01-Ruby/02-Flow-Array/03-Sorting-the-wagon
+  327  code .
+  328  rake
+  329  irb
+  330  rake
+  331  irb
+  332  cd ~/code/savannes/fullstack-challenges/
+  333  git status
+  334  git pull upstream master -X ours
+  335  cd 01-Ruby/03-Iterators-Blocks/01-How-many-team-members
+  336  code .
+  337  rake
+  338  git add .
+  339  git commit -m "resolved exercised"
+  340  git push oring main
+  341  git push origin master
+  342  cd ~/code/savannes/fullstack-challenges/
+  343  git status
+  344  git pull upstream master -X ours
+  345  cd 01-Ruby/03-Iterators-Blocks/02-Enumerable
+  346  code .
+  347  rake
+  348  irb
+  349  rake
+  350  git add.
+  351  git add .
+  352  git commit -m "resolved exercise"
+  353  git push origin master
+  354  rake
+  355  git add .
+  356  git commit -m "resolved exercise"
+  357  git push origin master
+  358  cd ~/code/savannes/fullstack-challenges/
+  359  git status
+  360  git pull upstream master -X ours
+  361  cd 01-Ruby/03-Iterators-Blocks/03-Burger-restaurant
+  362  code .
+  363  rake
+  364  irb
+  365  rake
+  366  clean
+  367  rake
+  368  nil
+  369  rake
+  370  cd ~/code/savannes/fullstack-challenges/
+  371  git status
+  372  git pull upstream master -X ours
+  373  cd 01-Ruby/04-Hash-Symbols/01-Modeling-with-Hash
+  374  code .
+  375  rake
+  376  git add .
+  377  rake
+  378  git add .
+  379  git git commit -m "resolved exercise"
+  380  git push origin master
+  381  git commit -m "resolved exercised"
+  382  git push origin master
+  383  rake
+  384  irb
+  385  cd ~/code/savannes/fullstack-challenges/
+  386  git status
+  387  git pull upstream master -X ours
+  388  cd 01-Ruby/04-Hash-Symbols/02-Modeling-with-Hash-part-II
+  389  code .
+  390  rake
+  391  puts DISHES_CALORIES
+  392  IRB
+  393  rake
+  394  clear
+  395  rake
+  396  ruby lib/restaurant_order.irb
+  397  ruby lib/restaurant_order.rb
+  398  rake
+  399  git add.
+  400  git add .
+  401  git commit -m "resolved exercise"
+  402  git push origin master
+  403  git push origin main
+  404  git add.
+  405  git add .
+  406  git commit -m "resolved exercise"
+  407  git push origin master
+  408  git add.
+  409  git commit -m "resolved exercise with comments"
+  410  git push origin master
+  411  git add .
+  412  git commit -m "resolved exercise with comments"
+  413  git push origin master
+  414  git status
+  415  git log
+  416  git add .
+  417  code .
+  418  git commit -m "resolved exercise with comments"
+  419  git push origin master
+  420  rake
+  421  irb
+  422  ruby coach_answer.rb
+  423  pwd
+  424  ls
+  425  cd lib
+  426  ls
+  427  ruby coach_answer.rb
+  428  rake
+  429  cd ~/code/savannes/fullstack-challenges/
+  430  rake
+  431  git status
+  432  git pull upstream master -X ours
+  433  cd 01-Ruby/01-Programming-basics/05-Stupid-coaching
+  434  rake
+  435  ruby lib/interface.rb
+  436  irb
+  437  rake
+  438  RAKE
+  439  rake
+  440  raKE
+  441  git add .
+  442  git commit -m "resolved exercise with an offense"
+  443  git push origin master
+  444  rake
+  445  rak
+  446  rake
+  447  git add .
+  448  git commit -m "resolved exercise with no offenses"
+  449  git push origin master
+  450  git add.
+  451  git commit -m "resolved exercise"
+  452  git add .
+  453  git status
+  454  git commit -m "exercise resolved"
+  455  git push origin master
+  456  cd ~/code/savannes/fullstack-challenges/
+  457  git status
+  458  git pull upstream master -X ours
+  459  cd 01-Ruby/02-Flow-Array/03-Sorting-the-wagon
+  460  rake
+  461  code .
+  462  irb
+  463  ruby lib/interface.rb
+  464  rake
+  465  wagon
+  466  ruby
+  467  rake
+  468  ruby lib/interface.rb
+  469  rake
+  470  ruby lib/interface.rb
+  471  rake
+  472  ruby lib/interface.rb
+  473  rake
+  474  ruby lib/interface.rb
+  475  a
+  476  ruby lib/interface.rb
+  477  Chicza
+  478  ruby lib/interface.rb
+  479  rake
+  480  ruby lib/interface.rb
+  481  rake
+  482  ruby lib/interface.rb
+  483  rake
+  484  ruby lib/interface.rb
+  485  l
+  486  ruby lib/interface.rb
+  487  rake
+  488  ruby lib/interface.rb
+  489  f
+  490  ruby lib/interface.rb
+  491  cd ~/code/savannes/fullstack-challenges/
+  492  git status
+  493  git pull upstream master -X ours
+  494  cd 01-Ruby/05-Regular-Expressions/Reboot-01-Calculator
+  495  code .
+  496  clear
+  497  touch operation.rb
+  498  quit
+  499  pwd
+  500  ls
+  501  cd savannes
+  502  ls
+  503  cd fullstack-challenges
+  504  ls
+  505  cd 01-Ruby
+  506  ls
+  507  cd 05-Regular-Expressions
+  508  ls
+  509  CD Reboot-01-Calculator
+  510  cd Reboot-01-Calculator 
+  511  ls
+  512  cd lib
+  513  cd .
+  514  cd ..
+  515  ruby interface.rb
+  516  cd lib
+  517  ruby interface.rb
+  518  1
+  519  ruby interface.rb
+  520  ls
+  521  ruby interface.rb
+  522  cd lib
+  523  ruby interface.rb
+  524  cd ~/code/savannes/fullstack-challenges/
+  525  git status
+  526  git pull upstream master -X ours
+  527  cd 01-Ruby/05-Regular-Expressions/Reboot-02-Horse-race
+  528  code .
+  529  cd ..
+  530  ls
+  531  Reboot-01-Calculator
+  532  git status
+  533  git commit -m "resolved exercise"
+  534  ls
+  535  cd lib
+  536  git status
+  537  cd ..
+  538  git add .
+  539  git status
+  540  git commit -m "resolved reboot challenge"
+  541  git push origin master
+  542  interface.rb
+  543  ruby interface.rb
+  544  ruby interface
+  545  ruby lib/interface.rb
+  546  ruby interface
+  547  ruby lib/interface.rb
+  548  2
+  549  ruby lib/interface.rb
+  550  3
+  551  ruby lib/interface.rb
+  552  1
+  553  ruby lib/interface.rb
+  554  git add .
+  555  git status
+  556  git commit -m "horses race challenge resolved"
+  557  git push origin master
+  558  cd ~/code/savannes/fullstack-challenges/
+  559  git status
+  560  git pull upstream master -X ours
+  561  cd 01-Ruby/06-Parsing/Reboot-01-Christmas-list
+  562  code .
+  563  ruby interface.rb
+  564  cd lib
+  565  ruby interface.rb
+  566  cd ..
+  567  rake
+  568  ruby interface.rb
+  569  ls
+  570  cd lib
+  571  cd .
+  572  cd ..
+  573  ruby lib/interface.rb
+  574  ls
+  575  ruby lib/interface.rb
+  576  git status
+  577  git add .
+  578  git status
+  579  git commit -m "1st part challenge" 
+  580  cd ..
+  581  cd..
+  582  cd ..
+  583  sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
+  584  irb
+  585  cd ~/code/savannes/fullstack-challenges/
+  586  git status
+  587  git pull upstream master -X ours
+  588  cd 02-OOP/01-OO-Basics/01-Define-your-own-class
+  589  code .
+  590  rake
+  591  ld
+  592  ls
+  593  cd lib
+  594  touch interface.rb
+  595  touch recipes.rb
+  596  rmdir .gitkeep
+  597  rmdir gitkeep
+  598  cd ..
+  599  rake
+  600  git status
+  601  git add .
+  602  git status
+  603  git log
+  604  git commit - m "Resolved OOP Chalenge n#1"
+  605  git commit -m "Resolved Challenge"
+  606  git push origin master
+  607  cd ~/code/savannes/fullstack-challenges/
+  608  git status
+  609  git pull upstream master -X ours
+  610  cd 02-OOP/01-OO-Basics/02-Getters-and-Setters
+  611  code .
+  612  rake
+  613  ruby lib/buying_scenario.rb
+  614  ruby lib/refilling_scenario.rb
+  615  rake
+  616  ruby lib/buying_scenarium.rb
+  617  cd lib
+  618  ls
+  619  ruby buying_scenario.rb
+  620  rake
+  621  git status
+  622  git cd ..
+  623  cd .
+  624  cd ..
+  625  git status
+  626  git add .
+  627  git commit -m "Resolved Challenge"
+  628  git push origin master
+  629  rake
+  630  git add .
+  631  git status
+  632  git commit -m "Resolved exercise with no offenses"
+  633  git push origin master
+  634  cd ~/code/savannes/fullstack-challenges/
+  635  git status
+  636  git pull upstream master -X ours
+  637  cd 01-Ruby/02-Flow-Array/03-Sorting-the-wagon
+  638  code .
+  639  rake
+  640  ruby wagon_sort.rb
+  641  ls
+  642  cd lib
+  643  ls
+  644  ruby wagon_sort.rb
+  645  ruby interface.rb
+  646  rake
+  647  ruby interface.rb
+  648  rake
+  649  ruby interface.rb
+  650  rake
+  651  ruby wagon_sort.rb
+  652  cd ~/code/savannes/fullstack-challenges/
+  653  git status
+  654  git pull upstream master -X ours
+  655  cd 02-OOP/01-OO-Basics/03-Basic-OOP
+  656  code .
+  657  rake
+  658  clear
+  659  rake
+  660  clear
+  661  rake
+  662  clear
+  663  rake
+  664  clear
+  665  rake
+  666  clear
+  667  rake
+  668  clear
+  669  rake
+  670  clear
+  671  rake
+  672  clear
+  673  rake
+  674  clear
+  675  rake
+  676  clear
+  677  rake
+  678  clear
+  679  rake
+  680  clear
+  681  rake
+  682  clear
+  683  rake
+  684  ruby wagon_sort.rb
+  685  ls
+  686  cd lib
+  687  ruby wagon_sort.rb
+  688  ruby interface.rb
+  689  rake
+  690  ruby interface.rb
+  691  rake
+  692  ruby interface.rb
+  693  rake
+  694  git status
+  695  git cd ..
+  696  pwd
+  697  cd .
+  698  cd ..
+  699  git add .
+  700  git status
+  701  git commit -m "Resolved Challenge"
+  702  git pudh origin master
+  703  cd ~/code/savannes/fullstack-challenges/
+  704  git status
+  705  git pull upstream master -X ours
+  706  cd 02-OOP/02-OO-Advanced/01-Dog-inheritance
+  707  code .
+  708  rake
+  709  git status
+  710  git add .
+  711  git commit -m "resolved challenge"
+  712  git push origin master
+  713  rake
+  714  git add .
+  715  git commit -m "resolved challenge"
+  716  git push origin master
+  717  rake
+  718  git add .
+  719  git commit -m "resolved challenge"
+  720  git commit origin master
+  721  git push origin master
+  722  git add .
+  723  git commit -m  "resolved challenge"
+  724  git push origin master
+  725  cd ~/code/savannes/fullstack-challenges/
+  726  git status
+  727  git pull upstream master -X ours
+  728  cd 02-OOP/02-OO-Advanced/02-Farming-Diary-Crops
+  729  code .
+  730  rake
+  731  lib/farming_diary.rb
+  732  ruby lib/farming_diary.rb
+  733  rake
+  734  ruby lib/farming_diary.rb
+  735  rake
+  736  ruby lib/farming_diary.rb
+  737  git add .
+  738  git commit -m "First part resolved"
+  739  git push origin master
+  740  rake
+  741  ruby lib/farming_diary.rb
+  742  rake
+  743  git add .
+  744  git commit -m "resolved exercise"
+  745  git push origin master
+  746  cd ~/code/savannes/fullstack-challenges/
+  747  git status
+  748  git pull upstream master -X ours
+  749  cd 02-OOP/02-OO-Advanced/04-Instance-vs-Class
+  750  code .
+  751  rake
+  752  irb
+  753  rake
+  754  git add .
+  755  git commit "resolved chellenge"
+  756  git commit -m "resolved challenge"
+  757  git push origin master
+  758  cd ~/code/savannes/fullstack-challenges/
+  759  git status
+  760  git pull upstream master -X ours
+  761  cd 02-OOP/02-OO-Advanced/03-Farming-Diary-Animals
+  762  code .
+  763  ruby lib/farming_diary.rb
+  764  cd ~/code/savannes/fullstack-challenges/
+  765  git status
+  766  git pull upstream master -X ours
+  767  cd 02-OOP/01-OO-Basics/03-Basic-OOP
+  768  code .
+  769  rake
+  770  rke
+  771  rake
+  772  ruby interface.rb
+  773  cd lib
+  774  ruby interface.rb
+  775  rake
+  776  irb
+  777  rake
+  778  git add .
+  779  git commit -m "Part resolved challenge. 1 test missing.
+  780  git commit -m "Part resolved challenge. 1 test missing."
+  781  git push origin master
+  782  d ~/code/savannes/fullstack-challenges/cd ~/code/savannes/fullstack-challenges/
+  783  git status
+  784  git pull upstream master -X ours
+  785  cd 02-OOP/03-Cookbook-Day-One/01-Recipe
+  786  code .
+  787  y
+  788  ll
+  789  cd ..
+  790  cd ~/code/savannes/fullstack-challenges/
+  791  git status
+  792  git pull upstream master -X ours
+  793  cd 02-OOP/03-Cookbook-Day-One/01-Recipe
+  794  code .
+  795  touch recipe.rb
+  796  rake
+  797  git add .
+  798  git commit -m "resolved challenge. Class Recipe created"
+  799  git push origin master
+  800  cd ~/code/savannes/fullstack-challenges/
+  801  git status
+  802  git pull upstream master -X ours
+  803  cd 02-OOP/03-Cookbook-Day-One/02-Cookbook
+  804  code .
+  805  cp ../01-Recipe/lib/recipe.rb lib
+  806  ruby lib/app.rb
+  807  rake
+  808  clear
+  809  rake
+  810  clear
+  811  rake
+  812  clear
+  813  rake
+  814  git add .
+  815  git git commit -m "Part resolved challenge"
+  816  git commit -m "Part resolved challenge"
+  817  git push origin master
+  818  ruby app.rb
+  819  cd lib
+  820  ruby app.rb
+  821  rake
+  822  ruby lib/app.rb
+  823  cd ..
+  824  ruby lib/app.rb
+  825  rake
+  826  ruby lib/app.rb
+  827  rake
+  828  git add .
+  829  git commit -m "resolvecookbook challenge"
+  830  git push origin master
+  831  rake
+  832  git add.
+  833  git add .
+  834  git commit -m "resolved Cookbook challenge"
+  835  git push origin master
+  836  cd ~/code/savannes/fullstack-challenges/
+  837  git status
+  838  git pull upstream master -X ours
+  839  cd 02-OOP/04-Cookbook-Day-Two/01-Cookbook-Advanced
+  840  code .
+  841  cd ~/code/savannes/fullstack-challenges/02-OOP/04-Cookbook-Day-Two/01-Cookbook-Advanced
+  842  cp -r ../../03-Cookbook-Day-One/02-Cookbook/lib .
+  843  ruby lib/app.rb
+  844  cd lib
+  845  ruby app.rb
+  846  cd lib
+  847  ruby app.rb
+  848  ruby lib/app.rb
+  849  cd ~/code/savannes/fullstack-challenges/
+  850  git status
+  851  git pull upstream master -X ours
+  852  cd 02-OOP/05-Food-Delivery-Day-One/01-Food-Delivery
+  853  code .
+  854  rake
+  855  touch app/models/meal_model.rb
+  856  ruby app/models/meal_model.br
+  857  ruby app/models/meal_model.rb
+  858  rake meal
+  859  rake
+  860  rake meal
+  861  touch app/repositories/meal_repository.rb
+  862  rake meal
+  863  rake
+  864  rake meal
+  865  git add .
+  866  git commit -m "meal + meal_repository"
+  867  git push origin master
+  868  touch MealsController.rb
+  869  touch view/meal_view.rb
+  870  touch app/view/meal_view.rb
+  871  ls
+  872  cd app
+  873  ls
+  874  cd views
+  875  touch cd ..
+  876  pwd
+  877  touch meal_view
+  878  rake
+  879  rake meal
+  880  rake
+  881  rake meal
+  882  ruby git add .
+  883  cd ..
+  884  git add .
+  885  git commit -m 'part resolved challenge'
+  886  git push origin master
+  887  rake
+  888  rake customer
+  889  rake
+  890  rake customer
+  891  ruby app.rb
+  892  rake
+  893  git add.
+  894  git add .
+  895  git commit -m 'Resolved Food Delivery Challenge'
+  896  git push origin master
+  897  clear
+  898  cd ~/code/savannes/fullstack-challenges/
+  899  git status
+  900  git pull upstream master -X ours
+  901  cd 02-OOP/06-Food-Delivery-Day-Two/01-Food-Delivery
+  902  code .
+  903  cp -r ../../05-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb} .
+  904  ruby app.rb
+  905  rake
+  906  clear
+  907  rake
+  908  clear
+  909  rake
+  910  clear
+  911  rake
+  912  clear
+  913  rake
+  914  clear
+  915  rake
+  916  clear
+  917  rake
+  918  clear
+  919  rake
+  920  clear
+  921  rake
+  922  clear
+  923  rake
+  924  clear
+  925  rake
+  926  clear
+  927  rake
+  928  clear
+  929  rake
+  930  clear
+  931  rake
+  932  clear
+  933  irb
+  934  rake
+  935  clear
+  936  rake
+  937  clear
+  938  rake
+  939  sqlite3
+  940  cd ~/code/savannes/fullstack-challenges/
+  941  git status
+  942  git pull upstream master -X ours
+  943  cd 03-AR-Database/01-DB-Design-and-SQL/01-Your-first-table
+  944  code .
+  945  rake
+  946  git add .
+  947  git commit -m "Table Design Challenge resolved"
+  948  git push origin master
+  949  cd ~/code/savannes/fullstack-challenges/
+  950  git status
+  951  git pull upstream master -X ours
+  952  cd 03-AR-Database/01-DB-Design-and-SQL/02-SQL-design
+  953  code .
+  954  rake
+  955  git add .
+  956  git commit "DB Design Challenge Resolved"
+  957  git commit -m "DB Design Challenge Resolved"
+  958  git push origin master
+  959  cd ~/code/savannes/fullstack-challenges/
+  960  git status
+  961  git pull upstream master -X ours
+  962  cd 03-AR-Database/01-DB-Design-and-SQL/03-Interacting-with-db
+  963  code .
+  964  sqlite3 lib/db/jukebox.sqlite
+  965  rake
+  966  clear
+  967  rake
+  968  git add.
+  969  git add .
+  970  git commit -m "Interacting with DB Challenge Resolved"
+  971  git push origin master
+  972  cd ~/code/savannes/fullstack-challenges/
+  973  git status
+  974  git pull upstream master -X ours
+  975  cd 03-AR-Database/01-DB-Design-and-SQL/04-Interacting-with-code
+  976  code .
+  977  gem install sqlite3
+  978  rake
+  979  clear
+  980  rake
+  981  clear
+  982  rake
+  983  CLEAR
+  984  RAKE
+  985  rake
+  986  irb
+  987  code .
+  988  ruby lib/queries.rb
+  989  irb
+  990  rake
+  991  sqlite3 lib/db/jukebox.sqlite
+  992  irb
+  993  sqlite3 lib/db/jukebox.sqlite
+  994  rake
+  995  gem install sqlite3
+  996  rake
+  997  ruby queries.rb
+  998  ls
+  999  cd lib
+ 1000  ruby queries.rb
+ 1001  rake
+ 1002  ruby queries.rb
+ 1003  rake
+ 1004  git add .
+ 1005  git commit -m "Interacting With Code Challenge Resolved"
+ 1006  git push origin master
+ 1007  cd ~/code/savannes/fullstack-challenges/
+ 1008  git status
+ 1009  git pull upstream master -X ours
+ 1010  cd 03-AR-Database/01-DB-Design-and-SQL/05-SQL-queries
+ 1011  code .
+ 1012  rake
+ 1013  cd ~/code/savannes/fullstack-challenges/
+ 1014  git status
+ 1015  git pull upstream master -X ours
+ 1016  cd 03-AR-Database/02-SQL-CRUD/01-Query-the-DB
+ 1017  code .
+ 1018  rake
+ 1019  git add .
+ 1020  git commit -m "Query the DB Challenge Resolved"
+ 1021  git push origin master
+ 1022  cd ~/code/savannes/fullstack-challenges/
+ 1023  git status
+ 1024  git pull upstream master -X ours
+ 1025  cd 03-AR-Database/02-SQL-CRUD/02-Read
+ 1026  code .
+ 1027  rake
+ 1028  git add .
+ 1029  git commit -m "Read Challenge resolved"
+ 1030  git push origin master
+ 1031  cd ~/code/savannes/fullstack-challenges/
+ 1032  git status
+ 1033  git pull upstream master -X ours
+ 1034  cd 03-AR-Database/02-SQL-CRUD/03-Delete
+ 1035  code .
+ 1036  rake
+ 1037  git add .
+ 1038  git commit -m "Destroy Challenge Resolved"
+ 1039  git push origin master
+ 1040  cd ~/code/savannes/fullstack-challenges/
+ 1041  git status
+ 1042  git pull upstream master -X ours
+ 1043  cd 03-AR-Database/02-SQL-CRUD/04-Create-Update
+ 1044  code .
+ 1045  rake
+ 1046  git add .
+ 1047  git commit -m "Join Queries Challenge Resolved"
+ 1048  git push origin master
+ 1049  rake
+ 1050  git add .
+ 1051  git commit -m "Join Queries Challenge Resolved"
+ 1052  git push origin master
+ 1053  rake
+ 1054  irb
+ 1055  rake
+ 1056  git add .
+ 1057  git commit -m "Resolved Challenge Basic OOP"
+ 1058  git push origin master
+ 1059  rake
+ 1060  cd ~/code/savannes/fullstack-challenges/
+ 1061  git status
+ 1062  cd ..
+ 1063  cd ~/code/savannes/fullstack-challenges/
+ 1064  git status
+ 1065  git pull upstream master -X ours
+ 1066  cd 01-Ruby/02-Flow-Array/04-Black-Jack
+ 1067  code .
+ 1068  rake
+ 1069  git log
+ 1070  rake
+ 1071  git add .
+ 1072  git commit -m "Basic OOP Resolved Challenge"
+ 1073  git push origin master
+ 1074  cd ~/code/savannes/fullstack-challenges/
+ 1075  git status
+ 1076  git pull upstream master -X ours
+ 1077  cd 03-AR-Database/03-ActiveRecord-Basics/01-Create-a-DB
+ 1078  code .
+ 1079  rake db:create
+ 1080  git add .
+ 1081  git commit -m "Generate DB - resolved challenge"
+ 1082  git push origin master
+ 1083  cd ~/code/savannes/fullstack-challenges/
+ 1084  git status
+ 1085  git pull upstream master -X ours
+ 1086  cd 03-AR-Database/03-ActiveRecord-Basics/02-Migrations
+ 1087  code .
+ 1088  rake db:migrate
+ 1089  sqlite3 db/development.sqlite3
+ 1090  rake db:drop
+ 1091  ll db
+ 1092  TIMESTAMP=`rake db:timestamp`\ntouch db/migrate/${TIMESTAMP}_create_restaurants.rb
+ 1093  rake db:migrate
+ 1094  sqlite3 db/development.sqlite3
+ 1095  TIMESTAMP=`rake db:timestamp`\ntouch db/migrate/${TIMESTAMP}_add_votes.rb
+ 1096  db/migrate/
+ 1097  cd .
+ 1098  cd ..
+ 1099  rake db:migrate
+ 1100  rake
+ 1101  git add .
+ 1102  git commit -m "Migrations - resolved challenge"
+ 1103  git push origin master
+ 1104  cd ~/code/savannes/fullstack-challenges/
+ 1105  git status
+ 1106  git pull upstream master -X ours
+ 1107  cd 03-AR-Database/03-ActiveRecord-Basics/03-Models
+ 1108  code .
+ 1109  sqlite3 db/development.sqlite3
+ 1110  rake db:create
+ 1111  rake db:migrate
+ 1112  sqlite3 db/development.sqlite3
+ 1113  ruby app.rb
+ 1114  1
+ 1115  ruby app.rb
+ 1116  rake
+ 1117  git add .
+ 1118  git commit -m "Resolved Challenge Models"
+ 1119  git push origin master
+ 1120  cd ~/code/savannes/fullstack-challenges/
+ 1121  git status
+ 1122  git pull upstream master -X ours
+ 1123  cd 03-AR-Database/04-ActiveRecord-Advanced/01-Associations
+ 1124  code .
+ 1125  TIMESTAMP=`rake db:timestamp`
+ 1126  touch db/migrate/${TIMESTAMP}_create_posts.rb
+ 1127  TIMESTAMP=`rake db:timestamp`
+ 1128  touch db/migrate/${TIMESTAMP}_create_users.rb
+ 1129  rake
+ 1130  rake db:migrate
+ 1131  rake
+ 1132  rakerake db:drop db:create db:migrate
+ 1133  rake db:drop db:create db:migrate
+ 1134  rake
+ 1135  rake db:drop db:create db:migrate
+ 1136  rake
+ 1137  rake db:seed
+ 1138  rake
+ 1139  rake db:seed
+ 1140  rake
+ 1141  db: seed
+ 1142  rake db: seed
+ 1143  rake
+ 1144  rake db:seed
+ 1145  rake
+ 1146  rake db:seed
+ 1147  rake db:migrate
+ 1148  rake db:drop db:create db:migrate
+ 1149  rake db:seed
+ 1150  rake
+ 1151  rake db:seed
+ 1152  rake
+ 1153  git add .
+ 1154  git commit -m "Resolved challenge"
+ 1155  git push origin master
+ 1156  cd ~/code/savannes/fullstack-challenges/
+ 1157  git status
+ 1158  cd ~/code/savannes/fullstack-challenges/
+ 1159  git status
+ 1160  git pull upstream master -X ours
+ 1161  cd 01-Ruby/03-Iterators-Blocks/03-Burger-restaurant
+ 1162  code .
+ 1163  cd ~/code/savannes/fullstack-challenges/
+ 1164  git pull upstream master -X ours
+ 1165  cd 01-Ruby/02-Flow-Array/04-Black-Jack
+ 1166  code .
+ 1167  ruby blackjack.rb
+ 1168  ruby lib/black_jack.rb
+ 1169  irb
+ 1170  ruby lib/black_jack.rb
+ 1171  ls
+ 1172  cd lib
+ 1173  ls
+ 1174  ruby black_jack.rb
+ 1175  ruby croupier.rb
+ 1176  ruby interface.rb
+ 1177  cd ~/code/savannes/fullstack-challenges/
+ 1178  cd 01-Ruby/02-Flow-Array/03-Sorting-the-wagon
+ 1179  code .
+ 1180  cd 01-Ruby/02-Flow-Array/03-Sorting-the-wagon
+ 1181  cd ~/code/savannes/fullstack-challenges/
+ 1182  ls
+ 1183  cd 01-Ruby/02-Flow-Array/03-Sorting-the-wagon
+ 1184  ls
+ 1185  cd lib
+ 1186  ls
+ 1187  ruby interface.rb
+ 1188  cd lib
+ 1189  ruby interface.rb
+ 1190  ruby lib/interface.rb
+ 1191  ruby lib/croupier.rb
+ 1192  irb
+ 1193  cd lib
+ 1194  irb
+ 1195  cd ..
+ 1196  ruby lib/interface.rb
+ 1197  IRB
+ 1198  ruby lib/interface.rb
+ 1199  RAKE
+ 1200  git add .
+ 1201  git commit -m "Challenge Resolved"
+ 1202  git push origin master
+ 1203  cd ~/code/savannes/fullstack-challenges/
+ 1204  git status
+ 1205  git pull upstream master -X ours
+ 1206  cd 01-Ruby/02-Flow-Array/05-Debug-Gym
+ 1207  code .
+ 1208  rake
+ 1209  git add .
+ 1210  git commit -m "Challenge Resolved"
+ 1211  git push origin master
+ 1212  cd ~/code/savannes/fullstack-challenges/
+ 1213  git status
+ 1214  git pull upstream master -X ours
+ 1215  cd 01-Ruby/02-Flow-Array/06-Destructive-Methods
+ 1216  code .
+ 1217  irb
+ 1218  rake
+ 1219  1.object_id
+ 1220  irb
+ 1221  cd lib
+ 1222  cd horse_racing.rb
+ 1223  race_array
+ 1224  horsse_racing_format!(race_array)
+ 1225  horse_racing_format!(race_array)
+ 1226  cd ..
+ 1227  rake
+ 1228  irb
+ 1229  rake
+ 1230  irb
+ 1231  rake
+ 1232  git add .
+ 1233  git commit -m "Resolved Challenge"
+ 1234  git push origin master
+ 1235  git add .
+ 1236  git push origin master
+ 1237  git add .
+ 1238  git commit -m "Resolved Challenge"
+ 1239  git push origin master
+ 1240  cd ~/code/savannes/fullstack-challenges/
+ 1241  git status
+ 1242  git pull upstream master -X ours
+ 1243  cd 01-Ruby/03-Iterators-Blocks/03-Burger-restaurant
+ 1244  code .
+ 1245  cd ~/code/savannes/fullstack-challenges/
+ 1246  git status
+ 1247  git pull upstream master -X ours
+ 1248  cd 04-Front-End/01-HTML-and-CSS/01-Profile-content
+ 1249  code .
+ 1250  rake
+ 1251  cd profile
+ 1252  mkdir images
+ 1253  code .
+ 1254  serve
+ 1255  gem install webrick
+ 1256  serve
+ 1257  rake
+ 1258  git add .
+ 1259  git commit -m "Added content to my profile page"
+ 1260  git push origin master
+ 1261  cp -r ../profile ../../02-Fonts-and-colors
+ 1262  ld
+ 1263  ls
+ 1264  cd profile
+ 1265  cp -r ../profile ../../02-Fonts-and-colors
+ 1266  cd ~/code/savannes/fullstack-challenges/
+ 1267  git status
+ 1268  git pull upstream master -X ours
+ 1269  cd 04-Front-End/01-HTML-and-CSS/02-Fonts-and-colors
+ 1270  code .
+ 1271  cp -r ../01-Profile-content/profile .
+ 1272  cd profile
+ 1273  touch style.css
+ 1274  serve
+ 1275  git add .
+ 1276  git commit -m "Added fonts & colors to my profile page"
+ 1277  git push origin master
+ 1278  cp -r profile ../03-Finishing-profile-design
+ 1279  cd ~/code/savannes/fullstack-challenges/
+ 1280  git status
+ 1281  git pull upstream master -X ours
+ 1282  cd 04-Front-End/01-HTML-and-CSS/03-Finishing-profile-design
+ 1283  code .
+ 1284  serve
+ 1285  git add .
+ 1286  git commit -m "Added div to my profile page"
+ 1287  git push origin master
+ 1288  cp -r profile ../04-Responsive-profile
+ 1289  cd ~/code/savannes/fullstack-challenges/
+ 1290  git status
+ 1291  git pull upstream master -X ours
+ 1292  cd 04-Front-End/01-HTML-and-CSS/04-Responsive-profile
+ 1293  code .
+ 1294  git add .
+ 1295  git commit - "Savanne's Profile"
+ 1296  git commit -m  "Savanne's Profile"
+ 1297  git push origin master
+ 1298  rake
+ 1299  git add .
+ 1300  git commit -m  "Savanne's Profile"
+ 1301  git push origin master
+ 1302  cd ~/code/savannes/fullstack-challenges/
+ 1303  git status
+ 1304  git pull upstream master -X ours
+ 1305  cd 04-Front-End/02-CSS-components/01-Button-sprint
+ 1306  code .
+ 1307  git add .
+ 1308  rake
+ 1309  git add .
+ 1310  git commit "Button-sprint Challenge"
+ 1311  git commit -m "Button-sprint Challenge"
+ 1312  git push origin master
+ 1313  cd ~/code/savannes/fullstack-challenges/
+ 1314  git status
+ 1315  git pull upstream master -X ours
+ 1316  cd 04-Front-End/02-CSS-components/02-Card-sprint
+ 1317  code .
+ 1318  git add .
+ 1319  git commit -m "Card Sprint"
+ 1320  git push origin master
+ 1321  rake
+ 1322  git add .
+ 1323  git commit -m "Card Sprint"
+ 1324  git push origin master
+ 1325  cd ~/code/savannes/fullstack-challenges/04-Front-End/01-HTML-and-CSS/04-Responsive-profile
+ 1326  cp -r profile ~/code/savannes
+ 1327  cd ~/code/savannes/profile
+ 1328  git init
+ 1329  git add .
+ 1330  git commit -m "my profile page"
+ 1331  gh repo create # this launches an interactive mode to create the GitHub repo
+ 1332  gh repo create
+ 1333  git co -b gh-pages
+ 1334  git push origin gh-pages 
+ 1335  git add .
+ 1336  git commit -m "make my profile prettier"
+ 1337  git push origin gh-pages
+ 1338  cd ~/code/savannes/fullstack-challenges/04-Front-End/01-HTML-and-CSS/05-Push-on-Github-Pages
+ 1339  cp -r ~/code/savannes/profile .
+ 1340  rm -rf profile/.git
+ 1341  git add .
+ 1342  git commit -m "Submitting my work to Kitt"
+ 1343  git push origin master
+ 1344  rake
+ 1345  cd ~/code/savannes/fullstack-challenges/
+ 1346  git status
+ 1347  git pull upstream master -X ours
+ 1348  cd 04-Front-End/01-HTML-and-CSS/06-Medium-copycat
+ 1349  code .
+ 1350  rake
+ 1351  mkdir medium-article
+ 1352  touch medium-article/index.html
+ 1353  touch medium-article/style.css
+ 1354  cd ~/code/savannes/fullstack-challenges/
+ 1355  git status
+ 1356  git pull upstream master -X ours
+ 1357  cd 04-Front-End/02-CSS-components/03-Landing-page
+ 1358  code .
+ 1359  server
+ 1360  cd ~/code/savannes/fullstack-challenges/
+ 1361  git status
+ 1362  git pull upstream master -X ours
+ 1363  cd 04-Front-End/03-Bootstrap/01-Smiley-grids
+ 1364  code .
+ 1365  rake
+ 1366  git add . 
+ 1367  git commit -m "Resolved challenge"
+ 1368  git push origin master
+ 1369  cd ~/code/savannes/fullstack-challenges/
+ 1370  git status
+ 1371  git pull upstream master -X ours
+ 1372  cd 04-Front-End/03-Bootstrap/02-Bootstrap-prototyping
+ 1373  code .
+ 1374  rake
+ 1375  git add .
+ 1376  git commit -m "Bootstrap Prototyping challenge resolved"
+ 1377  git push origin master
+ 1378  cd ~/code/savannes/fullstack-challenges/
+ 1379  git status
+ 1380  git pull upstream master -X ours
+ 1381  cd 04-Front-End/03-Bootstrap/03-Bootstrap-forms
+ 1382  code .
+ 1383  rake
+ 1384  git status
+ 1385  git add .
+ 1386  git commit -m "Bootstrap forms"
+ 1387  git push origin master
+ 1388  cd ~/code/savannes/fullstack-challenges/
+ 1389  git status
+ 1390  git pull upstream master -X ours
+ 1391  cd 04-Front-End/04-JavaScript-basics/01-Even-or-odd
+ 1392  code .
+ 1393  node -v
+ 1394  rake
+ 1395  git add .
+ 1396  git commit -m "resolved challenge"
+ 1397  git push origin master
+ 1398  cd ~/code/savannes/fullstack-challenges/
+ 1399  git status
+ 1400  git pull upstream master -X ours
+ 1401  cd 04-Front-End/04-JavaScript-basics/02-Sum-of-negative
+ 1402  code .
+ 1403  cd ~/code/savannes/fullstack-challenges/
+ 1404  git status
+ 1405  git pull upstream master -X ours
+ 1406  cd 04-Front-End/05-DOM-and-Events/01-Select-element
+ 1407  code .
+ 1408  rake webpack
+ 1409  cd ~/code/savannes/fullstack-challenges/
+ 1410  git status
+ 1411  git pull upstream master -X ours
+ 1412  cd 04-Front-End/06-HTTP-and-AJAX/01-Click-me
+ 1413  code .
+ 1414  rake
+ 1415  cd ~/code/savannes/fullstack-challenges/
+ 1416  git status
+ 1417  git pull upstream master -X ours
+ 1418  cd 04-Front-End/06-HTTP-and-AJAX/02-My-Favourite-Sports
+ 1419  code .
+ 1420  pwd
+ 1421  cd ..
+ 1422  ~ pwd
+ 1423  cd
+ 1424  pwd
+ 1425  ls
+ 1426  cd code
+ 1427  ls
+ 1428  cd savannes/challenge_nilce
+ 1429  code .
+ 1430  rake
+ 1431  rspec exercicio_spec.rb
+ 1432  cd
+ 1433  cd ~/code/savannes/fullstack-challenges/
+ 1434  git status
+ 1435  git pull upstream master -X ours
+ 1436  cd 01-Ruby/03-Iterators-Blocks/03-Burger-restaurant
+ 1437  code .
+ 1438  cd ~/code/savannes/fullstack-challenges/
+ 1439  git status
+ 1440  git pull upstream master -X ours
+ 1441  cd 01-Ruby/03-Iterators-Blocks/04-HTML-generator
+ 1442  code .
+ 1443  rake
+ 1444  git add .
+ 1445  git commit -m "resolved challenge"
+ 1446  git push origin master
+ 1447  cd ~/code/savannes/fullstack-challenges/
+ 1448  git status
+ 1449  git pull upstream master -X ours
+ 1450  cd 01-Ruby/03-Iterators-Blocks/05-Splitter
+ 1451  code .
+ 1452  rake
+ 1453  git add .
+ 1454  git commit -m "resolved challenge"
+ 1455  git push origin master
+ 1456  rake
+ 1457  git add .
+ 1458  git commit -m "resolved challenge"
+ 1459  git push origin master
+ 1460  cd ~/code/savannes/fullstack-challenges/
+ 1461  git status
+ 1462  git pull upstream master -X ours
+ 1463  cd 01-Ruby/03-Iterators-Blocks/Optional-01-Playing-with-strings
+ 1464  code .
+ 1465  rake
+ 1466  irb
+ 1467  rake
+ 1468  git add .
+ 1469  git commit -m "challenge resolved"
+ 1470  git push origin master
+ 1471  cd ~/code/savannes/fullstack-challenges/
+ 1472  git status
+ 1473  git pull upstream master -X ours
+ 1474  cd 01-Ruby/04-Hash-Symbols/03-On-symbols
+ 1475  code .
+ 1476  rake
+ 1477  irb
+ 1478  rake
+ 1479  ?
+ 1480  rake
+ 1481  clear
+ 1482  irb
+ 1483  rake
+ 1484  git add .
+ 1485  git acommit -m "challenge resolved"
+ 1486  git push origin master
+ 1487  cd ~/code/savannes/fullstack-challenges/
+ 1488  git status
+ 1489  git pull upstream master -X ours
+ 1490  cd 01-Ruby/04-Hash-Symbols/04-Argument-order-dependency
+ 1491  code .
+ 1492  rake
+ 1493  git add .
+ 1494  git commit -m "resolved challeng"
+ 1495  git push origin master
+ 1496  cd ~/code/savannes/fullstack-challenges/
+ 1497  git status
+ 1498  git pull upstream master -X ours
+ 1499  cd 01-Ruby/04-Hash-Symbols/05-Array-to-hash
+ 1500  code .
+ 1501  rake
+ 1502  irb
+ 1503  rake
+ 1504  irb
+ 1505  clear
+ 1506  rake
+ 1507  clear
+ 1508  rake
+ 1509  clear
+ 1510  rake
+ 1511  clear
+ 1512  rake
+ 1513  clear
+ 1514  rake
+ 1515  git add .
+ 1516  git commit -m "resolved challenge"
+ 1517  git push origin master
+ 1518  cd ~/code/savannes/fullstack-challenges/
+ 1519  git status
+ 1520  git pull upstream master -X ours
+ 1521  cd 02-OOP/01-OO-Basics/04-Public-Interface
+ 1522  code .
+ 1523  ruby bank_account.rb
+ 1524  ruby lib/bank_account.rb
+ 1525  irb
+ 1526  ruby lib/bank_account.rb
+ 1527  rake
+ 1528  clear
+ 1529  rake
+ 1530  git add.
+ 1531  git add .
+ 1532  git git commit -m "resolved challenge"
+ 1533  git commit -m "resolved challenge"
+ 1534  git push origin master
+ 1535  cd ~/code/savannes/fullstack-challenges/
+ 1536  git status
+ 1537  git pull upstream master -X ours
+ 1538  cd 02-OOP/02-OO-Advanced/03-Farming-Diary-Animals
+ 1539  code .
+ 1540  rake
+ 1541  ruby lib/farming_diary.rb
+ 1542  rake
+ 1543  ruby lib/farming_diary.rb
+ 1544  rake
+ 1545  git add .
+ 1546  git commit -m "resolved challenge"
+ 1547  git push origin master
+ 1548  rake
+ 1549  git add .
+ 1550  git commit -m "resolved challenge"
+ 1551  git push origin master
+ 1552  cd ~/code/savannes/fullstack-challenges/
+ 1553  git status
+ 1554  git pull upstream master -X ours
+ 1555  cd 02-OOP/02-OO-Advanced/05-About-self
+ 1556  code .
+ 1557  rake
+ 1558  irb
+ 1559  rake
+ 1560  ruby animal.rb
+ 1561  ruby lib/animal.rb
+ 1562  rake
+ 1563  git add .
+ 1564  git commit -m "challenge resolved"
+ 1565  git push origin master
+ 1566  cd ~/code/savannes/fullstack-challenges/
+ 1567  git status
+ 1568  git pull upstream master -X ours
+ 1569  cd 03-AR-Database/02-SQL-CRUD/04-Create-Update
+ 1570  code .
+ 1571  rake
+ 1572  cd ~/code/savannes/fullstack-challenges/
+ 1573  git status
+ 1574  git pull upstream master -X ours
+ 1575  cd 04-Front-End/07-JavaScript-Plugins/01-Bugfix\n
+ 1576  rake
+ 1577  code .
+ 1578  rake webpack
+ 1579  git add .
+ 1580  git commit -m "resolved challenge"
+ 1581  git push origin master
+ 1582  cd ~/code/savannes/fullstack-challenges/
+ 1583  git status
+ 1584  git pull upstream master -X ours
+ 1585  cd 04-Front-End/07-JavaScript-Plugins/03-Classes
+ 1586  code .
+ 1587  rake
+ 1588  git add .
+ 1589  git commit -m "resolved exercise"
+ 1590  git push origin master
+ 1591  cd ~/code/savannes/fullstack-challenges/
+ 1592  git status
+ 1593  git pull upstream master -X ours
+ 1594  cd 03-AR-Database/02-SQL-CRUD/04-Create-Update
+ 1595  code .
+ 1596  rake
+ 1597  git add .
+ 1598  git commit -m "resolved challenge"
+ 1599  git push origin master
+ 1600  cd ~/code/savannes/fullstack-challenges/
+ 1601  git status
+ 1602  git pull upstream master -X ours
+ 1603  cd 03-AR-Database/02-SQL-CRUD/05-MVC-HackerNews
+ 1604  code .
+ 1605  rake
+ 1606  ruby app.rb
+ 1607  rake
+ 1608  ruby app.rb
+ 1609  rake
+ 1610  ruby app.rb
+ 1611  rake
+ 1612  ruby app.rb
+ 1613  rake
+ 1614  git add .
+ 1615  git commit -m "resolved exercise"
+ 1616  git push origin master
+ 1617  cd ~/code/savannes/fullstack-challenges/\n
+ 1618  git status\n
+ 1619  git pull upstream master -X ours\n
+ 1620  cd 03-AR-Database/03-ActiveRecord-Basics/04-Seed-Faker\n
+ 1621  code .
+ 1622  rake
+ 1623  gem install faker
+ 1624  bundle install
+ 1625  rake
+ 1626  git add .
+ 1627  git commit -m "resolved challenge"
+ 1628  git push origin master
+ 1629  gem install rest-client
+ 1630  cd ~/code/savannes/fullstack-challenges/\n
+ 1631  git status\n
+ 1632  git pull upstream master -X ours\n
+ 1633  cd 03-AR-Database/03-ActiveRecord-Basics/05-Seed-API\n
+ 1634  code .
+ 1635  rake
+ 1636  rake db:drop db:create db:migrate db:seed
+ 1637  sqlite3 db/development.sqlite3\nsqlite> .mode columns\nsqlite> .headers on\nsqlite> SELECT * FROM posts;
+ 1638  rake
+ 1639  sqlite3 db/development.sqlite3
+ 1640  rake db:drop db:create db:migrate db:seed
+ 1641  sqlite3 db/development.sqlite3
+ 1642  rake
+ 1643  cd ~/code/savannes/fullstack-challenges/
+ 1644  git status
+ 1645  git pull upstream master -X ours
+ 1646  cd 04-Front-End/07-JavaScript-Plugins/04-Stimulus
+ 1647  code .
+ 1648  rake
+ 1649  yarn install
+ 1650  rake webpack
+ 1651  yarn add @hotwired/stimulus
+ 1652  yarn add @hotwired/stimulus-webpack-helpers
+ 1653  mkdir lib/controllers
+ 1654  touch lib/controllers/check_all_checkboxes_controller.js
+ 1655  rake webpack
+ 1656  rails -v
+ 1657  pwd ..
+ 1658  pwd
+ 1659  cd ..
+ 1660  cd ~/code/savannes/fullstack-challenges/
+ 1661  git status
+ 1662  git pull upstream master -X ours
+ 1663  cd 05-Rails/01-Rails-intro/01-HTTP-and-MVC-quiz
+ 1664  code .
+ 1665  rake
+ 1666  git add .
+ 1667  git commit -m "answered quizz"
+ 1668  git push origin master
+ 1669  rake
+ 1670  git add .
+ 1671  git commit -m "answered quizz"
+ 1672  git push origin master
+ 1673  cd ~/code/savannes
+ 1674  rails new rails-stupid-coaching --skip-active-storage --skip-action-mailbox
+ 1675  cd rails-stupid-coaching
+ 1676  git add .
+ 1677  git commit -m "rails new"
+ 1678  gh repo create --public --source=.
+ 1679  git push origin master
+ 1680  cd ~/code/$GITHUB_SAVANNES
+ 1681  rails new rails-intro --skip-active-storage --skip-action-mailbox --skip-test
+ 1682  cd rails-stupid-coaching
+ 1683  cd ..
+ 1684  cd ~/code/savannes
+ 1685  cd rails-stupid-coaching
+ 1686  rails s
+ 1687  rails generate controller pages
+ 1688  rails routes
+ 1689  rails generate controller questions
+ 1690  cd ~/code/savannes/fullstack-challenges/
+ 1691  git status
+ 1692  git pull upstream master -X ours
+ 1693  cd 04-Front-End/05-DOM-and-Events/02-DOM-Manipulation
+ 1694  code .
+ 1695  rake
+ 1696  rake webpack
+ 1697  git add.
+ 1698  rake
+ 1699  git add .
+ 1700  git commit -m "resolved exercised"
+ 1701  git push origin master
+ 1702  cd ~/code/savannes/fullstack-challenges/
+ 1703  git status
+ 1704  git pull upstream master -X ours
+ 1705  cd 04-Front-End/05-DOM-and-Events/03-My-First-Event-Listener
+ 1706  code .
+ 1707  rake webpack
+ 1708  git add .
+ 1709  git commit -m "resolved exercise"
+ 1710  git push origin master
+ 1711  cd rails-stupid-coaching
+ 1712  pwd
+ 1713  cd ..
+ 1714  cd .
+ 1715  cd ..
+ 1716  ls
+ 1717  cd rails-stupid-coaching
+ 1718  rails s
+ 1719  pwd
+ 1720  cd˜
+ 1721  cd
+ 1722  ls
+ 1723  cd code
+ 1724  ls
+ 1725  cd savannes
+ 1726  ls
+ 1727  cd fullstack-challenges
+ 1728  ls
+ 1729  cd 04-Front-End/05-DOM-and-Events/03-My-First-Event-Listener
+ 1730  ls
+ 1731  cd ..
+ 1732  ls
+ 1733  cd 02-DOM-Manipulation
+ 1734  rake webpack
+ 1735  rake
+ 1736  cd
+ 1737  cd savanne/code
+ 1738  ld
+ 1739  ls
+ 1740  cd code
+ 1741  ls
+ 1742  cd savannes
+ 1743  ls
+ 1744  cd fullstack-challenges
+ 1745  ls
+ 1746  cd 04-Front-End
+ 1747  ls
+ 1748  cd 05-DOM-and-Events
+ 1749  ls
+ 1750  cd 02-DOM-Manipulation
+ 1751  git add .
+ 1752  git commit -m "resolved challenge"
+ 1753  git push origin master
+ 1754  cd ~/code/savannes/fullstack-challenges/
+ 1755  git status
+ 1756  git pull upstream master -X ours
+ 1757  cd 04-Front-End/05-DOM-and-Events/04-Wagon-Race
+ 1758  code .
+ 1759  rake webpack
+ 1760  cd ~/code/savannes/fullstack-challenges/
+ 1761  git status
+ 1762  git pull upstream master -X ours
+ 1763  cd 04-Front-End/05-DOM-and-Events/05-Fake-Inbox
+ 1764  code .
+ 1765  cd ~/code/savannes/fullstack-challenges/\n
+ 1766  git status
+ 1767  cd 05-Rails/02-Rails-CRUD/01-Routing-quiz
+ 1768  code .
+ 1769  rake
+ 1770  git add .
+ 1771  git commit - m "answered quiz"
+ 1772  git status
+ 1773  git add .
+ 1774  git commit -m "answered quiz"
+ 1775  git push origin master
+ 1776  rake
+ 1777  git push origin master
+ 1778  rake
+ 1779  git status
+ 1780  git add .
+ 1781  git commit -m "answered quiz"
+ 1782  git push origin master
+ 1783  cd ~/code/savannes
+ 1784  rails new rails-task-manager --skip-active-storage --skip-action-mailbox
+ 1785  cd rails-task-manager
+ 1786  git add .
+ 1787  git commit -m "rails new"
+ 1788  gh repo create --public --source=.
+ 1789  git push origin master
+ 1790  code .
+ 1791  rails generate model task title:string details:text completed:boolean
+ 1792  rails generate controller pages task
+ 1793  rails s
+ 1794  rails db:migrate
+ 1795  rails rollback
+ 1796  rails db:rollback
+ 1797  rails db:migrate
+ 1798  db:seed
+ 1799  rails db:seed
+ 1800  rails c
+ 1801  rails route
+ 1802  rails routes
+ 1803  cd ~/code/savannes/fullstack-challenges/
+ 1804  git status
+ 1805  git pull upstream master -X ours
+ 1806  cd 05-Rails/03-Rails-restaurant-reviews/01-CRUD-quiz
+ 1807  code .
+ 1808  rake
+ 1809  rails generate model Review content:text restaurant:references
+ 1810  rake
+ 1811  git add .
+ 1812  git commit -m "answered quiz"
+ 1813  git push origin master
+ 1814  cd ~/code/savannes
+ 1815  rails new rails-yelp-mvp --skip-active-storage --skip-action-mailbox -T
+ 1816  cd rails-yelp-mvp
+ 1817  git add .
+ 1818  git commit -m "rails new"
+ 1819  gh repo create --public --source=.
+ 1820  git push origin master
+ 1821  echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
+ 1822  echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile
+ 1823  bundle install
+ 1824  git submodule add git@github.com:lewagon/fullstack-challenges-03-Rails-restaurant-reviews-specs.git spec
+ 1825  git add .
+ 1826  git commit -m "Prepare rails app with external specs"
+ 1827  code .
+ 1828  bundle install
+ 1829  rails generate simple_form:install --bootstrap
+ 1830  gem update --system 3.3.7
+ 1831  gem --version
+ 1832  cd Users/savannesoares/.rbenv/versions/3.1.2/lib/ruby/3.1.0/bundler
+ 1833  cd /Users/savannesoares/.rbenv/versions/3.1.2/lib/ruby/3.1.0/bundler
+ 1834  code .
+ 1835  cd -
+ 1836  bundle install
+ 1837  rails generate simple_form:install --bootstrap
+ 1838  rails db:migrate RAILS_ENV=test
+ 1839  rspec
+ 1840  rake
+ 1841  bin/rake
+ 1842  rspec
+ 1843  rails generate model restaurant name address phone_number: number category
+ 1844  code .
+ 1845  rails generate model review rating :number content restaurant :references
+ 1846  rails generate model review rating:number content restaurant:references
+ 1847  generate model review rating:integer content restaurant:references
+ 1848  rails generate model review rating:integer content restaurant:references
+ 1849  rails db:migrate
+ 1850  rspec spec/01_models
+ 1851  rails c
+ 1852  rails db:seed
+ 1853  rails s
+ 1854  rails generate view restaurant 
+ 1855  rails s
+ 1856  rails generate controller reviews
+ 1857  rails g controller reviews
+ 1858  cd ~/code/savannes/fullstack-challenges/
+ 1859  git status
+ 1860  git pull upstream master -X ours
+ 1861  cd 05-Rails/04-Rails-mister-cocktail/01-Advanced-routing-quiz
+ 1862  code .
+ 1863  rake
+ 1864  git add .
+ 1865  git commit -m "answerd quiz"
+ 1866  git push origin origin master
+ 1867  git push origin master
+ 1868  yarn -v
+ 1869  cd ~/code/savannes
+ 1870  rails new rails-watch-list -j webpack -d postgresql --skip-action-mailbox -T
+ 1871  cd rails-watch-list
+ 1872  rails db:create
+ 1873  git add .
+ 1874  git commit -m "rails new"
+ 1875  gh repo create --public --source=.
+ 1876  git push origin master
+ 1877  echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
+ 1878  echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile
+ 1879  bundle install
+ 1880  rails db:migrate
+ 1881  rails db:test:prepare
+ 1882  git submodule add https://github.com/lewagon/fullstack-challenges-04-Rails-watch-list-specs.git spec
+ 1883  git add .
+ 1884  git commit -m "Prepare rails app with external specs"
+ 1885  rails db:migrate RAILS_ENV=test
+ 1886  rspec spec/models  
+ 1887  yarn add bootstrap @popperjs/core
+ 1888  code .
+ 1889  bundle install
+ 1890  rm -rf app/assets/stylesheets
+ 1891  curl -L https://github.com/lewagon/stylesheets/archive/master.zip > stylesheets.zip
+ 1892  unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets
+ 1893  import "bootstrap";
+ 1894  git commit -m "status completed"
+ 1895  git push origin master
+ 1896  rspec spec/models
+ 1897  rails generate model movie title overview poster_url rating:float
+ 1898  rails generate list name
+ 1899  rails generate model list name
+ 1900  rails generate model bookmark comment:text list:references movie:references 
+ 1901  bundle
+ 1902  rails generate simple_form:install --bootstrap
+ 1903  rspec spec/models
+ 1904  rails db:migrate
+ 1905  rspec spec/models
+ 1906  bundle
+ 1907  gem list
+ 1908  cd ~/code/savannes/fullstack-challenges/
+ 1909  git status
+ 1910  git pull upstream master -X ours
+ 1911  cd 05-Rails/05-Rails-MC-with-images/01-Rails-frontend-quiz
+ 1912  code .
+ 1913  rake
+ 1914  git status
+ 1915  git add .
+ 1916  git commit -m "answered quiz"
+ 1917  git push origin master
+ 1918  pwd
+ 1919  cd ..
+ 1920  cd..
+ 1921  cd ..
+ 1922  ls
+ 1923  cd ..
+ 1924  mkdir mcpenchel
+ 1925  ls
+ 1926  cd mcpenchel
+ 1927  git clone git@github.com:mcpenchel/rails-authentication-1020.git
+ 1928  ll
+ 1929  ls
+ 1930  cd rails-authentication-1020
+ 1931  bundle install
+ 1932  rbenv -v
+ 1933  cd ..
+ 1934  ruby -v
+ 1935  cd rails-authentication-1020
+ 1936  git pull origin main
+ 1937  bundle install
+ 1938  git pull origin main
+ 1939  bundle install
+ 1940  yarn install
+ 1941  rails db:create db:migrate
+ 1942  rails c
+ 1943  git status
+ 1944  git checkout .
+ 1945  git status
+ 1946  git pull origin main
+ 1947  rails db:migrate
+ 1948  d
+ 1949  cd
+ 1950  ls
+ 1951  cd code
+ 1952  ls
+ 1953  mkdir partiupiscina\n
+ 1954  ls
+ 1955  cd partiupiscina
+ 1956  git clone git@github.com:LuizCampedelli/partiupiscina.git
+ 1957  ls
+ 1958  ll
+ 1959  bundle install
+ 1960  cd
+ 1961  ls
+ 1962  cd code
+ 1963  ls
+ 1964  cd partiupiscina
+ 1965  ls
+ 1966  cd partiupiscina
+ 1967  bundle install
+ 1968  code .
+ 1969  gem install bundler -v '~> 2.4
+ 1970  gem install bundler -v '~> 2.4'
+ 1971  bundle install
+ 1972  yarn install
+ 1973  rails db:create db:migrate
+ 1974  bundle install
+ 1975  rails generate devise:install
+ 1976  rails generate devise User
+ 1977  rails db:migrate
+ 1978  rails routes | grep user
+ 1979  rails generate devise:views
+ 1980  rails s
+ 1981  yarn build --watch
+ 1982  Rails c
+ 1983  git branch
+ 1984  git checkout -b user_model
+ 1985  git status
+ 1986  git add .
+ 1987  git status
+ 1988  git commit -m "create user model"
+ 1989  git log
+ 1990  git push origin user_model
+ 1991  git checkout master
+ 1992  git status
+ 1993  git pull origin master
+ 1994  git checkout -b controllers_pools_and_orders
+ 1995  rails g controller Pools
+ 1996  rails g controller Orders
+ 1997  git add .
+ 1998  git status
+ 1999  git commit -m "create orders and pools controllers"
+ 2000  git push origin controllers_pools_and_orders
+ 2001  cd ..
+ 2002  ls
+ 2003  cd partiupiscina
+ 2004  cd ..
+ 2005  cd partiupiscina
+ 2006  git checkout master
+ 2007  git pull origin master
+ 2008  db :migrate
+ 2009  rails db:migrate
+ 2010  bundle install
+ 2011  rails s
+ 2012  undle complete! 21 Gemfile dependencies, 87 gems now installed.
+ 2013  git checkout -b validations_associations
+ 2014  git status
+ 2015  git add .
+ 2016  git commit -m "create validations and associations"
+ 2017  git push origin validations_associations
+ 2018  git checkout master
+ 2019  git pull origin master
+ 2020  git status
+ 2021  git restore
+ 2022  git restore app/views/pools/show.html.erb
+ 2023  git status
+ 2024  git pull origin master
+ 2025  code .
+ 2026  node -v
+ 2027  yarn -v
+ 2028  rails s
+ 2029  rails c
+ 2030  rails db:seed
+ 2031  clear
+ 2032  rails db:seed
+ 2033  rails c
+ 2034  rails generate migration AddUserToPool user:references
+ 2035  rails db:migrate
+ 2036  rails db:drop
+ 2037  rails db:migrate
+ 2038  rails db:seed
+ 2039  rails db:create
+ 2040  rails db:migrate
+ 2041  rails db:seed
+ 2042  rails c
+ 2043  git status
+ 2044  git checkout -b seed_and_edition_pool_migration
+ 2045  git add .
+ 2046  git commit -m "create seed and edit pool migration"
+ 2047  git push origin seed_and_edition_pool_migration
+ 2048  git checkout master
+ 2049  git pull origin master
+ 2050  rails s
+ 2051  git checkout -b start_editing_show_page
+ 2052  git status
+ 2053  git add .
+ 2054  git commit -m "start editing show page"
+ 2055  git push origin start_editing_show_page
+ 2056  git checkout master
+ 2057  git checkout -b edit_migration_pool 
+ 2058  rails generate migration AddDetailsToPools pet_friendly:boolean height:integer restrooms:integer parking:integer  guest_number:integer description:text picture:string location:varchar 
+ 2059  rails generate migration AddDetailsToPools pet_friendly:boolean height:integer restrooms:integer parking:integer  guest_number:integer description:text picture:string location:string
+ 2060  rails db:migrate
+ 2061  git status
+ 2062  rails s
+ 2063  git checkout master
+ 2064  git pull origin master
+ 2065  rails db:migrate
+ 2066  bundle install
+ 2067  git checkout -b editing_pools
+ 2068  rails s
+ 2069  git checkout master
+ 2070  git pull origin master
+ 2071  rails db:migrate
+ 2072  git checkout editing_pools
+ 2073  git checkout master
+ 2074  git pull origin master
+ 2075  rails db :migrate
+ 2076  rails db:git merge master
+ 2077  git merge master
+ 2078  bin/dev
+ 2079  git pull origin master
+ 2080  bin/dev
+ 2081  bundle install
+ 2082  bin/dev
+ 2083  rails db:migrate
+ 2084  [200~<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+ 2085  git checkout master
+ 2086  git pull origin master
+ 2087  rails db :migrate
+ 2088  git status
+ 2089  git checkout editing_pools
+ 2090  git status
+ 2091  git restore
+ 2092  git restore db/schema.rb
+ 2093  git status
+ 2094  git add.
+ 2095  git add .
+ 2096  git status
+ 2097  git status db/migrate/20230203200735_add_details_to_pools.rb
+ 2098  git restore db/migrate/20230203200735_add_details_to_pools.rb
+ 2099  git status
+ 2100  clear
+ 2101  git status
+ 2102  git restore db/migrate/20230203200735_add_details_to_pools.rb
+ 2103  git status
+ 2104  git add .
+ 2105  git status
+ 2106  git checkout master
+ 2107  git pull origin master
+ 2108  rails db:migrate
+ 2109  bundle install
+ 2110  rails db:migrate
+ 2111  git checkout editing_pools
+ 2112  git status
+ 2113  code .
+ 2114  git restore db/schema.rb
+ 2115  git status
+ 2116  git checkout editing_pools
+ 2117  code .
+ 2118  git checkout master
+ 2119  code .
+ 2120  git checkout editing_pools
+ 2121  git merge master
+ 2122  code .
+ 2123  rails db:migrate
+ 2124  bin/dev
+ 2125  touch .env
+ 2126  echo '.env*' >> .gitignore
+ 2127  git status 
+ 2128  git restore db/schema.rb
+ 2129  git status 
+ 2130  git restore app/views/pages/show.html.erb
+ 2131  git status
+ 2132  git commit -m "add dotenv-rails"
+ 2133  git add .
+ 2134  git commit -m "add dotenv-rails"
+ 2135  rails active_storage:install
+ 2136  rails db:migrate
+ 2137  bin/dev
+ 2138  rails c
+ 2139  rails db:drop
+ 2140  rails db:create
+ 2141  rails db:migrate
+ 2142  rails db:seed
+ 2143  bin/dev
+ 2144  rails c
+ 2145  rails db:sedd
+ 2146  rails db:seed
+ 2147  rails c
+ 2148  rails db:drop
+ 2149  rails dp:create
+ 2150  rails db:create
+ 2151  rails db:migrate
+ 2152  rails db:seed
+ 2153  bin/dev
+ 2154  git add .
+ 2155  git commit -m "carrossel de fotos"
+ 2156  bin/dev
+ 2157  rails routes
+ 2158  git add .
+ 2159  git commit -m "editado o show e o edit"
+ 2160  git add .
+ 2161  git commit -m "edicao do show edit e new"
+ 2162  git push origin editing_pools
+ 2163  git status
+ 2164  git restore app/views/pools/_form.html.erb
+ 2165  git restores app/views/pools/edit.html.erb
+ 2166  git restore app/views/pools/new.html.erb
+ 2167  git status
+ 2168  git checkout master
+ 2169  git pull origin master
+ 2170  rails db:migrate
+ 2171  bundle install
+ 2172  yarn install
+ 2173  git checkout -b "front_end_pools"
+ 2174  git add .
+ 2175  git commit -m "botoezinhos lado a lado"
+ 2176  bin/dev
+ 2177  git status
+ 2178  bin/dev
+ 2179  git status
+ 2180  git add .
+ 2181  git commit -m "ajustadas as fotos do show"
+ 2182  git push origin front_end_pools
+ 2183  git checkout master
+ 2184  git pull origin master
+ 2185  rails db:migrate
+ 2186  bin/dev
+ 2187  git status
+ 2188  git pull origin master
+ 2189  rails db:migrate
+ 2190  bundle install
+ 2191  git checkout -b pundit
+ 2192  bundle install
+ 2193  rails generate pundit:install
+ 2194  rails c
+ 2195  rails g pundit:policy pool
+ 2196  rails g migration AddAdminToUsers admin:boolean
+ 2197  rails db:migrate
+ 2198  rails c
+ 2199  yarn install
+ 2200  bin/dev
+ 2201  git add .
+ 2202  git commit -m "basic pundit" 
+ 2203  git push origin pundit
+ 2204  git checkout master
+ 2205  git pull origin master
+ 2206  bin/dev
+ 2207  rails routes
+ 2208  git pull origin master
+ 2209  bin/dev
+ 2210  rails db:migrate
+ 2211  bundle install
+ 2212  yarn install
+ 2213  git checkout -b my_page
+ 2214  rails c
+ 2215  git add .
+ 2216  git commit -m "ajustes no pundit do order"
+ 2217  git status
+ 2218  git push origin my_page
+ 2219  git checkout master
+ 2220  git status
+ 2221  git add .
+ 2222  git commit -m "ajustes no new do order"
+ 2223  git status
+ 2224  git push origin my_page
+ 2225  git checkout master
+ 2226  git pull origin master
+ 2227  git status
+ 2228  git add .
+ 2229  git commit -m "comentei a linha que estava quebrando"
+ 2230  git push origin git status
+ 2231  git status
+ 2232  rails routes
+ 2233  rails routes | grep order
+ 2234  rails c
+ 2235  git status
+ 2236  git add .
+ 2237  git commit -m "ajustes pundit"
+ 2238  git push origin master
+ 2239  rails g controller dashboard
+ 2240  rails c
+ 2241  bin/dev
+ 2242  rails g migration AddPriceToOrders
+ 2243  rails db:migrate
+ 2244  rails c
+ 2245  git status
+ 2246  git checkout -b dashboard
+ 2247  git add .
+ 2248  git commit -m "backend do dashboard"
+ 2249  git push origin dashboard
+ 2250  git add .
+ 2251  git commit -m "mudanças front"
+ 2252  git add .
+ 2253  git commit -m "melhorias front"
+ 2254  git push origin dashboard
+ 2255  git checkout master
+ 2256  git pull origin master
+ 2257  git checkout master
+ 2258  git pull origin master
+ 2259  git checkout master
+ 2260  git pull origin master
+ 2261  rails db:migrate
+ 2262  bundle install
+ 2263  rails db:migrate
+ 2264  rails db:seed
+ 2265  bin/dev
+ 2266  rails db:seed
+ 2267  git checkout master
+ 2268  git pull origin master
+ 2269  rails db:migrate
+ 2270  bundle install
+ 2271  git checkout -b button_new_pool
+ 2272  git merge master
+ 2273  rails routes -g orders
+ 2274  bin/dev
+ 2275  git status
+ 2276  git add .
+ 2277  git commit -m “ajustes no front”
+ 2278  git commit -m "ajustes"
+ 2279  git push origin button_new_pool
+ 2280  cd ..
+ 2281  ls
+ 2282  cd savannes
+ 2283  ls
+ 2284  rails new \\n  -d postgresql \\n  -j webpack \\n  -m https://raw.githubusercontent.com/lewagon/rails-templates/master/devise.rb \\n  CHANGE_THIS_TO_YOUR_RAILS_APP_NAME
+ 2285  ls
+ 2286  rm -rf CHANGE_THIS_TO_YOUR_RAILS_APP_NAME
+ 2287  rails new \\n  -d postgresql \\n  -j webpack \\n  -m https://raw.githubusercontent.com/lewagon/rails-templates/master/devise.rb \\n  hired
+ 2288  cd hired
+ 2289  gh repo create --public --source=.
+ 2290  gh repo view
+ 2291  git remote -v
+ 2292  git checkout -b main
+ 2293  git push origin main
+ 2294  git branch -d master
+ 2295  heroku create hired --region eu
+ 2296  brew tap heroku/brew && brew install heroku
+ 2297  heroku create hired --region eu
+ 2298  heroku run rails db:migrate
+ 2299  touch Procfile
+ 2300  ls
+ 2301  code .
+ 2302  git add .
+ 2303  git commit -m "add procfile"
+ 2304  git push origin main
+ 2305  git push heroku main
+ 2306  heroku run rails db:migrate
+ 2307  git checkout main
+ 2308  git pull origin main
+ 2309  rails db:migrate
+ 2310  code .
+ 2311  git checkout -b model_associations_validations
+ 2312  rails g model Job company user:referenes role level description status type salary:integer  applycation_link
+ 2313  rails g model Job company user:references role level description status type salary:integer  applycation_link
+ 2314  rails db:migrate
+ 2315  rails g migration AddFirstNameToUser
+ 2316  rails db:migrate
+ 2317  git add .
+ 2318  git commit -m "modelo de user ajustado, modelo de job criado, assosciacoes e validoes criadas"
+ 2319  git push origin model_associations_validations
+ 2320  bin/dev
+ 2321  rails s
+ 2322  bundle install
+ 2323  bin/dev
+ 2324  rails s
+ 2325  yarn build
+ 2326  yarn build --watch
+ 2327  yarn add chartkick chart.js
+ 2328  bundle install
+ 2329  rails s
+ 2330  yarn build --watch
+ 2331  git status
+ 2332  git add .
+ 2333  git commit -m "dashboard"
+ 2334  git push origin model_associations_validations
+ 2335  git checkout main
+ 2336  git pull origin main
+ 2337  rails db:migrate
+ 2338  rails db:seed
+ 2339  rails db:create
+ 2340  rails db:seed
+ 2341  rails db:drop
+ 2342  rails dp:create
+ 2343  rails db:create
+ 2344  rails db:migrate
+ 2345  bundle install
+ 2346  git checkout -b dashboard
+ 2347  rails c
+ 2348  rails db:seed
+ 2349  rails db:drop db:create db:migrate db:seed  
+ 2350  rails c
+ 2351  git status
+ 2352  git checkout main
+ 2353  git pull origin main
+ 2354  git checkout dashboard
+ 2355  git add .
+ 2356  git commit -m "comments"
+ 2357  git checkout main
+ 2358  git pull origin main
+ 2359  git checkout -b feature
+ 2360  rails db:drop db:create db:migrate db:seed
+ 2361  yarn build --watch
+ 2362  rails s
+ 2363  yarn build --watch
+ 2364  git status
+ 2365  git checkout main
+ 2366  git pull origin main
+ 2367  rails db:migrate
+ 2368  bundle install
+ 2369  rails db:migrate
+ 2370  git checkout feature
+ 2371  rails s
+ 2372  gst
+ 2373  git add .
+ 2374  git commit -m "frontend do dashboard"
+ 2375  git rebase origin/main
+ 2376  bundle install
+ 2377  rails db:migrate
+ 2378  rails s
+ 2379  yarn install
+ 2380  yarn build --watch
+ 2381  git add .
+ 2382  git commit -m "frontend do dashboard2"
+ 2383  git push origin feature
+ 2384  git checkout main
+ 2385  git pull origin main
+ 2386  bundle install
+ 2387  rails db :migrate
+ 2388  git checkout -b seed
+ 2389  gem install faker
+ 2390  bundle install
+ 2391  rails db:seed
+ 2392  rails c
+ 2393  rails db:migrate:reset
+ 2394  rails db:seed
+ 2395  rails c
+ 2396  git status
+ 2397  git add .
+ 2398  rails db:seed
+ 2399  git status
+ 2400  git add .
+ 2401  git commit -m"seed"
+ 2402  git push origin seed
+ 2403  rails c
+ 2404  git checkout main
+ 2405  git pull origin main
+ 2406  bundle install
+ 2407  rails db :migrate
+ 2408  rails db:migrate
+ 2409  rails s
+ 2410  bundle install
+ 2411  rails db:migrate db:seed
+ 2412  git checkout main
+ 2413  git pull origin main
+ 2414  bundle install
+ 2415  rails db:migrate:reset db:seed
+ 2416  rails s
+ 2417  rails db:migrate:reset db:seed
+ 2418  git status
+ 2419  git pull origin main
+ 2420  bundle install
+ 2421  yarn install
+ 2422  rails db:migrate:reset db:seed
+ 2423  rails s
+ 2424  git checkout -b edit_pundit
+ 2425  git add .
+ 2426  git commit -m "edicao do pundit"
+ 2427  git checkout main
+ 2428  git pull origin main
+ 2429  git checkout -
+ 2430  git merge main
+ 2431  git push origin edit_pundit
+ 2432  git checkout main
+ 2433  git pull main
+ 2434  git pull
+ 2435  git pull origin main
+ 2436  git checkout -b develop
+ 2437  git push
+ 2438  touch oi.txt
+ 2439  git add .
+ 2440  git commit -m "criar txt"
+ 2441  git push
+ 2442  git pull
+ 2443  git checkout -b feature/delete-oi
+ 2444  git checkout -b feature/oi
+ 2445  git remote -v
+ 2446  git remote prune prigin
+ 2447  git remote prune origin
+ 2448  git checkout -b feature/oi
+ 2449  git checkout -b feature/outra
+ 2450  git checkout -b outra
+ 2451  rm oi.txt
+ 2452  git add .
+ 2453  git commit -m "remove"
+ 2454  git push origin outra
+ 2455  git checkout develop
+ 2456  git pull
+ 2457  git checkout -b feature/modal
+ 2458  git checkout -b modal
+ 2459  bundle install
+ 2460  rails db:migrate
+ 2461* rails s
