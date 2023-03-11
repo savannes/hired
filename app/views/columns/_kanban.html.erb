@@ -1,22 +1,32 @@
 <!-- Masthead -->
-<header class="masthead">
+<div data-controller="search">
 
-	<div class="boards-menu">
-		<div class="board-search">
-			<input type="search" class="board-search-input" aria-label="Board Search">
-			<i class="fas fa-search search-icon" aria-hidden="true"></i>
-		</div>
-	</div>
+  <header class="masthead">
 
-	<div class="user-settings">
-		<a class="user-settings-btn" aria-label="Create" data-action="click->add_a_list#add_a_list">
-			<i class="fas fa-plus" aria-hidden="true"></i>
-			  <i class="fa-solid fa-list"></i>
-		</a>
-	</div>
+    <div class="boards-menu">
 
-</header>
-<!-- End of masthead -->
+      <button class="boards-btn btn-cl"><i class="fab fa-trello boards-btn-icon"></i>HIRED</button>
+
+      <div class="board-search">
+        <input type="search" class="board-search-input" aria-label="Board Search" data-search-target="input" data-action="input->search#search">
+        <i class="fas fa-search search-icon" aria-hidden="true"></i>
+      </div>
+      <div>
+        <%= select_tag(:role, options_for_select(Job::ROLE), {data: { action: "change->search#searchRole" }, prompt: "Filter role"}) %>
+      </div>
+    </div>
+
+    <div class="user-settings">
+
+      <a class="user-settings-btn" aria-label="Create" data-action="click->add_a_list#add_a_list">
+        <i class="fas fa-plus" aria-hidden="true"></i>
+        Add a list
+      </a>
+
+    </div>
+
+  </header>
+  <!-- End of masthead -->
 
 <!-- Lists container -->
 <br>
@@ -44,6 +54,8 @@
           </div>
       <% end %>
     </section>
+  </div>
+  <!-- End of lists container -->
 </div>
 
 
