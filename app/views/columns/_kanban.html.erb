@@ -42,7 +42,7 @@
             <ul id="list-<%= column.id %>" class="list-items">
               <% column.jobs.order(:position).each do |job| %>
                 <%= link_to edit_job_path(job), id: job.id, column: column.id, class: "list-item" do %>
-                  <li>
+                  <li data-search-target="cards" data-keywords="<%= job.search_fields%>" data-role="<%= job.role%>">
                       <h3>Empresa: <%= job.company %> </h3>
                       <h3>Status: <%= job.status %> </h3>
                       <h3>Salário: R$ <%= job.salary %> </h3>
