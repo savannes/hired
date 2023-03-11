@@ -7,4 +7,8 @@ class Job < ApplicationRecord
   def status
     column.name
   end
+
+  def search_fields
+    "#{company} #{description}".downcase
+  end
 end
