@@ -66,6 +66,13 @@ class JobsController < ApplicationController
     end
   end
 
+  def move
+    @job = Job.find(params[:id])
+    authorize @job
+    @job.update(column: params[:column])
+    redirect_to columns_path, notice: "Successfully moved"
+  end
+
   private
 
   def job_params

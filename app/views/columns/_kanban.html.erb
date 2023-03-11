@@ -20,18 +20,18 @@
 
 <!-- Lists container -->
 <br>
-<div style="width: 100%" data-controller="job">
+<div style="width: 100%">
     <section class="lists-container">
 
       <% columns.each do |column| %>
-          <div class="list" data-controller="job">
+          <div class="list" id="<%= column.id %>">
               <%= link_to new_column_job_path(column), class: "ml-25" do %>
                 <i class="fas fa-regular fa-square-caret-down fa-2x"></i>
               <% end %>
             <h3 class="list-title"><%= column.name %></h3>
-            <ul class="list-items" data-controller="sortable" >
+            <ul id="list-<%= column.id %>" class="list-items">
               <% column.jobs.each do |job| %>
-                <%= link_to edit_job_path(job) do %>
+                <%= link_to edit_job_path(job), id: job.id, column: column.id, class: "list-item" do %>
                   <li>
                       <h3>Empresa: <%= job.company %> </h3>
                       <h3>Status: <%= job.status %> </h3>
@@ -45,6 +45,58 @@
       <% end %>
     </section>
 </div>
+
+
+<script>
+    let items = document.getElementsByClassName("list-item");
+    let clickedTarget = null;
+    let droppedTarget = null;
+    
+    for (item of items) {
+      item.addEventListener("mousedown", (event) => {
+        event.preventDefault();
+        const clickedItem = event.target.parentElement.parentElement;
+
+        if (clickedItem.tagName == "A" && !clickedTarget) {
+          droppedTarget = null;
+          clickedTarget = clickedItem;
+        }
+      });
+
+      document.addEventListener("mouseup", (event) => {
+        let targetList = event.target;
+        let foundParent = false;
+
+        while (!foundParent) {
+          try {
+            targetList.tagName;
+          } catch (error) {
+            break;
+          }
+          
+          if (targetList.tagName == "DIV" && targetList.className == "list") {
+            foundParent = true;
+          } else {
+            try {
+              targetList = targetList.parentElement;
+            } catch (error) {
+              break;
+            }
+          }
+        }
+
+        if (foundParent && !droppedTarget && clickedTarget) {
+          droppedTarget = targetList;
+          const droppedColumn = document.getElementById(`list-${targetList.id}`);
+          const oldList = clickedTarget.parentElement;
+
+          droppedColumn.appendChild(clickedTarget);
+          clickedTarget = null;
+        }
+      });
+    }
+</script>
+
 <!-- End of lists container -->
 
 

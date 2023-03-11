@@ -17,24 +17,22 @@ export default class extends Controller {
   // }
 
   connect() {
-    super.connect()
-    console.log('Do what you want here.')
-    Sortable.create(this.element, {
-      swapThreshold: 1,
-      swap: true, // Enable swap plugin
-	    swapClass: 'highlight', // The class applied to the hovered swap item
-      ghostClass: "ghost",
-      animation: 150,
-      direction: "both",
-      onEnd: (event) => {
-        if (event.to.id === "right-column") {
-          // The item was dropped in the right column
-          const item = event.item;
-          const rightColumn = document.getElementById("right-column");
-          rightColumn.appendChild(item);
-        }
-      }
-    });
+    // Sortable.create(this.element, {
+    //   swapThreshold: 1,
+    //   swap: true, // Enable swap plugin
+	  //   swapClass: 'highlight', // The class applied to the hovered swap item
+    //   ghostClass: "ghost",
+    //   animation: 150,
+    //   direction: "both",
+    //   onEnd: (event) => {
+    //     if (event.to.id === "right-column") {
+    //       // The item was dropped in the right column
+    //       const item = event.item;
+    //       const rightColumn = document.getElementById("right-column");
+    //       rightColumn.appendChild(item);
+    //     }
+    //   }
+    // });
   }
 }
 
