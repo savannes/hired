@@ -58,6 +58,9 @@ class JobsController < ApplicationController
   def create
     @job = Job.new(job_params)
     @job.column = @column
+    last_job_position = Job.where(column: @column)&.maximum(:position)
+    last_job_position ||= 0
+    @job.position = last_job_position + 1
     authorize @job
     if @job.save
       redirect_to columns_path, notice: "Successfully created"
@@ -67,7 +70,6 @@ class JobsController < ApplicationController
   end
 
   def move
-    puts "TO ENTRANDO"
     @job = Job.find(params[:id])
     authorize @job
     @job.update(column_id: params[:column_id])
