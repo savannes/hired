@@ -7,3 +7,5 @@ import { application } from "./application"
 import JobController from "./job_controller"
 application.register("job", JobController)
 
+import SearchController from "./search_controller"
+application.register("search", SearchController)
