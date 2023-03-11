@@ -33,7 +33,6 @@
               <% column.jobs.order(:position).each do |job| %>
                 <%= link_to edit_job_path(job), id: job.id, column: column.id, class: "list-item" do %>
                   <li>
-                      <h3>Position: <%= job.position %></h3>
                       <h3>Empresa: <%= job.company %> </h3>
                       <h3>Status: <%= job.status %> </h3>
                       <h3>Salário: R$ <%= job.salary %> </h3>
@@ -49,11 +48,11 @@
 
 
 <script>
-    let items = document.getElementsByClassName("list-item");
-    let clickedTarget = null;
-    let droppedTarget = null;
+    var items = document.getElementsByClassName("list-item");
+    var clickedTarget = null;
+    var droppedTarget = null;
 
-    const move = (id, columnId) => {
+    var move = (id, columnId) => {
       const url = `/move/${id}`;
       const data = { column_id: columnId };
 
@@ -84,7 +83,10 @@
 
         while (!foundParent) {
           try {
-            targetList.tagName;
+            const tag = targetList.tagName;
+            // if (tag == "LI") {
+            //   const elementHeight = targetList.clientHeight;
+            // }
           } catch (error) {
             break;
           }
