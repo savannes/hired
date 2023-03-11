@@ -67,10 +67,10 @@ class JobsController < ApplicationController
   end
 
   def move
+    puts "TO ENTRANDO"
     @job = Job.find(params[:id])
     authorize @job
-    @job.update(column: params[:column])
-    redirect_to columns_path, notice: "Successfully moved"
+    @job.update(column_id: params[:column_id])
   end
 
   private

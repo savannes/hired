@@ -51,6 +51,20 @@
     let items = document.getElementsByClassName("list-item");
     let clickedTarget = null;
     let droppedTarget = null;
+
+    const move = (id, columnId) => {
+      const url = `/move/${id}`;
+      const data = { column_id: columnId };
+
+      fetch(url, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').content,
+        },
+        body: JSON.stringify(data),
+      })
+    }
     
     for (item of items) {
       item.addEventListener("mousedown", (event) => {
@@ -73,7 +87,7 @@
           } catch (error) {
             break;
           }
-          
+
           if (targetList.tagName == "DIV" && targetList.className == "list") {
             foundParent = true;
           } else {
@@ -91,6 +105,8 @@
           const oldList = clickedTarget.parentElement;
 
           droppedColumn.appendChild(clickedTarget);
+          move(clickedTarget.id, targetList.id)
+          
           clickedTarget = null;
         }
       });
