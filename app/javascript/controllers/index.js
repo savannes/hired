@@ -5,11 +5,7 @@
 import { application } from "./application"
 
 import JobController from "./job_controller"
+application.register("job", JobController)
 
 import ModalController from "./modal_controller"
-
-import { eagerLoadControllersFrom } from "@hotwired/stimulus-loading"
-eagerLoadControllersFrom("controllers", application)
-
-application.register("job", JobController)
 application.register("modal", ModalController)

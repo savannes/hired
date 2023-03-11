@@ -1,0 +1,16 @@
+<div class="container job-new-modal">
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-4 col-xl-6">
+      <%= simple_form_for([@column, @job]) do |f| %>
+      <%= f.input :company %>
+      <%= f.input :role %>
+      <%= f.input :level %>
+      <%= f.input :description %>
+      <%= f.input :job_type %>
+      <%= f.input :salary %>
+      <%= f.input :application_link %>
+      <%= f.button_button t(".submit"), name: "Confirm", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
