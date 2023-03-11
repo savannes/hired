@@ -5,6 +5,7 @@ class Job < ApplicationRecord
   validates :salary, numericality: { only_integer: true }, allow_nil: true
   validates :role, inclusion: { in: ROLE }
   delegate :user, to: :column
+  has_many :calendar_events, dependent: :destroy
 
   def status
     column.name

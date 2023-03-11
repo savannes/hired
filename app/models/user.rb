@@ -6,6 +6,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :columns, dependent: :destroy
   has_many :jobs, through: :columns
+  has_many :calendar_events, through: :jobs
   validates :first_name, :last_name, presence: true
   has_one_attached :avatar
   after_create :build_user_columns
