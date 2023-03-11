@@ -28,8 +28,9 @@ level = ["Junior", "Entry-level"]
 job_type = ["Remote", "On site", "Hybrid"]
 user = [valentina, marina, taisa, luis, savanne]
 
-300.times do
+300.times do |n|
   job = Job.new(
+    position: n,
     company: Faker::Company.name,
     column: Column.all.sample,
     role: roles.sample,
