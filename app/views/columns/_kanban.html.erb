@@ -9,12 +9,10 @@
 	</div>
 
 	<div class="user-settings">
-
 		<a class="user-settings-btn" aria-label="Create" data-action="click->add_a_list#add_a_list">
 			<i class="fas fa-plus" aria-hidden="true"></i>
-			 Add a list
+			  <i class="fa-solid fa-list"></i>
 		</a>
-
 	</div>
 
 </header>
@@ -26,12 +24,12 @@
     <section class="lists-container">
 
       <% columns.each do |column| %>
-          <div class="list" data-controller="job" >
+          <div class="list" data-controller="job">
+              <%= link_to new_column_job_path(column), class: "ml-25" do %>
+                <i class="fas fa-regular fa-square-caret-down fa-2x"></i>
+              <% end %>
             <h3 class="list-title"><%= column.name %></h3>
-
-                  <span><%= link_to "Add Card", new_column_job_path(column) %></span>
-
-            <ul class="list-items" data-job-target="listItems" >
+            <ul class="list-items" data-controller="sortable" >
               <% column.jobs.each do |job| %>
                 <%= link_to edit_job_path(job) do %>
                   <li>
@@ -50,7 +48,7 @@
 <!-- End of lists container -->
 
 
-  Launch static backdrop modal
+  <%# Launch static backdrop modal %>
 
 <!-- Button trigger modal
               <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
