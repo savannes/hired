@@ -11,7 +11,9 @@
         <input type="search" class="board-search-input" aria-label="Board Search" data-search-target="input" data-action="input->search#search">
         <i class="fas fa-search search-icon" aria-hidden="true"></i>
       </div>
-
+      <div>
+        <%= select_tag(:role, options_for_select(Job::ROLE), {data: { action: "change->search#searchRole" }, prompt: "Filter role"}) %>
+      </div>
     </div>
 
     <div class="user-settings">
@@ -36,7 +38,7 @@
           <span><%= link_to "Add Card", new_column_job_path(column) %></span>
           <ul class="list-items" data-job-target="listItems" >
             <% column.jobs.each do |job| %>
-              <li data-search-target="cards" data-keywords="<%= job.search_fields%>">
+              <li data-search-target="cards" data-keywords="<%= job.search_fields%>" data-role="<%= job.role%>">
                 <h3>Empresa: <%= job.company %> </h3>
                 <h3>Status: <%= job.status %> </h3>
                 <h3>Salário: R$ <%= job.salary %> </h3>
