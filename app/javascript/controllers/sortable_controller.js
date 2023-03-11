@@ -5,7 +5,6 @@ export default class extends Controller {
   static targets = ["listItem"]
 
   connect() {
-    
       const items = this.listItemTargets
       // var items = document.getElementsByClassName("list-item");
       var clickedTarget = null;
@@ -44,9 +43,20 @@ export default class extends Controller {
         while (!foundParent) {
           try {
             const tag = targetList.tagName;
-            // if (tag == "LI") {
-            //   const elementHeight = targetList.clientHeight;
-            // }
+            if (tag == "LI") {
+              const element = event.target.getBoundingClientRect();  
+              const cursorPosition = event.clientY - element.top;
+              const elementHeight = targetList.clientHeight;
+              const middle = elementHeight / 2;
+              console.log("middle", middle);
+              console.log("cursorPosition", cursorPosition);
+              console.log("elementHeight", elementHeight);
+
+              if (cursorPosition >= middle)
+                console.log("bottom");
+              else
+                console.log("top");
+            }
           } catch (error) {
             break;
           }
