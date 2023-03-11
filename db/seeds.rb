@@ -30,8 +30,9 @@ user = [valentina, marina, taisa, luis, savanne]
 
 User.all.each do |user|
   user.columns.each do |column|
-    rand(5..20).times do
+    rand(5..20).times do |n|
       job = Job.new(
+        position: n,
         company: Faker::Company.name,
         column: column,
         role: roles.sample,

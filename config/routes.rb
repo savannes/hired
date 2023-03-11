@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :columns, only: %i[new index update], shallow: true do
     resources :jobs
   end
+
+  patch "move/:id", to: "jobs#move", as: "move_job"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

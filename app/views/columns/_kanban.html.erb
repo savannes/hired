@@ -1,38 +1,45 @@
 <!-- Masthead -->
-<header class="masthead">
+<div data-controller="search">
 
-	<div class="boards-menu">
-		<div class="board-search">
-			<input type="search" class="board-search-input" aria-label="Board Search">
-			<i class="fas fa-search search-icon" aria-hidden="true"></i>
-		</div>
-	</div>
+  <header class="masthead">
 
-	<div class="user-settings">
-		<a class="user-settings-btn" aria-label="Create" data-action="click->add_a_list#add_a_list">
-			<i class="fas fa-plus" aria-hidden="true"></i>
-			  <i class="fa-solid fa-list"></i>
-		</a>
-	</div>
+    <div class="boards-menu">
 
-</header>
-<!-- End of masthead -->
+      <button class="boards-btn btn-cl"><i class="fab fa-trello boards-btn-icon"></i>HIRED</button>
+
+      <div class="board-search">
+        <input type="search" class="board-search-input" aria-label="Board Search" data-search-target="input" data-action="input->search#search">
+        <i class="fas fa-search search-icon" aria-hidden="true"></i>
+      </div>
+      <div>
+        <%= select_tag(:role, options_for_select(Job::ROLE), {data: { action: "change->search#searchRole" }, prompt: "Filter role"}) %>
+      </div>
+    </div>
+
+    <div class="user-settings">
+      <a class="user-settings-btn" aria-label="Create" data-action="click->add_a_list#add_a_list">
+        <i class="fas fa-plus" aria-hidden="true"></i>
+          <i class="fa-solid fa-list"></i>
+      </a>
+    </div>
+
+  </header>
+  <!-- End of masthead -->
 
 <!-- Lists container -->
 <br>
-<div style="width: 100%" data-controller="job">
+<div style="width: 100%">
     <section class="lists-container">
-
       <% columns.each do |column| %>
-          <div class="list" data-controller="job">
+          <div class="list" id="<%= column.id %>">
               <%= link_to new_column_job_path(column), class: "ml-25" do %>
                 <i class="fas fa-regular fa-square-caret-down fa-2x"></i>
               <% end %>
             <h3 class="list-title"><%= column.name %></h3>
-            <ul class="list-items" data-controller="sortable" >
-              <% column.jobs.each do |job| %>
-                <%= link_to edit_job_path(job) do %>
-                  <li>
+            <ul id="list-<%= column.id %>" class="list-items" data-controller="sortable">
+              <% column.jobs.order(:position).each do |job| %>
+                <%= link_to edit_job_path(job), id: job.id, column: column.id, class: "list-item", data: { sortable_target: "listItem" } do %>
+                  <li data-search-target="cards" data-keywords="<%= job.search_fields%>" data-role="<%= job.role%>">
                       <h3>Empresa: <%= job.company %> </h3>
                       <h3>Status: <%= job.status %> </h3>
                       <h3>Salário: R$ <%= job.salary %> </h3>
@@ -44,7 +51,11 @@
           </div>
       <% end %>
     </section>
+  </div>
+  <!-- End of lists container -->
 </div>
+
+
 <!-- End of lists container -->
 
 
