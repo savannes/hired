@@ -17,12 +17,10 @@
     </div>
 
     <div class="user-settings">
-
       <a class="user-settings-btn" aria-label="Create" data-action="click->add_a_list#add_a_list">
         <i class="fas fa-plus" aria-hidden="true"></i>
-        Add a list
+          <i class="fa-solid fa-list"></i>
       </a>
-
     </div>
 
   </header>
@@ -32,16 +30,15 @@
 <br>
 <div style="width: 100%">
     <section class="lists-container">
-
       <% columns.each do |column| %>
           <div class="list" id="<%= column.id %>">
               <%= link_to new_column_job_path(column), class: "ml-25" do %>
                 <i class="fas fa-regular fa-square-caret-down fa-2x"></i>
               <% end %>
             <h3 class="list-title"><%= column.name %></h3>
-            <ul id="list-<%= column.id %>" class="list-items">
+            <ul id="list-<%= column.id %>" class="list-items" data-controller="sortable">
               <% column.jobs.order(:position).each do |job| %>
-                <%= link_to edit_job_path(job), id: job.id, column: column.id, class: "list-item" do %>
+                <%= link_to edit_job_path(job), id: job.id, column: column.id, class: "list-item", data: { sortable_target: "listItem" } do %>
                   <li data-search-target="cards" data-keywords="<%= job.search_fields%>" data-role="<%= job.role%>">
                       <h3>Empresa: <%= job.company %> </h3>
                       <h3>Status: <%= job.status %> </h3>
@@ -58,75 +55,6 @@
   <!-- End of lists container -->
 </div>
 
-
-<script>
-    var items = document.getElementsByClassName("list-item");
-    var clickedTarget = null;
-    var droppedTarget = null;
-
-    var move = (id, columnId) => {
-      const url = `/move/${id}`;
-      const data = { column_id: columnId };
-
-      fetch(url, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').content,
-        },
-        body: JSON.stringify(data),
-      })
-    }
-    
-    for (item of items) {
-      item.addEventListener("mousedown", (event) => {
-        event.preventDefault();
-        const clickedItem = event.target.parentElement.parentElement;
-
-        if (clickedItem.tagName == "A" && !clickedTarget) {
-          droppedTarget = null;
-          clickedTarget = clickedItem;
-        }
-      });
-
-      document.addEventListener("mouseup", (event) => {
-        let targetList = event.target;
-        let foundParent = false;
-
-        while (!foundParent) {
-          try {
-            const tag = targetList.tagName;
-            // if (tag == "LI") {
-            //   const elementHeight = targetList.clientHeight;
-            // }
-          } catch (error) {
-            break;
-          }
-
-          if (targetList.tagName == "DIV" && targetList.className == "list") {
-            foundParent = true;
-          } else {
-            try {
-              targetList = targetList.parentElement;
-            } catch (error) {
-              break;
-            }
-          }
-        }
-
-        if (foundParent && !droppedTarget && clickedTarget) {
-          droppedTarget = targetList;
-          const droppedColumn = document.getElementById(`list-${targetList.id}`);
-          const oldList = clickedTarget.parentElement;
-
-          droppedColumn.appendChild(clickedTarget);
-          move(clickedTarget.id, targetList.id)
-          
-          clickedTarget = null;
-        }
-      });
-    }
-</script>
 
 <!-- End of lists container -->
 
