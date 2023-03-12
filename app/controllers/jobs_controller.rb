@@ -48,6 +48,7 @@ class JobsController < ApplicationController
   def show
     @job = Job.find(params[:id])
     authorize @job
+    render json: @job
   end
 
   def new

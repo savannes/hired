@@ -1,0 +1,18 @@
+<li id="<%=job.id%>" column="<%= column.id %>" class="list-item text-decoration-none">
+  <h5><%= job.company %> </h5>
+  <h6><%= job.role %> </h6>
+  <h6>R$ <%= job.salary %> </h6>
+  <button type="button" class="add-card-button"
+    data-bs-toggle="modal"
+    data-bs-target="#jobModal"
+    data-bs-job-id="<%=job.id%>"
+    data-bs-job-company="<%=job.company%>"
+    data-bs-job-salary="<%=job.salary%>"
+    data-bs-job-role="<%=job.role%>"
+    data-bs-job-level="<%=job.level%>"
+    data-bs-job-description="<%=job.description%>"
+    data-bs-job-job-type="<%=job.job_type%>"
+    data-bs-job-application-link="<%=job.application_link%>"
+    data-bs-route="edit">Edit Card
+  </button>
+</li>

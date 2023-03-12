@@ -36,16 +36,11 @@
                 <i class="fas fa-regular fa-square-caret-down fa-2x"></i>
               <% end %>
             <h3 class="list-title"><%= column.name %></h3>
-            <ul id="list-<%= column.id %>" class="list-items" data-controller="sortable">
+
+            <button type="button" id="<%=column.id%>" class="add-card-button" data-bs-toggle="modal" data-bs-target="#jobModal" data-bs-column="<%=column.id%>" data-bs-column-name="<%=column.name%>" data-bs-route="add">Add Card</button>
+            <ul id="list-<%= column.id %>" class="list-items">
               <% column.jobs.order(:position).each do |job| %>
-                <%= link_to edit_job_path(job), id: job.id, column: column.id, class: "list-item", data: { sortable_target: "listItem" } do %>
-                  <li data-search-target="cards" data-keywords="<%= job.search_fields%>" data-role="<%= job.role%>">
-                      <h3>Empresa: <%= job.company %> </h3>
-                      <h3>Status: <%= job.status %> </h3>
-                      <h3>Salário: R$ <%= job.salary %> </h3>
-                      <h3>-------------------</h3>
-                  </li>
-                <% end %>
+                <%= render "jobs/job", job: job, column: column %>
               <% end %>
             </ul>
           </div>
@@ -56,28 +51,71 @@
 </div>
 
 
-<!-- End of lists container -->
-
-
-  <%# Launch static backdrop modal %>
-
-<!-- Button trigger modal
-              <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-              </button> -->
-<!-- Modal NEW
-<div class="modal fade" id="staticNEW" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="jobModal" tabindex="-1" aria-labelledby="jobModalLabel" aria-hidden="true" data-controller="modal">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <h1 data-modal-target="title" class="modal-title fs-5" id="jobModalLabel">New Job</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+          <div class="row justify-content-center">
+            <div class="col-12 col-sm-4 col-xl-6">
+              <%= simple_form_for(:job, url:"/columns/:column_id/jobs", data: { modal_target: "form"}) do |f| %>
+                <%= f.input :company %>
+                <%= f.input :role %>
+                <%= f.input :level %>
+                <%= f.input :description %>
+                <%= f.input :job_type %>
+                <%= f.input :salary %>
+                <%= f.input :application_link %>
+                <%= f.button_button t(".submit"), name: "Confirm", class: "btn btn-flat" %>
+              <% end %>
+            </div>
+          </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
+        <button type="button" class="btn btn-primary">Send message</button>
       </div>
     </div>
   </div>
-</div> -->
+</div>
+
+
+
+
+<!--script
+<script>
+  var modal = document.querySelector(".my-modal");
+  var modalTitle = document.querySelector(".my-modal-title");
+  var jobNewModal = document.querySelector(".job-new-modal");
+  var jobEditModal = document.querySelector(".job-edit-modal");
+  var buttons = document.getElementsByClassName("add-card-button");
+  var items = document.getElementsByClassName("list-item");
+
+  var toggleModal = (modalBody) => {
+    modalBody.style.display = modalBody.style.display === "block" ? "none" : "block";
+    modal.style.display = modal.style.display === "block" ? "none" : "block";
+  }
+
+  for (const button of buttons) {
+    button.addEventListener("click", () => {
+      modalTitle.textContent = "Create Job";
+      toggleModal(jobNewModal);
+    })
+  }
+
+  for (const item of items) {
+    item.addEventListener("click", () => {
+      toggleModal(jobEditModal);
+
+      fetch(`/jobs/${item.id}`)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+        });
+    })
+  }
+</script>
+-->
