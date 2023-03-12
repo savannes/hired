@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   get "dashboard", to: "dashboard#show"
+  get "calendar", to: "calendars#index"
 end
