@@ -32,13 +32,10 @@
     <section class="lists-container">
       <% columns.each do |column| %>
           <div class="list" id="<%= column.id %>">
-              <%= link_to new_column_job_path(column), class: "ml-25" do %>
-                <i class="fas fa-regular fa-square-caret-down fa-2x"></i>
-              <% end %>
             <h3 class="list-title"><%= column.name %></h3>
 
-            <button type="button" id="<%=column.id%>" class="add-card-button" data-bs-toggle="modal" data-bs-target="#jobModal" data-bs-column="<%=column.id%>" data-bs-column-name="<%=column.name%>" data-bs-route="add">Add Card</button>
-            <ul id="list-<%= column.id %>" class="list-items">
+            <button type="button" id="<%=column.id%>" class="add-card-button" data-bs-toggle="modal" data-bs-target="#jobModal" data-bs-column="<%=column.id%>" data-bs-column-name="<%=column.name%>" data-bs-route="add">Add a <i class="fa-regular fa-rectangle-list"></i></button>
+            <ul id="list-<%= column.id %>" class="list-items" data-controller="sortable">
               <% column.jobs.order(:position).each do |job| %>
                 <%= render "jobs/job", job: job, column: column %>
               <% end %>
@@ -76,7 +73,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+        <%# <button type="button" class="btn btn-primary">Send message</button> %>
       </div>
     </div>
   </div>

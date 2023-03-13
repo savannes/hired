@@ -1,4 +1,20 @@
 /* Base styles */
+.add-card-button {
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+  font: inherit;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.alert-info {
+  --bs-alert-color: #664f24;
+  --bs-alert-bg: rgb(62 130 233 / 15%);
+  --bs-alert-border-color: #ffeece;
+}
+
 li {
   list-style-type: none;
 }
