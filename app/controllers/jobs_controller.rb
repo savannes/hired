@@ -66,7 +66,7 @@ class JobsController < ApplicationController
     if @job.save
       redirect_to columns_path, notice: "Successfully created"
     else
-      render :new, status: :unprocessable_entity
+      render "modals/job_new", status: :unprocessable_entity
     end
   end
 
