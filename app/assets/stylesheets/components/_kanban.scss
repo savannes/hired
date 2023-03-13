@@ -1,4 +1,12 @@
 /* Base styles */
+.role-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  cursor: grab;
+}
+
 .alert-info {
   --bs-alert-color: #664f24;
   --bs-alert-bg: rgb(62 130 233 / 15%);
@@ -69,23 +77,23 @@ li {
 }
 
 .board-search-input {
-  height: 3rem;
+  height: 1.3rem;
   border:rgba(0, 0, 0, 0.3);
-  border-radius: 0.3rem;
-  background-color: #e0e0e0;
-  width: 100%;
+  // border-radius: 0.3rem;
+  background-color: #fcfcfc;
+  // width: 100%;
   padding: 0 3rem 0 1rem;
-  color: #000000;
+  // color: #000000;
 }
 
 
 .search-icon {
-  font-size: 1.5rem;
+  font-size: 1rem;
   position: absolute;
   top: 50%;
   right: 0.8rem;
   transform: translateY(-50%) rotate(90deg);
-  color: #fff;
+  color: #000000;
 }
 
 .logo {
