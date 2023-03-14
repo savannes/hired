@@ -23,7 +23,7 @@ puts"Users Created"
 
 puts "Creating fake Jobs"
 
-roles = ["Front-end Web Developer", "Back-end Web Developer", "Full Stack Web Developer"]
+roles = ["Full Stack", "Front-End", "Back-End"]
 level = ["Junior", "Entry-level"]
 job_type = ["Remote", "On site", "Hybrid"]
 user = [valentina, marina, taisa, luis, savanne]

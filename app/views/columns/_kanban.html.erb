@@ -7,6 +7,8 @@
 
       <div class="role-filter">
         <%= select_tag(:role, options_for_select(Job::ROLE), {data: { action: "change->search#searchRole" }, prompt: "Filter role"}) %>
+        <input id="salary" type="range" min="0" max="10000" step="any" />
+        <p>Salary <output id="value"></output></p>
       </div>
 
       <div class="board-search">
@@ -14,25 +16,6 @@
         <i class="fas fa-search search-icon" aria-hidden="true"></i>
       </div>
       
-      <div>
-        <%= select_tag(:role, options_for_select(Job::ROLE), {data: { action: "change->search#searchRole" }, prompt: "Filter role"}) %>
-      </div>
-      <p>Salary settings:</p>
-
-      <div class= "text-white" >
-        <input id="salary" type="range" min="0" max="10000" step="any" />
-        <p>Salary <output id="value"></output></p>
-      </div>
-      <script>
-        const value = document.querySelector("#value")
-        const input = document.querySelector("#salary")
-        value.textContent = input.value
-        input.addEventListener("input", (event) => {
-          value.textContent = event.target.value
-        })
-      </script>
-    </div>
-
     </div>
 
   </header>
