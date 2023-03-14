@@ -1,0 +1,36 @@
+.my-modal{
+  display:none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.add-card-button-top {
+  width: 85px;
+  margin-left: 10px;
+  background: none;
+}
+
+.add-card-button-top:hover {
+  // color: #838c91;
+  background-color: #c2c2c2; 
+  color: black; 
+  transition-duration: 0.8s;
+}
+
+.add-card-button-edit {
+  width: 35px;
+  background: none;
+  border: none;
+  color: #838c91;
+}
+
+.add-card-button-edit:hover {
+  background-color: #c2c2c2; 
+  color: black; 
+  transition-duration: 0.8s;
+}
+
+
+

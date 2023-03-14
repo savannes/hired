@@ -21,25 +21,38 @@ savanne = User.create!(first_name: "Savanne", last_name: "Soares", email: "savan
 
 puts"Users Created"
 
-puts "Creating 300 fake Jobs"
+puts "Creating fake Jobs"
 
 roles = ["Front-end Web Developer", "Back-end Web Developer", "Full Stack Web Developer"]
 level = ["Junior", "Entry-level"]
 job_type = ["Remote", "On site", "Hybrid"]
 user = [valentina, marina, taisa, luis, savanne]
 
-300.times do
-  job = Job.new(
-    company: Faker::Company.name,
-    column: Column.all.sample,
-    role: roles.sample,
-    level: level.sample,
-    description: "Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.Paisis, filhis, espiritis santis.Leite de capivaris, leite de mula manquis sem cabeça.Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.",
-    job_type: job_type.sample,
-    salary: rand(800..1950),
-    application_link: Faker::Internet.url
-  )
-  job.save!
+User.all.each do |user|
+  user.columns.each do |column|
+    rand(5..20).times do |n|
+      job = Job.new(
+        position: n,
+        company: Faker::Company.name,
+        column: column,
+        role: roles.sample,
+        level: level.sample,
+        description: "Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.Paisis, filhis, espiritis santis.Leite de capivaris, leite de mula manquis sem cabeça.Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.",
+        job_type: job_type.sample,
+        salary: rand(800..1950),
+        application_link: Faker::Internet.url
+      )
+      job.save!
+      start_date = Time.now + rand(1..13).days + rand(1..13).hours
+      CalendarEvent.create!(
+        job: job,
+        description: Faker::Movie.quote,
+        name: job.company,
+        starts_at: start_date,
+        ends_at: start_date + rand(1..3).hours
+      )
+    end
+  end
 end
 
 #google_dev = Job.create(user: user_valentina, company: "Google", role: "Front-end web developer", level: "Junior", description: "The role will include coding signed off designs into working web page templates in HTML5, CSS and JavaScript and then integrating those into content management systems.", status: 1, job_type: "remote", salary: 4000, application_link: "www.google/jobs")

@@ -10,7 +10,7 @@
 
         <div class="col col-4" style="background-color: transparent; border: none">
 
-          <%= bar_chart Job.group(:column_id).count, library: {backgroundColor: "transparent"}, title: "Status" %>
+          <%= bar_chart current_user.jobs.group(:job_type).count, library: {backgroundColor: "transparent"}, title: "Type" %>
         </div>
 
         <div class="col col-4" style="background-color: transparent; border: none">
@@ -18,8 +18,9 @@
         </div>
 
         <div class="col col-4" style="background-color: transparent; border: none">
-          <%= column_chart current_user.jobs.group(:salary).count, library: {backgroundColor: "transparent"}, title: "Salary" %>
+          <%= column_chart current_user.jobs.group(:level).count, library: {backgroundColor: "transparent"}, title: "Level" %>
         </div>
+
     </div>
 
   </div>

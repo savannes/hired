@@ -9,14 +9,22 @@ class JobsController < ApplicationController
 
   def update
     @job = Job.find(params[:id])
-    @job.update(job_params)
     authorize @job
+    if @job.update(job_params)
+      redirect_to columns_path, notice: "Successfully edited"
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
     @job = Job.find(params[:id])
-    @job.destroy
     authorize @job
+    if @job.destroy
+      redirect_to columns_path, notice: "Successfully deleted"
+    else
+      render :edit, notice: "Can't be deleted"
+    end
   end
 
   def index
@@ -40,6 +48,7 @@ class JobsController < ApplicationController
   def show
     @job = Job.find(params[:id])
     authorize @job
+    render json: @job
   end
 
   def new
@@ -50,12 +59,22 @@ class JobsController < ApplicationController
   def create
     @job = Job.new(job_params)
     @job.column = @column
+    last_job_position = Job.where(column: @column)&.maximum(:position)
+    last_job_position ||= 0
+    @job.position = last_job_position + 1
     authorize @job
-    if @job.save!
-      redirect_to columns_path
+    if @job.save
+      redirect_to columns_path, notice: "Successfully created"
     else
-      render :new
+      redirect_to columns_path, notice: "Revise your fields"
+      # render :new, status: :unprocessable_entity
     end
+  end
+
+  def move
+    @job = Job.find(params[:id])
+    authorize @job
+    @job.update(column_id: params[:column_id])
   end
 
   private
