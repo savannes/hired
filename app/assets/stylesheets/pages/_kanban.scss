@@ -1,3 +1,37 @@
+/* Dark Light Mode */
+.theme {
+  --background: rgb(255, 255, 255);
+}
+
+[data-dark-light-mode-value="dark"] {
+  --primary-color: rgb(150, 65, 255);
+  --primary-variant: #6c63ff;
+  --secondary-color: #03dac5;
+  --on-primary: #000;
+  --on-background: rgba(255, 255, 255, 0.9);
+  --on-background-alt: rgba(66, 66, 66, 0.7);
+  --background: #373434;
+}
+
+.theme {
+  background-color: var(--background);
+}
+
+.theme b-toggle {
+  background-color: var(--on-background-alt);
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid var(--on-background);
+}
+
+.theme b-toggle:hover{
+  color: #f8f004;
+}
+
+.theme b-toggle:focus {
+  outline: none;
+}
+
 .my-modal{
   display:none;
   position: fixed;

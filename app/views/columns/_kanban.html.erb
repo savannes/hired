@@ -19,6 +19,12 @@
     </div>
 
   </header>
+    <div data-controller="dark-light" data-dark-light-mode-value="light"d class="theme p-3">
+      <button data-action="click->dark-light#toggleMode" class="b-toggle">
+        <i class="fa-regular fa-sun"></i>
+      </button>
+
+
   <!-- End of masthead -->
 
 <!-- Lists container -->
@@ -75,40 +81,3 @@
   </div>
 </div>
 
-
-
-
-<!--script
-<script>
-  var modal = document.querySelector(".my-modal");
-  var modalTitle = document.querySelector(".my-modal-title");
-  var jobNewModal = document.querySelector(".job-new-modal");
-  var jobEditModal = document.querySelector(".job-edit-modal");
-  var buttons = document.getElementsByClassName("add-card-button");
-  var items = document.getElementsByClassName("list-item");
-
-  var toggleModal = (modalBody) => {
-    modalBody.style.display = modalBody.style.display === "block" ? "none" : "block";
-    modal.style.display = modal.style.display === "block" ? "none" : "block";
-  }
-
-  for (const button of buttons) {
-    button.addEventListener("click", () => {
-      modalTitle.textContent = "Create Job";
-      toggleModal(jobNewModal);
-    })
-  }
-
-  for (const item of items) {
-    item.addEventListener("click", () => {
-      toggleModal(jobEditModal);
-
-      fetch(`/jobs/${item.id}`)
-        .then(response => response.json())
-        .then(data => {
-          console.log(data);
-        });
-    })
-  }
-</script>
--->
