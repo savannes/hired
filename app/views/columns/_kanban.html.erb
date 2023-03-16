@@ -1,6 +1,6 @@
 <!-- Masthead -->
 <div data-controller="search">
-  
+
   <header class="masthead">
 
     <div class="boards-menu">
@@ -62,21 +62,20 @@
             <div class="col-12 col-sm-4 col-xl-6">
               <%= simple_form_for(:job, url:"/columns/:column_id/jobs", data: { modal_target: "form"}) do |f| %>
                 <%= f.input :company %>
-                <%= f.input :role %>
-                <%= f.input :level %>
+                <%= f.input :role, as: :select, collection: Job::ROLE%>
+                <%= f.input :level, as: :select, collection:['Entry-Level', 'Junior']%>
                 <%= f.input :description %>
-                <%= f.input :job_type %>
+                <%= f.input :job_type, as: :select, collection:['Remote', 'Hybrid', 'On Site']%>
                 <%= f.input :salary %>
                 <%= f.input :application_link %>
-                <%= f.button_button t(".submit"), name: "Confirm", class: "btn btn-flat" %>
+                <%= f.submit "Confirm", class: "btn btn-flat" %>
               <% end %>
             </div>
           </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <%# <button type="button" class="btn btn-primary">Send message</button> %>
-      </div>
+
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <%#link_to "Delete", job_path(job), data:{turbo_method: :delete}, class:"btn btn-secondary"%>
     </div>
   </div>
 </div>
