@@ -5,11 +5,19 @@ export default class extends Controller {
   static values = { mode: String }
 
   connect() {
-    this.modeValueChanged()
+    this.modeValueChanged();
+    const mode = localStorage.getItem("mode") ?? "light";
+    this.modeValue = mode;
   }
 
   toggleMode() {
-    this.modeValue = this.modeValue === "light" ? "dark" : "light"
-    this.modeValueChanged()
+    const mode = localStorage.getItem("mode") ?? "light";
+    localStorage.setItem("mode", mode === "light" ? "dark" : "light");
+    this.modeValue = mode === "light" ? "dark" : "light";
+  }
+
+  modeValueChanged() {
+    this.iconTarget.classList.toggle("fa-sun", this.modeValue === "light");
+    this.iconTarget.classList.toggle("fa-moon", this.modeValue === "dark");
   }
 }
