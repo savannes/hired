@@ -81,11 +81,8 @@ class JobsController < ApplicationController
     else
       @job.update(column_id: target_column, position: new_position)
     end
-  
-    respond_to do |format|
-      format.html { redirect_to your_view_path, notice: "Job was successfully moved." }
-      format.json { render :show, status: :ok, location: @job }
-    end
+
+    render json: { status: :ok }
   end
   
   private

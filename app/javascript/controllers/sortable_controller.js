@@ -1,5 +1,4 @@
 import { Controller } from "@hotwired/stimulus"
-import { ModalController } from "./modal_controller"
 
 // Connects to data-controller="sortable"
 export default class extends Controller {
