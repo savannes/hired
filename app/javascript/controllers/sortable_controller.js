@@ -1,5 +1,4 @@
 import { Controller } from "@hotwired/stimulus"
-import { ModalController } from "./modal_controller"
 
 // Connects to data-controller="sortable"
 export default class extends Controller {
@@ -14,14 +13,14 @@ export default class extends Controller {
       const button = this.buttonTarget;
 
       button.addEventListener("click", this.editJob.bind(this));
-      
+
       var clickedTarget = null;
       var droppedTarget = null;
 
       var move = (id, columnId) => {
         const url = `/move/${id}`;
         const data = { column_id: columnId };
-        
+
         fetch(url, {
           method: "PATCH",
           headers: {
@@ -64,15 +63,15 @@ export default class extends Controller {
 
       clickedTarget = null;
     }
-    
+
       items.forEach((item) => {
         item.addEventListener("mousedown", (event) => {
           event.preventDefault();
           const clickedItem = findParent(event.target, "list-item", (currentElement) => currentElement);
-          
+
           if (clickedItem && !clickedTarget) {
             const clickedButton = findParent(event.target, "button", (currentElement) => currentElement);
-            
+
             if (!clickedButton) {
               // clicked inside the LI, enable move action
               droppedTarget = null;
@@ -97,7 +96,7 @@ export default class extends Controller {
                 // console.log("tag", tag);
                 if (tag == "LI") {
                   // console.log("entrei");
-                  const element = event.target.getBoundingClientRect();  
+                  const element = event.target.getBoundingClientRect();
                   const cursorPosition = event.clientY - element.top;
                   const elementHeight = targetList.clientHeight;
                   const middle = elementHeight / 2;
