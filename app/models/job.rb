@@ -1,6 +1,8 @@
 class Job < ApplicationRecord
   acts_as_list scope: [:column_id]
   ROLE = ["Full Stack", "Front-End", "Back-End"].freeze
+  JOB_TYPE = ["Remote", "On Site", "Hybrid"].freeze
+  LEVEL = ["Entry-Level","Junior", "Pleno", "Senior"].freeze
   belongs_to :column
   validates :company, :role, :level, :status, :job_type, :application_link, presence: true
   validates :salary, numericality: { only_integer: true }, allow_nil: true
