@@ -10,7 +10,7 @@
 
 .alert-info {
   --bs-alert-color: #664f24;
-  --bs-alert-bg: rgb(62 130 233 / 15%);
+  --bs-alert-bg: rgb(62 130 233 / 50%);
   --bs-alert-border-color: #ffeece;
 }
 
@@ -209,6 +209,7 @@ li {
 }
 
 .list {
+  box-shadow: 0 2px 2px 2px #989696;
   flex: 0 0 27rem;
   display: flex;
   flex-direction: column;
