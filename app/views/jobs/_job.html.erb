@@ -1,11 +1,12 @@
-<li id="<%=job.id%>" column="<%= column.id %>" class="list-item text-decoration-none"
+<li id="<%=job.id%>" column="<%= column.id %>" position="<%= job.position %>" class="list-item text-decoration-none"
 data-search-target="cards" data-keywords="<%= job.search_fields%>" data-role="<%= job.role%>"
 data-search-target="cards" data-keywords="<%= job.search_fields%>" data-job_type="<%= job.job_type%>"
 data-sortable-target="listItem">
-  <h5><%= job.company %> </h5>
+  <h4><%= job.company %> </h5>
   <h6><%= job.role %> </h6>
+  <h6><%= job.job_type %> </h6>
   <h6>R$ <%= job.salary %> </h6>
-  <button type="button" class="add-card-button-edit float-end"
+  <button type="button" class="add-card-button-edit float-end" data-action="click->sortable#editJob" data-sortable-target="button"
     data-bs-toggle="modal"
     data-bs-target="#jobModal"
     data-bs-job-id="<%=job.id%>"
@@ -18,4 +19,8 @@ data-sortable-target="listItem">
     data-bs-job-application-link="<%=job.application_link%>"
     data-bs-route="edit"><i class="fa-sharp fa-regular fa-pen-to-square fa-sm"></i>
   </button>
+  <%=link_to job_path(job), data:{turbo_method: :delete} do%>
+  <i class="fa-solid fa-trash-can float-end"></i>
+  <%end%>
 </li>
+

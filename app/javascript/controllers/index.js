@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import DarkLightController from "./dark_light_controller"
+application.register("dark-light", DarkLightController)
+
 import ModalController from "./modal_controller"
 application.register("modal", ModalController)
 
@@ -12,4 +15,3 @@ application.register("search", SearchController)
 
 import SortableController from "./sortable_controller"
 application.register("sortable", SortableController)
-
