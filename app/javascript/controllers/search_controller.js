@@ -36,4 +36,14 @@ export default class extends Controller {
       }
     })
   }
+  searchLevel(event) {
+    this.resetSearch();
+    const cards = this.cardsTargets;
+    const query = event.target.value;
+    cards.forEach((card) => {
+      if (card.dataset.level !== query && query !== "") {
+        card.classList.add("d-none")
+      }
+    })
+  }
 }
