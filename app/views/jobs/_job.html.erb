@@ -1,6 +1,7 @@
 <li id="<%=job.id%>" column="<%= column.id %>" position="<%= job.position %>" class="list-item text-decoration-none"
 data-search-target="cards" data-keywords="<%= job.search_fields%>" data-role="<%= job.role%>"
 data-sortable-target="listItem">
+  <h4><%= job.position %></h4>
   <h5><%= job.company %> </h5>
   <h6><%= job.role %> </h6>
   <h6>R$ <%= job.salary %> </h6>

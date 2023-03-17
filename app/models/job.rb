@@ -1,4 +1,5 @@
 class Job < ApplicationRecord
+  acts_as_list scope: [:column_id]
   ROLE = ["Full Stack", "Front-End", "Back-End"].freeze
   belongs_to :column
   validates :company, :role, :level, :status, :job_type, :application_link, presence: true
