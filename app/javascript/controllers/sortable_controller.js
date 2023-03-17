@@ -17,10 +17,10 @@ export default class extends Controller {
       var clickedTarget = null;
       var droppedTarget = null;
 
-      var move = (id, columnId) => {
+      var move = (id, columnId, position) => {
         const url = `/move/${id}`;
-        const data = { column_id: columnId };
-
+        const data = { column_id: columnId, position };
+        
         fetch(url, {
           method: "PATCH",
           headers: {
@@ -54,12 +54,13 @@ export default class extends Controller {
       droppedTarget = targetList;
       const droppedColumn = document.getElementById(`list-${targetList.id}`);
       const index = Array.from(droppedColumn.children).indexOf(targetElement);
+      console.log(index);
 
       const oldList = clickedTarget;
       const newIndex = position === "top" ? index : index + 1;
 
       droppedColumn.insertBefore(clickedTarget, droppedColumn.children[newIndex]);
-      move(clickedTarget.id, targetList.id)
+      move(clickedTarget.id, targetList.id, newIndex)
 
       clickedTarget = null;
     }

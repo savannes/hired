@@ -1,4 +1,5 @@
 class Job < ApplicationRecord
+  acts_as_list scope: [:column_id]
   ROLE = ["Full Stack", "Front-End", "Back-End"].freeze
   JOB_TYPE = ["Remote", "On Site", "Hybrid"].freeze
   LEVEL = ["Entry-Level","Junior", "Pleno", "Senior"].freeze
