@@ -1,5 +1,6 @@
 /* Base styles */
 .role-filter {
+  z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,13 +34,12 @@ li {
 /* Masthead */
 
 .masthead {
-  height: 18vh;
   flex-basis: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 0.8rem;
-  padding-bottom: 10px;
+  padding-top: 24px;
+  padding-bottom: 12px;
   background-color: #050505;
 }
 
