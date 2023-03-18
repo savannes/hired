@@ -1,3 +1,10 @@
+.container-calendar {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-top: 100px;
+}
 .simple-calendar {
   table {
     min-height: 80vh;
