@@ -3,9 +3,9 @@
   <div class="masthead">
     <div class="boards-menu">
       <div class="role-filter">
-        <%= select_tag(:role, options_for_select(Job::ROLE), {data: { action: "change->search#searchRole" }, prompt: "Filter role"}) %>
-        <%= select_tag(:level, options_for_select(Job::LEVEL), {data: { action: "change->search#searchInputLevel" }, prompt: "Filter level"}) %>
-        <%= select_tag(:job_type, options_for_select(Job::JOB_TYPE), {data: { action: "change->search#searchJobType" }, prompt: "Filter job_type"}) %>
+        <%= select_tag(:role, options_for_select(Job::ROLE), {data: { action: "change->search#searchRole" }, prompt: "Filter Role"}) %>
+        <%= select_tag(:level, options_for_select(Job::LEVEL), {data: { action: "change->search#searchInputLevel" }, prompt: "Filter Level"}) %>
+        <%= select_tag(:job_type, options_for_select(Job::JOB_TYPE), {data: { action: "change->search#searchJobType" }, prompt: "Filter Type"}) %>
       </div>
       <div class="board-search">
         <input type="search" class="board-search-input" placeholder="Input search here..." aria-label="Board Search" data-search-target="input" data-action="input->search#search">
@@ -15,24 +15,54 @@
   </div>
     <div data-controller="dark-light" data-dark-light-mode-value="light" class="theme">
       <button data-action="click->dark-light#toggleMode" class="b-toggle">
-        <i data-dark-light-target="icon" class="fa-regular fa-sun"></i>
-      </button>    
+        <i data-dark-light-target="icon" class="bi bi-brightness-high"></i>
+
+      </button>
+
+
   <!-- End of masthead -->
-  <!-- Lists container -->
-  <br>
-  <div style="width: 100%">
-      <section class="lists-container">
-        <% columns.each do |column| %>
-            <div class="list" id="<%= column.id %>">
-              <h3 class="list-title"><%= column.name %><button type="button" id="<%=column.id%>"
-              class="add-card-button-top float-end" data-bs-toggle="modal" data-bs-target="#jobModal"
-              data-bs-column="<%=column.id%>" data-bs-column-name="<%=column.name%>"
-              data-bs-route="add"><i class="fa-solid fa-plus"></i></button></h3>
-              <ul id="list-<%= column.id %>" class="list-items" data-controller="sortable">
-                <% column.jobs.order(:position).each do |job| %>
-                  <%= render "jobs/job", job: job, column: column %>
-                <% end %>
-              </ul>
+
+<!-- Lists container -->
+<br>
+<div style="width: 100%">
+    <section class="lists-container">
+      <% columns.each do |column| %>
+          <div class="list" id="<%= column.id %>">
+            <h3 class="list-title"><%= column.name %><button type="button" id="<%=column.id%>"
+            class="add-card-button-top float-end" data-bs-toggle="modal" data-bs-target="#jobModal"
+            data-bs-column="<%=column.id%>" data-bs-column-name="<%=column.name%>"
+            data-bs-route="add"><i class="bi bi-plus-square"></i></button></h3>
+            <ul id="list-<%= column.id %>" class="list-items" data-controller="sortable">
+              <% column.jobs.order(:position).each do |job| %>
+                <%= render "jobs/job", job: job, column: column %>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+    </section>
+  </div>
+  <!-- End of lists container -->
+</div>
+<div class="modal fade" id="jobModal" tabindex="-1" aria-labelledby="jobModalLabel" aria-hidden="true" data-controller="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 data-modal-target="title" class="modal-title fs-5" id="jobModalLabel">New Job</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <div class="row justify-content-center">
+            <div class="col-12 col-sm-4 col-xl-6">
+              <%= simple_form_for(:job, url:"/columns/:column_id/jobs", data: { modal_target: "form"}) do |f| %>
+                <%= f.input :company %>
+                <%= f.input :role, as: :select, collection: Job::ROLE%>
+                <%= f.input :level, as: :select, collection:['Entry-Level', 'Junior', 'Pleno', 'Senior']%>
+                <%= f.input :description %>
+                <%= f.input :job_type, as: :select, collection:['Remote', 'Hybrid', 'On Site']%>
+                <%= f.input :salary %>
+                <%= f.input :application_link %>
+                <%= f.submit "Confirm", class: "btn button_one" %>
+              <% end %>
             </div>
         <% end %>
       </section>
