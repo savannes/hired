@@ -7,9 +7,11 @@
 
       <div class="role-filter">
         <%= select_tag(:role, options_for_select(Job::ROLE), {data: { action: "change->search#searchRole" }, prompt: "Filter role"}) %>
-        <input id="salary" type="range" min="0" max="10000" step="any" />
-        <p>Salary <output id="value"></output></p>
+        <%= select_tag(:level, options_for_select(Job::LEVEL), {data: { action: "change->search#searchInputLevel" }, prompt: "Filter level"}) %>
+        <%= select_tag(:job_type, options_for_select(Job::JOB_TYPE), {data: { action: "change->search#searchJobType" }, prompt: "Filter job_type"}) %>
       </div>
+
+
 
       <div class="board-search">
         <input type="search" class="board-search-input" placeholder="Input search here..." aria-label="Board Search" data-search-target="input" data-action="input->search#search">

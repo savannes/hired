@@ -72,10 +72,19 @@ class JobsController < ApplicationController
 
   def move
     @job = Job.find(params[:id])
+    target_column = params[:column_id]
+    new_position = params[:new_position].to_i
     authorize @job
-    @job.update(column_id: params[:column_id])
-  end
+  
+    if @job.column_id == target_column
+      @job.insert_at(new_position)
+    else
+      @job.update(column_id: target_column, position: new_position)
+    end
 
+    render json: { status: :ok }
+  end
+  
   private
 
   def job_params
