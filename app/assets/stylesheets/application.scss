@@ -11,3 +11,14 @@
 @import "components/index";
 @import "pages/index";
 @import "simple_calendar";
+
+.button_orange{
+  border: 1px solid #3BB4C1;
+  background: white;
+  color: #3BB4C1;
+}
+
+.button_orange:hover{
+  background: #3BB4C1;
+  color: white;
+}
