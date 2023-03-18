@@ -6,7 +6,7 @@
           <div class="card">
             <div class="card-body">
               <h2>Log in</h2>
-              
+
               <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
                 <div class="form-inputs">
                   <%= f.input :email,
@@ -20,7 +20,7 @@
                 </div>
 
                 <div class="form-actions">
-                  <%= f.button :submit, "Log in", class: "btn btn-light w-100" %>
+                  <%= f.button :submit, "Log in", class: "btn button_orange w-100" %>
                 </div>
               <% end %>
 
@@ -32,4 +32,3 @@
     </div>
   </div>
 </div>
-
