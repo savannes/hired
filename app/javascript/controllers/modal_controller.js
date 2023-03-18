@@ -16,6 +16,7 @@ export default class extends Controller {
     }
     })
   }
+  
   newJob(button) {
     this.clearPatchInputs()
     this.resetInputs()
@@ -26,6 +27,7 @@ export default class extends Controller {
     this.titleTarget.textContent = `Add new job to ${columnName}`
     console.log(url);
   }
+
   editJob(button) {
     this.clearPatchInputs()
     const patchInput = '<input class="patch_input" type="hidden" name="_method" value="patch" autocomplete="off">'
@@ -37,6 +39,7 @@ export default class extends Controller {
     console.log(this.formTarget.action);
     this.titleTarget.textContent = `Edit job`
   }
+
   clearPatchInputs() {
     document.querySelectorAll(".patch_input").forEach((element) => {
       element.remove()

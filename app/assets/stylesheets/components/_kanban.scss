@@ -1,5 +1,4 @@
 /* Base styles */
-
 .role-filter {
   display: flex;
   justify-content: center;
@@ -34,12 +33,14 @@ li {
 /* Masthead */
 
 .masthead {
+  height: 18vh;
   flex-basis: 4rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0 0.8rem;
+  padding-bottom: 10px;
   background-color: #050505;
-  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
 }
 
 .masthead .btn-cl {
@@ -48,31 +49,8 @@ li {
   transition: background-color 150ms;
 }
 
-.masthead .btn-cl:hover {
-  background-color: #454545;
-}
-
-.boards-menu {
-  display: flex;
-  flex-shrink: 0;
-}
-
-// .boards-btn {
-//   flex-basis: 9rem;
-//   font-size: 1.4rem;
-//   font-weight: 700;
-//   color: #fff;
-//   margin-right: 0.8rem;
-//   padding: 0.6rem 0.8rem;
-// }
-
-// .boards-btn-icon {
-//   font-size: 1.7rem;
-//   padding-right: 1.2rem;
-// }
-
 .board-search {
-  padding: 10px 0;
+  padding: 10px 20px;
   flex-basis: 18rem;
   position: relative;
 }
@@ -80,15 +58,13 @@ li {
 .board-search-input {
   height: 1.3rem;
   border:rgba(0, 0, 0, 0.3);
-  // border-radius: 0.3rem;
   background-color: #fcfcfc;
-  // width: 100%;
   padding: 0 3rem 0 1rem;
-  // color: #000000;
 }
 
 
 .search-icon {
+  padding: 10px;
   font-size: 1rem;
   position: absolute;
   top: 50%;
@@ -195,8 +171,8 @@ li {
 }
 
 .lists-container::-webkit-scrollbar-thumb {
-  background-color: #000000;
-  border: 1rem solid #000000;
+  // background-color: #f80404;
+  border: 1rem solid #909090;
   border-top-width: 0;
 }
 
@@ -205,7 +181,7 @@ li {
   align-items: start;
   padding: 0 0.8rem 0.8rem;
   overflow-x: auto;
-  height: calc(100vh - 8.6rem);
+  height: calc(100vh - 6rem);
 }
 
 .list {
@@ -213,7 +189,7 @@ li {
   flex: 0 0 27rem;
   display: flex;
   flex-direction: column;
-  background-color: #e2e4e6;
+  background-color: #fff;
   max-height: calc(100vh - 11.8rem);
   border-radius: 0.2rem;
   margin-right: 0.6rem;
@@ -244,15 +220,16 @@ li {
 }
 
 .list-items::-webkit-scrollbar-thumb {
-  background-color: #c4c9cc;
-  border-right: 0.6rem solid #e2e4e6;
+  background-color: #909090;
+  border-right: 0.8rem solid #e2e4e6;
 }
 
 .list-items li {
+  box-shadow: 0 2px 2px 2px #989696;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.3;
-  background-color: #fff;
+  background-color: $Shaka-3-hex;
   padding: 0.65rem 0.6rem;
   color: #4d4d4d;
   border-bottom: 0.1rem solid #ccc;
