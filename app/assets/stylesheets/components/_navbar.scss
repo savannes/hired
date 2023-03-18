@@ -1,6 +1,6 @@
 .hired {
   color: #ffffff;
-  font-size: 24px;
+  font-size: 37px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -8,7 +8,7 @@
 
 .navbar-lewagon {
   justify-content: space-between;
-  background: #6481F5;
+  background: black;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -34,4 +34,29 @@
 .nav-item {
   margin: auto;
   display: inline;
+}
+.bi-kanban{
+  color: #ffffff;
+  font-size: 40px;
+  margin-right: 6px;
+}
+.bi-bar-chart-fill{
+  color: #ffffff;
+  font-size: 40px;
+  margin-right: 6px;
+}
+.bi-calendar3{
+  color: #ffffff;
+  font-size: 40px;
+  margin-right: 6px;
+}
+
+.bi-calendar3:hover{
+  color: #3BB4C1;
+}
+.bi-bar-chart-fill:hover{
+  color: #3BB4C1;
+}
+.bi-kanban:hover{
+  color: #3BB4C1;
 }

@@ -49,8 +49,7 @@
 
 .add-card-button-top:hover {
   // color: #838c91;
-  background-color: #c2c2c2; 
-  color: black; 
+  color: #565555;
   transition-duration: 0.8s;
 }
 
@@ -58,14 +57,33 @@
   width: 35px;
   background: none;
   border: none;
-  color: #838c91;
+
 }
 
 .add-card-button-edit:hover {
-  background-color: #c2c2c2; 
-  color: black; 
+  color: #565555;
   transition-duration: 0.8s;
 }
 
+.bi-trash3{
+  color: #b0b0b0;
+}
+.bi-trash3:hover{
+  color: #565555;
+}
 
-
+.bi-plus-square{
+  color: #b0b0b0;
+  background-color: transparent;
+}
+.bi-plus-square:hover{
+  color: #565555;
+  background-color: transparent;
+}
+.bi-pencil{
+  color: #b0b0b0;
+}
+.bi-pencil:hover{
+  color: #565555;
+  background-color: transparent;
+}
