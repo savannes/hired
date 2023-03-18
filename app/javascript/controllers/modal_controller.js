@@ -16,7 +16,7 @@ export default class extends Controller {
     }
     })
   }
-  
+
   newJob(button) {
     this.clearPatchInputs()
     this.resetInputs()
@@ -54,6 +54,7 @@ export default class extends Controller {
     document.getElementById("job_description").value = button.getAttribute('data-bs-job-description')
     document.getElementById("job_job_type").value = button.getAttribute('data-bs-job-job-type')
     document.getElementById("job_application_link").value = button.getAttribute('data-bs-job-application-link')
+    document.getElementById("job_notes").value = button.getAttribute('data-bs-job-notes')
   }
 
   resetInputs() {
@@ -64,5 +65,6 @@ export default class extends Controller {
     document.getElementById("job_description").value = ""
     document.getElementById("job_job_type").value = ""
     document.getElementById("job_application_link").value = ""
+    document.getElementById("job_notes").value = ""
   }
 }
