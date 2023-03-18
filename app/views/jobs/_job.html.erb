@@ -20,7 +20,7 @@ data-sortable-target="listItem">
     data-bs-job-application-link="<%=job.application_link%>"
     data-bs-route="edit"><i class="bi bi-pencil"></i>
   </button>
-  <%=link_to job_path(job), data:{turbo_method: :delete} do%>
-  <i class="bi bi-trash3 text-decoration-none"></i>
-  <%end%>
+  <%= button_to job_path(job), method: :delete do %>
+    <i class="bi bi-trash3 text-decoration-none"></i>
+  <% end %>
 </li>

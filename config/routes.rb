@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     resources :jobs
   end
 
+  delete "jobs/:id", to: "jobs#destroy"
+
   resources :calendar_events, only: %i[new create]
 
   patch "move/:id", to: "jobs#move", as: "move_job"

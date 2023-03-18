@@ -1,27 +1,19 @@
 <!-- Masthead -->
 <div data-controller="search">
-
-  <header class="masthead">
-
+  <div class="masthead">
     <div class="boards-menu">
-
       <div class="role-filter">
         <%= select_tag(:role, options_for_select(Job::ROLE), {data: { action: "change->search#searchRole" }, prompt: "Filter Role"}) %>
         <%= select_tag(:level, options_for_select(Job::LEVEL), {data: { action: "change->search#searchInputLevel" }, prompt: "Filter Level"}) %>
         <%= select_tag(:job_type, options_for_select(Job::JOB_TYPE), {data: { action: "change->search#searchJobType" }, prompt: "Filter Type"}) %>
       </div>
-
-
-
       <div class="board-search">
         <input type="search" class="board-search-input" placeholder="Input search here..." aria-label="Board Search" data-search-target="input" data-action="input->search#search">
         <i class="fas fa-search search-icon" aria-hidden="true"></i>
       </div>
-
     </div>
-
-  </header>
-    <div data-controller="dark-light" data-dark-light-mode-value="light" class="theme p-3">
+  </div>
+    <div data-controller="dark-light" data-dark-light-mode-value="light" class="theme">
       <button data-action="click->dark-light#toggleMode" class="b-toggle">
         <i data-dark-light-target="icon" class="bi bi-brightness-high"></i>
 
@@ -51,8 +43,6 @@
   </div>
   <!-- End of lists container -->
 </div>
-
-
 <div class="modal fade" id="jobModal" tabindex="-1" aria-labelledby="jobModalLabel" aria-hidden="true" data-controller="modal">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -74,11 +64,37 @@
                 <%= f.submit "Confirm", class: "btn button_one" %>
               <% end %>
             </div>
+        <% end %>
+      </section>
+    </div>
+  </div>
+    <!-- End of lists container -->
+  <div class="modal fade" id="jobModal" tabindex="-1" aria-labelledby="jobModalLabel" aria-hidden="true" data-controller="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+              <h1 data-modal-target="title" class="modal-title fs-5" id="jobModalLabel">New Job</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                  <div class="modal-body">
+                    <div class="row justify-content-center">
+                      <div class="col-12 col-sm-4 col-xl-6">
+                        <%= simple_form_for(:job, url:"/columns/:column_id/jobs", data: { modal_target: "form"}) do |f| %>
+                          <%= f.input :company %>
+                          <%= f.input :role, as: :select, collection: Job::ROLE%>
+                          <%= f.input :level, as: :select, collection:['Entry-Level', 'Junior']%>
+                          <%= f.input :description %>
+                          <%= f.input :job_type, as: :select, collection:['Remote', 'Hybrid', 'On Site']%>
+                          <%= f.input :salary %>
+                          <%= f.input :application_link %>
+                          <%= f.submit "Confirm", class: "btn btn-flat" %>
+                        <% end %>
+                      </div>
+                    </div>
+                  </div>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
           </div>
       </div>
-
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-        <%#link_to "Delete", job_path(job), data:{turbo_method: :delete}, class:"btn btn-secondary"%>
     </div>
   </div>
 </div>

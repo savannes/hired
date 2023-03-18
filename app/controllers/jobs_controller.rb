@@ -19,12 +19,9 @@ class JobsController < ApplicationController
 
   def destroy
     @job = Job.find(params[:id])
+    @job.destroy
     authorize @job
-    if @job.destroy
-      redirect_to columns_path, notice: "Successfully deleted"
-    else
-      render :edit, notice: "Can't be deleted"
-    end
+    redirect_to columns_path, notice: "Successfully deleted", status: :see_other
   end
 
   def index
