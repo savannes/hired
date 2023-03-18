@@ -43,13 +43,13 @@ User.all.each do |user|
         application_link: Faker::Internet.url
       )
       job.save!
-      start_date = Time.now + rand(1..13).days + rand(1..13).hours
-      CalendarEvent.create!(
-        job: job,
-        description: Faker::Movie.quote,
-        name: job.company,
-        starts_at: start_date,
-        ends_at: start_date + rand(1..3).hours
+      # start_date = Time.now + rand(1..13).days + rand(1..13).hours
+      # CalendarEvent.create!(
+      #   job: job,
+      #   description: Faker::Movie.quote,
+      #   name: job.company,
+      #   starts_at: start_date,
+      #   ends_at: start_date + rand(1..3).hours
       )
     end
   end
