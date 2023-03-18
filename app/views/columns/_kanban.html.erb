@@ -18,7 +18,6 @@
         <i data-dark-light-target="icon" class="bi bi-brightness-high"></i>
       </button>
 
-
   <!-- End of masthead -->
 
   <!-- Lists container -->
@@ -61,6 +60,7 @@
                           <%= f.input :job_type, as: :select, collection:['Remote', 'Hybrid', 'On Site']%>
                           <%= f.input :salary %>
                           <%= f.input :application_link %>
+                          <%= f.input :notes %>
                           <%= f.submit "Confirm", class: "btn button_one" %>
                         <% end %>
                       </div>

@@ -15,6 +15,6 @@ class Job < ApplicationRecord
   end
 
   def search_fields
-    "#{company} #{description}".downcase
+    "#{company} #{description} #{notes}".downcase
   end
 end
