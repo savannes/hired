@@ -3,7 +3,7 @@
     <div class="col-12 col-sm-4 col-xl-6">
       <%= simple_form_for(@calendar_events) do |f| %>
       <%= f.input :name %>
-      <%= f.input :description %>
+      <%= f.input :description, placeholder: "maximum 50 characters.." %>
       <%= f.input :starts_at %>
       <%= f.input :ends_at %>
       <%# <%= f.association :job %>
