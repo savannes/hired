@@ -1,4 +1,20 @@
 /* Dark Light Mode */
+
+#jobModalLabel.modal-title.fs-5 {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-body {
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 0.25em;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+}
+
 .theme {
   --background: #F6F4EA;
 }
@@ -49,7 +65,7 @@
 
 .add-card-button-top:hover {
   // color: #838c91;
-  color: #565555;
+  color: #3BB4C1;
   transition-duration: 0.8s;
 }
 
@@ -61,15 +77,70 @@
 }
 
 .add-card-button-edit:hover {
-  color: #565555;
+  color: #3BB4C1;
   transition-duration: 0.8s;
 }
 
 .bi-trash3{
   color: #b0b0b0;
+  border: none;
+  background: none;
 }
 .bi-trash3:hover{
-  color: #565555;
+  color: #3BB4C1;
+  border: none;
+  background: none;
+}
+.board-search-input {
+  height: 1.8rem;
+  border:#66a4c8;
+  background-color: #fcfcfc;
+  padding: 0 3rem 0 1rem;
+  font-size: 18px;
+}
+
+// .board-search-input:hover {
+//   background-color: #66a4c8;
+// }
+
+.search-icon {
+  padding: 10px;
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  right: 0.8rem;
+  transform: translateY(-50%) rotate(90deg);
+  color: #000;
+}
+
+.logo {
+  flex: 1;
+  font-family: "Courgette", cursive;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 2rem;
+  transition: color 150ms;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.logo:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.logo-icon {
+  padding-right: 0.4rem;
+}
+
+.user-settings {
+  display: flex;
+  height: 3rem;
+  color: #fff;
+}
+
+.user-settings-btn {
 }
 
 .bi-plus-square{
@@ -77,13 +148,15 @@
   background-color: transparent;
 }
 .bi-plus-square:hover{
-  color: #565555;
+  color: #3BB4C1;
   background-color: transparent;
 }
 .bi-pencil{
   color: #b0b0b0;
 }
 .bi-pencil:hover{
-  color: #565555;
+  color: #3BB4C1;
   background-color: transparent;
 }
+
+
