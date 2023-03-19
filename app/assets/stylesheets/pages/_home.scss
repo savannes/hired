@@ -57,12 +57,20 @@ h1, h2, h3, h4, h5, h6, p{
 	background-color: $Shaka-3-hex;
 }
 
-.sectOne{
+ .sectOne{
 	background-image: url(image_path("brooke-cagle-xcgh5_-QIXc-unsplash.jpg"));
 }
 
 .sectTwo{
-	background-image: url(image_path("brooke-cagle-xcgh5_-QIXc-unsplash.jpg"));	
+	background-image: url(image_path("brooke-cagle-xcgh5_-QIXc-unsplash.jpg"));
+}
+
+.fraseprincipal{
+  padding-top: 100px;
+  padding-left: 10px;
+  color: white;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  font-weight:500;
 }
 
 /* Large desktop */
@@ -134,7 +142,7 @@ h1, h2, h3, h4, h5, h6, p{
   .card-container {
     flex-direction: column;
   }
-  
+
   .card {
     width: 100%;
   }
