@@ -3,8 +3,8 @@
     <div class="align-items-center">
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-4 text-center">
-          <div class="card">
-            <div class="card-body">
+          <div class="art">
+            <div class="card-body p-2">
               <h2>Log in</h2>
               <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
                 <div class="form-inputs">
@@ -18,7 +18,7 @@
                   <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
                 </div>
                 <div class="form-actions">
-                  <%= f.button :submit, "Log in", class: "btn button_orange w-100" %>
+                  <%= f.button :submit, "Log in", class: "btn button_one" %>
                 </div>
               <% end %>
               <%= render "devise/shared/links" %>
