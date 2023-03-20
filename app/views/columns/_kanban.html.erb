@@ -28,7 +28,7 @@
             class="add-card-button-top float-end" data-bs-toggle="modal" data-bs-target="#jobModal"
             data-bs-column="<%=column.id%>" data-bs-column-name="<%=column.name%>"
             data-bs-route="add"><i class="bi bi-plus-square"></i></button></h3>
-            <ul id="list-<%= column.id %>" class="list-items" data-controller="sortable">
+            <ul id="list-<%= column.id %>" class="list-items" data-controller="sortable" data-sortable-target="button">
               <% column.jobs.order(:position).each do |job| %>
                 <%= render "jobs/job", job: job, column: column %>
               <% end %>

@@ -15,3 +15,4 @@ application.register("search", SearchController)
 
 import SortableController from "./sortable_controller"
 application.register("sortable", SortableController)
+
