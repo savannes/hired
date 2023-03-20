@@ -17,5 +17,8 @@
   },
   "scripts": {
     "build": "webpack --config webpack.config.js"
+  },
+  "devDependencies": {
+    "prettier": "2.8.4"
   }
 }
