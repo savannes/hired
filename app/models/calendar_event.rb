@@ -2,7 +2,7 @@ class CalendarEvent < ApplicationRecord
   belongs_to :job, optional: true
   delegate :user, to: :job
   validates :starts_at, :ends_at, presence: true
-  validates :description, length: {maximum: 50}
+  validates :description, length: {maximum: 40}
 
   default_scope -> { order(:starts_at) }  # Our meetings will be ordered by their start_time by default
 

@@ -27,6 +27,13 @@ class CalendarEventsController < ApplicationController
     # @calendar_events.user = current_user
   end
 
+  def destroy
+    @calendar_event = CalendarEvent.find(params[:id])
+    @calendar_event.destroy
+    authorize @calendar_event
+    redirect_to calendar_path, notice: "Meeting Deleted"
+  end
+
 private
 
 def calendar_event_params
