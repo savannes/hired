@@ -23,10 +23,6 @@
 
 .nav-link {
   color: #ffffff;
-  // font-size: 14px;
-  // font-weight: bold;
-  // text-transform: uppercase;
-  // letter-spacing: 1px;
 }
 
 .nav-link:hover {
@@ -37,6 +33,12 @@
   margin: auto;
   display: inline;
 }
+
+.dropdown-item:hover {
+  color: #000000;
+  background-color: rgba(59, 178, 191, 0.5);
+}
+
 .bi-kanban{
   color: #ffffff;
   font-size: 40px;

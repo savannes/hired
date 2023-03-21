@@ -69,10 +69,6 @@ li {
   padding-top: 24px;
   padding-bottom: 12px;
   background-color: #050505;
-}
-
-.masthead .btn-cl {
-  background-color: #050505;
   border-radius: 0.3rem;
   transition: background-color 150ms;
 }
@@ -82,97 +78,6 @@ li {
   flex-basis: 18rem;
   position: relative;
   font-size: 18px;
-}
-
-.logo {
-  flex: 1;
-  font-family: "Courgette", cursive;
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.5);
-  margin: 0 2rem;
-  transition: color 150ms;
-  text-align: center;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-.logo:hover {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.logo-icon {
-  padding-right: 0.4rem;
-}
-
-.user-settings {
-  display: flex;
-  color: #fff;
-}
-
-.user-settings-btn {
-  color: #fff;
-  padding: 0 0 0 10px;
-  text-decoration: none;
-  font-size: 1.5rem;
-  margin-right: 0.8rem;
-  &:hover {
-    color: #838c91;
-  }
-}
-
-.user-settings-btn:last-of-type {
-  margin-right: 0;
-}
-
-.label-add {
-  justify-content: center;
-}
-
-/* Board info bar */
-
-.board-info-bar {
-  flex-basis: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0.8rem 0;
-  padding: 0 1rem;
-  color: #f6f6f6;
-}
-
-.board-controls {
-  display: flex;
-}
-
-.board-controls .btn-cl {
-  margin-right: 1rem;
-}
-
-.board-controls .btn-cl:last-of-type {
-  margin-right: 0;
-}
-
-.board-info-bar .btn-cl {
-  font-size: 1.4rem;
-  font-weight: 400;
-  transition: background-color 150ms;
-  padding: 0 0.6rem;
-  border-radius: 0.3rem;
-  height: 3rem;
-}
-
-
-.private-btn-icon,
-.menu-btn-icon {
-  padding-right: 0.6rem;
-  white-space: nowrap;
-}
-
-.board-title h2 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  white-space: nowrap;
 }
 
 /* Lists */
@@ -258,44 +163,6 @@ li {
   background-color: #d0d0d0;
 }
 
-.add-card-btn {
-  display: block;
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: #838c91;
-  padding: 1rem;
-  text-align: left;
-  cursor: pointer;
-}
-
-.add-card-btn:hover {
-  background-color: #cdd2d4;
-  color: #4d4d4d;
-  text-decoration: underline;
-}
-
-.add-list-btn {
-  flex: 0 0 27rem;
-  display: block;
-  font-size: 1.4rem;
-  font-weight: 400;
-  background-color: #000000;
-  color: #fefefe;
-  padding: 1rem;
-  border-radius: 0.3rem;
-  cursor: pointer;
-  transition: background-color 150ms;
-  text-align: left;
-}
-
-.add-list-btn:hover {
-  background-color: #000000;
-}
-
-.add-card-btn::after,
-.add-list-btn::after {
-  content: '...';
-}
 
 /*
 
