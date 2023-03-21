@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   delete "jobs/:id", to: "jobs#destroy"
 
-  resources :calendar_events, only: %i[new create]
+  resources :calendar_events, only: %i[new create destroy]
 
   patch "move/:id", to: "jobs#move", as: "move_job"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

@@ -13,4 +13,8 @@ class CalendarEventPolicy < ApplicationPolicy
   def new?
     true
   end
+
+  def destroy?
+    true
+  end
 end

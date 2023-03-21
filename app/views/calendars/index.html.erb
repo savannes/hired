@@ -11,6 +11,9 @@
                 <p>Description: <%= event.description %></p>
                 <p>Start: <%= event.starts_at.strftime("%H:%M") %></p>
                 <p>Finish: <%= event.ends_at.strftime("%H:%M") %></p>
+                  <%= button_to calendar_event_path(event), method: :delete do %>
+                  <i class="fa-solid fa-trash-can float-end"></i>
+                  <% end %>
               </div>
             <% end %>
           <% end %>
