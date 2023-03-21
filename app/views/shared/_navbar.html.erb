@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <span class="hired">HIRED</span>
+      <span class="hired">HIRED!</span>
     <% end %>
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,17 +13,17 @@
         <% if user_signed_in? %>
           <li class="nav-item">
             <%= link_to columns_path do %>
-              <i class="fa-sharp fa-solid fa-border-all fa-2x nav-link"></i>
+              <i class="bi bi-kanban fa"></i>
             <% end %>
           </li>
           <li class="nav-item">
             <%= link_to dashboard_path do %>
-              <i class="fa-sharp fa-solid fa-chart-line fa-2x nav-link"></i>
+              <i class="bi bi-bar-chart-fill"></i>
             <% end %>
           </li>
           <li class="nav-item active">
             <%= link_to calendar_path do %>
-              <i class="fa-sharp fa-solid fa-calendar-days fa-2x nav-link"></i>
+              <i class="bi bi-calendar3"></i>
             <% end %>
           </li>
           <li class="nav-item dropdown">

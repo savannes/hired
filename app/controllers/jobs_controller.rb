@@ -72,7 +72,7 @@ class JobsController < ApplicationController
     target_column = params[:column_id]
     new_position = params[:new_position].to_i
     authorize @job
-  
+
     if @job.column_id == target_column
       @job.insert_at(new_position)
     else
@@ -81,11 +81,11 @@ class JobsController < ApplicationController
 
     render json: { status: :ok }
   end
-  
+
   private
 
   def job_params
-    params.require(:job).permit(:company, :description, :role, :level, :job_type, :salary, :application_link)
+    params.require(:job).permit(:company, :description, :role, :level, :job_type, :salary, :application_link, :notes)
   end
 
   def set_job

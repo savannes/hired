@@ -1,20 +1,17 @@
-<div class="d-flex align-items-center" style="height: calc(90vh - 110px);">
+<div class="d-flex align-items-center devise" style="height: calc(120vh - 100px);">
   <div class="container">
     <div class="align-items-center">
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-4 text-center">
-          <div class="card">
-            <div class="card-body">
+          <div class="art">
+            <div class="card-body p-2">
               <h2>Edit <%= resource_name.to_s.humanize %></h2>
               <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
                 <%= f.error_notification %>
-
                   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
                     <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
                   <% end %>
-
                 <div class="form-inputs">
-                
                   <div class="text-center">
                     <% if resource.avatar.present? %>
                       <div class="rounded">
@@ -23,13 +20,10 @@
                     <% end %>
                       <%= f.input :avatar, as: :file, label: "Add your photo:", required: false %>
                   </div>
-
                   <%= f.input :email, required: true, autofocus: true, :label => "Current email:" %>
-
                   <%= f.input :email, :label => "New email if you want to change:",
                               required: false, placeholder: "Leave it blank if you don't want to change",
-                              input_html: { autocomplete: "new-email" } %>
-                  
+                              input_html: { autocomplete: "new-email" } %>               
                   <%= f.input :password, :label => "Password you want to change:",
                               required: false, placeholder: "Leave it blank if you don't want to change",
                               input_html: { autocomplete: "new-password" } %>
@@ -40,14 +34,13 @@
                               required: true, placeholder: "Type password to confirm changes",
                               input_html: { autocomplete: "current-password" } %>
                 </div>
-
                 <div class="form-actions">
-                  <%= f.button :submit, "Update", class: "btn btn-light w-100" %>
+                  <%= f.button :submit, "Update", class: "btn button_one" %>
                 </div>
               <% end %>
-              <%= link_to "Back", :back, class: "btn btn-light w-100" %>
+              <%= link_to "Back", :back, class: "btn btn-link" %>
             </div>
-              <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-light w-100" %>
+              <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-cancel btn-link" %>
           </div>
         </div>
       </div>

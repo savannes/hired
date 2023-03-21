@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-calendar">
   <div class="row justify-content-center">
     <div class="col-12 col-sm-4 col-xl-6">
       <%= simple_form_for(@calendar_events) do |f| %>
@@ -7,7 +7,7 @@
       <%= f.input :starts_at %>
       <%= f.input :ends_at %>
       <%# <%= f.association :job %>
-      <%= f.submit "Submit", class: "btn button_orange"%>
+      <%= f.submit "Submit", class: "btn button_one"%>
       <% end %>
     </div>
   </div>
