@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   get "dashboard", to: "dashboard#show"
   get "calendar", to: "calendars#index"
+
+  get '/:filename', to: redirect('/%{filename}'), constraints: { filename: /[\w\.]+/ }
+  get '*path' => redirect('/')
 end

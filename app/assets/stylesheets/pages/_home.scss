@@ -4,23 +4,27 @@
   justify-content: space-between;
   max-width: 1000px;
   margin: 0 auto;
+  align-items: baseline;
 }
 
 .card-home-up-content {
-  background-color: white;
+  border: 1px solid #3BB4C1;
   border-radius: 10px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
   padding: 20px;
   width: 300px;
   margin-bottom: 20px;
+  margin-left: 30px;
 }
 
 .card-home-up-content h2 {
+  color: #3BB4C1;
   font-size: 24px;
   margin-bottom: 10px;
 }
 
 .card-home-up-content p {
+  color: #3BB4C1;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -42,19 +46,20 @@ h1, h2, h3, h4, h5, h6, p{
 
 .sect{
 	height: 100%;
-	background-size:cover;
+	// background-size:cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center center;
 }
 
 .subSection{
+  box-shadow: #3BB4C1;
+  background-color: #000000;
 	display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 	height: 50%;
-	background-color: $Shaka-3-hex;
 }
 
  .sectOne{
@@ -62,14 +67,14 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .sectTwo{
-	background-image: url(image_path("brooke-cagle-xcgh5_-QIXc-unsplash.jpg"));
+	background-image: url(image_path("thought-catalog-Nv-vx3kUR2A-unsplash.jpg"));
 }
 
 .fraseprincipal{
-  padding-top: 100px;
-  padding-left: 10px;
-  color: white;
-  text-shadow: black 0.1em 0.1em 0.2em;
+  padding-top: 18rem;
+  padding-left: 4rem;
+  color: $off-white;
+  text-shadow: #000000 0.1em 0.1em 0.2em;
   font-weight:500;
 }
 
