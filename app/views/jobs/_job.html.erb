@@ -3,10 +3,11 @@ data-search-target="cards" data-keywords="<%= job.search_fields%>" data-role="<%
 data-level="<%= job.level%>"
 data-job_type="<%= job.job_type%>"
 data-sortable-target="listItem">
-  <h4><%= job.company %> </h5>
-  <h6><%= job.role %> </h6>
-  <h6><%= job.job_type %> </h6>
-  <h6>R$ <%= job.salary %> </h6>
+  <h5><strong><%= job.company %></strong></h5>
+  <p><%= job.role %> </p>
+  <p><%= job.level %> </p>
+  <p><%= job.job_type %> </p>
+  <p>R$ <%= job.salary %> </p>
   <button type="button" class="add-card-button-edit float-end" data-action="click->sortable#editJob" data-sortable-target="button"
     data-bs-toggle="modal"
     data-bs-target="#jobModal"

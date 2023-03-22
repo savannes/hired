@@ -73,17 +73,26 @@ h1, h2, h3, h4, h5, h6, p{
 .fraseprincipal{
   padding-top: 18rem;
   padding-left: 4rem;
-  color: $off-white;
-  text-shadow: #000000 0.1em 0.1em 0.2em;
+  color: black;
   font-weight:500;
+}
+
+span > h1{
+  background-color: white;
+  width: 40%;
+}
+
+span > h3{
+  background-color: white;
+  width: 40%;
 
 }
 
-.backgroundprincipal{
-  background-color: #ffffff80;
-  width:57%;
-  padding: 25px;
-}
+// .backgroundprincipal{
+//   background-color: #ffffff80;
+//   width:59%;
+//   padding: 25px;
+// }
 
 /* Large desktop */
 @media only screen and (min-width: 1200px) {
