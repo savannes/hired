@@ -40,6 +40,11 @@
   padding: 0;
   cursor: grab;
   font-size: 20px;
+  border-radius: 5px;
+}
+
+.role-filter > select{
+  border-radius: 5px;
 }
 
 li {
@@ -78,6 +83,7 @@ li {
   flex-basis: 18rem;
   position: relative;
   font-size: 18px;
+
 }
 
 /* Lists */
@@ -105,7 +111,7 @@ li {
   flex: 0 0 27rem;
   display: flex;
   flex-direction: column;
-  background-color: #ebecf0;
+  background-color: #a8d3d7;
   max-height: calc(100vh - 11.8rem);
   border-radius: 0.2rem;
   margin-right: 0.6rem;
@@ -163,7 +169,10 @@ li {
   background-color: #d0d0d0;
 }
 
-
+.list-item > p{
+  font-size: 16px;
+  margin-bottom: 9px;
+}
 /*
 
 The following rule will only run if your browser supports CSS grid.
@@ -205,4 +214,3 @@ Remove or comment-out the code block below to see how the browser will fall-back
   }
 
 }
-
