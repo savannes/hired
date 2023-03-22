@@ -1,10 +1,11 @@
 import { Controller } from "@hotwired/stimulus";
+import ModalController from "./modal_controller";
 
 export default class extends Controller {
-  static targets = ["listItem", "button"]
+  static targets = ["listItem", "button", "dragHandle"];
 
   editJob(button) {
-    ModalController.prototype.editJob.call(this, button)
+    ModalController.prototype.editJob.call(this, button);
   }
 
   connect() {
@@ -21,7 +22,6 @@ export default class extends Controller {
     var move = (id, columnId, position) => {
       const url = `/move/${id}`;
       const data = { column_id: columnId, position };
-
       fetch(url, {
         method: "PATCH",
         headers: {
@@ -30,8 +30,7 @@ export default class extends Controller {
         },
         body: JSON.stringify(data),
       });
-    }
-  }
+    };
 
     const createClone = (element) => {
       clone = element.cloneNode(true);
@@ -39,21 +38,21 @@ export default class extends Controller {
       clone.style.pointerEvents = "none";
       clone.style.opacity = "0.8";
       document.body.appendChild(clone);
-    }
+    };
 
     const removeClone = () => {
       if (clone) {
         clone.remove();
         clone = null;
       }
-    }
+    };
 
     const updateClonePosition = (event) => {
       if (clone) {
         clone.style.top = event.clientY + "px";
         clone.style.left = event.clientX + "px";
       }
-    }
+    };
 
     const findParent = (element, className, onFind) => {
       let currentElement = element;
@@ -63,29 +62,28 @@ export default class extends Controller {
         }
         currentElement = currentElement.parentElement;
       }
-    }
-    
+    };
+
     const moveElement = (targetList, position, targetElement) => {
       droppedTarget = targetList;
       const droppedColumn = document.getElementById(`list-${targetList.id}`);
       const index = Array.from(droppedColumn.children).indexOf(targetElement);
-      console.log(index);
-    
+
       const oldList = clickedTarget;
       const newIndex = position === "top" ? index : index + 1;
-    
+
       droppedColumn.insertBefore(clickedTarget, droppedColumn.children[newIndex]);
       move(clickedTarget.id, targetList.id, newIndex);
-    
+
       clickedTarget = null;
     };
-    
-    items.forEach(item) {
+
+    items.forEach((item) => {
       item.addEventListener("mousedown", (event) => {
         const clickedItem = findParent(event.target, "list-item", (currentElement) => currentElement);
         const clickedButton = findParent(event.target, "button", (currentElement) => currentElement);
+        const clickedHandle = findParent(event.target, "drag-handle", (currentElement) => currentElement);
 
-    
         if (!clickedButton) {
           if (clickedItem && !clickedTarget) {
             droppedTarget = null;
@@ -95,56 +93,29 @@ export default class extends Controller {
           }
         }
       });
-    
-      item.addEventListener("dragend", (event) => {
-        removeClone();
-      });
-    
-      item.addEventListener("dragover", (event) => {
-        event.preventDefault();
-        updateClonePosition(event);
-      });
-    };
 
-    document.addEventListener("mousedown", (event) => {
-      const clickedItem = findParent(event.target, "list-item", (currentElement) => currentElement);
-    
-      if (clickedItem && !clickedTarget) {
-        const clickedButton = findParent(event.target, "button", (currentElement) => currentElement);
-    
-        if (!clickedButton) {
-          if (!clickedButton) {
-            // clicked inside the LI, enable move action
-            droppedTarget = null;
-            clickedTarget = clickedItem;
-            createClone(clickedItem);
-            updateClonePosition(event);
-          }
-        }
-      }
-      
       document.addEventListener("mousemove", (event) => {
         if (clone) {
           updateClonePosition(event);
         }
       });
-      
+
       document.addEventListener("mouseup", (event) => {
         if (clickedTarget) {
           removeClone();
-      
+
           let targetList = event.target;
           let foundParent = false;
           let targetElement = null;
           let position = null;
-      
+
           if (event.target === button) {
             this.editJob();
           } else {
             while (!foundParent) {
               try {
                 const tag = targetList.tagName;
-                if (tag == "LI") {
+                if (tag === "LI") {
                   const element = event.target.getBoundingClientRect();
                   const cursorPosition = event.clientY - element.top;
                   const elementHeight = targetList.clientHeight;
@@ -152,85 +123,9 @@ export default class extends Controller {
                   position = cursorPosition >= middle ? "bottom" : "top";
                   targetElement = targetList;
                 }
-      
-                if (targetList.tagName == "DIV" && targetList.className == "list") {
-                  moveElement(targetList, position, targetElement); // Provide three arguments here
-                  break;
-                } else {
-                  try {
-                    targetList = targetList.parentElement;
-                  } catch (error) {
-                    break;
-                  }
-                }
-              } catch (error) {
-                break;
-              }
-            }
-          }
-        }
-        this.editJob();
-      });
-    };
-    
-      item.addEventListener("dragend", (event) => {
-        removeClone();
-      });
 
-      item.addEventListener("dragover", (event) => {
-        event.preventDefault();
-        updateClonePosition(event);
-      });
-
-    document.addEventListener("mousedown", (event) => {
-      const clickedItem = findParent(event.target, "list-item", (currentElement) => currentElement);
-    
-      if (clickedItem && !clickedTarget) {
-        const clickedButton = findParent(event.target, "button", (currentElement) => currentElement);
-    
-        if (!clickedButton) {
-          if (!clickedButton) {
-            // clicked inside the LI, enable move action
-            droppedTarget = null;
-            clickedTarget = clickedItem;
-            createClone(clickedItem);
-            updateClonePosition(event);
-          }
-        }
-      }
-      
-      document.addEventListener("mousemove", (event) => {
-        if (clone) {
-          updateClonePosition(event);
-        }
-      });
-      
-      document.addEventListener("mouseup", (event) => {
-        if (clickedTarget) {
-          removeClone();
-      
-          let targetList = event.target;
-          let foundParent = false;
-          let targetElement = null;
-          let position = null;
-      
-          if (event.target === button) {
-            this.editJob();
-          } else {
-            while (!foundParent) {
-              try {
-                const tag = targetList.tagName;
-                if (tag == "LI") {
-                  const element = event.target.getBoundingClientRect();
-                  const cursorPosition = event.clientY - element.top;
-                  const elementHeight = targetList.clientHeight;
-                  const middle = elementHeight / 2;
-                  position = cursorPosition >= middle ? "bottom" : "top";
-                  targetElement = targetList;
-                }
-      
-                if (targetList.tagName == "DIV" && targetList.className == "list") {
-                  moveElement(targetList, position, targetElement); // Provide three arguments here
+                if (targetList.tagName === "DIV" && targetList.className === "list") {
+                  moveElement(targetList, position, targetElement);
                   break;
                 } else {
                   try {
@@ -248,5 +143,5 @@ export default class extends Controller {
         this.editJob();
       });
     });
-}  
-    
+  }
+}
