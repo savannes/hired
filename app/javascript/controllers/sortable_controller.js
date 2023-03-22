@@ -1,5 +1,4 @@
 import { Controller } from "@hotwired/stimulus";
-import ModalController from "./modal_controller";
 
 export default class extends Controller {
   static targets = ["listItem", "button", "dragHandle"];
