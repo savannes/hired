@@ -7,10 +7,12 @@
 
             <% events.each do |event| %>
               <div class="meeting">
+                <% start_hour = event.starts_at.hour - 3 %>
+                <% end_hour = event.ends_at.hour - 3 %>
                 <p>Title: <%= event.name %></p>
                 <p>Description: <%= event.description %></p>
-                <p>Start: <%= event.starts_at.strftime("%H:%M") %></p>
-                <p>Finish: <%= event.ends_at.strftime("%H:%M") %></p>
+                <p>Start: <%= "#{start_hour}:#{event.starts_at.strftime("%M")}" %></p>
+                <p>Finish: <%= "#{end_hour}:#{event.ends_at.strftime("%M")}" %></p>
                   <%= button_to calendar_event_path(event), method: :delete do %>
                   <i class="fa-solid fa-trash-can float-end"></i>
                   <% end %>

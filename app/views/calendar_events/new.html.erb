@@ -2,7 +2,7 @@
   <div class="row justify-content-center">
     <div class="col-12 col-sm-4 col-xl-6">
       <%= simple_form_for(@calendar_events) do |f| %>
-      <%= f.input :name %>
+      <%= f.input :name, placeholder: "write your meeting name.." %>
       <%= f.input :description, placeholder: "maximum 40 characters.." %>
       <%= f.input :starts_at %>
       <%= f.input :ends_at %>
