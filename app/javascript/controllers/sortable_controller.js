@@ -1,4 +1,5 @@
 import { Controller } from "@hotwired/stimulus";
+import ModalController from "./modal_controller"
 
 export default class extends Controller {
   static targets = ["listItem", "button", "dragHandle"];
@@ -82,8 +83,13 @@ export default class extends Controller {
         const clickedItem = findParent(event.target, "list-item", (currentElement) => currentElement);
         const clickedButton = findParent(event.target, "button", (currentElement) => currentElement);
         const clickedHandle = findParent(event.target, "drag-handle", (currentElement) => currentElement);
-
-        if (!clickedButton) {
+    
+        const liRect = clickedItem.getBoundingClientRect();
+        const clickPositionY = event.clientY - liRect.top;
+        const liHeight = clickedItem.clientHeight;
+        const liMiddle = liHeight / 2;
+    
+        if (!clickedButton && clickPositionY < liMiddle) {
           if (clickedItem && !clickedTarget) {
             droppedTarget = null;
             clickedTarget = clickedItem;
