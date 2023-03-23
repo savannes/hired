@@ -10,11 +10,13 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
+      <% if (controller_name == 'jobs' && action_name == 'index') || (controller_name == 'columns' && action_name == 'index') %>
         <div class="navbar-dark-light" data-controller="dark-light" data-dark-light-mode-value="light" class="theme">
           <button data-action="click->dark-light#toggleMode" class="b-toggle">
             <i data-dark-light-target="icon" class="bi bi-brightness-high"></i>
           </button>
-        </div> 
+        </div>
+      <% end %>
         <% if user_signed_in? %>
           <li class="nav-item">
             <%= link_to columns_path do %>
