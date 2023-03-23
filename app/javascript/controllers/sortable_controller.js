@@ -64,7 +64,7 @@ export default class extends Controller {
       }
     };
 
-    const moveElement = (targetList, position, targetElement) => {
+    function moveElement(targetList, position, targetElement) {
       droppedTarget = targetList;
       const droppedColumn = document.getElementById(`list-${targetList.id}`);
       const index = Array.from(droppedColumn.children).indexOf(targetElement);
@@ -76,7 +76,7 @@ export default class extends Controller {
       move(clickedTarget.id, targetList.id, newIndex);
 
       clickedTarget = null;
-    };
+    }
 
     items.forEach((item) => {
       item.addEventListener("mousedown", (event) => {
