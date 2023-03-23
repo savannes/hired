@@ -1,4 +1,72 @@
-/* Base styles */
+/* Drag and drop effect */
+.list-item {
+  cursor: grab;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #f5f5f5c6;
+  margin-bottom: 8px;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out; /* Add opacity transition */ /* Set default opacity */
+}
+
+.list-item:hover {
+  background-color: #f5f5f5;
+}
+
+.list-item:active {
+  cursor: grabbing;
+  // transform: scale(0.9); /* Add transform on active state */
+  opacity: 1;
+}
+
+.list-item.drag-over {
+  transform: scale(0.90);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  opacity: 1; /* Add opacity for smoother appearance */
+}
+
+/* other styles */
+
+.navbar-dark-light {
+  display: inline-block;
+  margin-top: 1px;
+  padding: 7px 10px 7px 10px;
+  font-size: 25px;
+}
+
+body.light {
+  background-color: #ffffff !important;
+  color: #000 !important;
+}
+
+body.dark {
+  background-color: #000 !important;
+  color: #ffffff !important;
+}
+
+
+.role-filter {
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 0;
+  cursor: grab;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.role-filter > select{
+  border-radius: 5px;
+}
+
+li {
+  list-style-type: none;
+}
 
 .btn-cl {
   display: flex;
@@ -9,7 +77,7 @@
   border: none;
   color: inherit;
   padding: 0;
-  cursor: pointer;
+  cursor: grab;
 }
 
 
@@ -19,155 +87,20 @@
   flex-basis: 4rem;
   display: flex;
   align-items: center;
-  padding: 0 0.8rem;
-  background-color: #050505;
-  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
-}
-
-.masthead .btn-cl {
+  justify-content: center;
+  padding-top: 24px;
+  padding-bottom: 12px;
   background-color: #050505;
   border-radius: 0.3rem;
   transition: background-color 150ms;
-}
-
-.masthead .btn-cl:hover {
-  background-color: #454545;
-}
-
-.boards-menu {
-  display: flex;
-  flex-shrink: 0;
-}
-
-.boards-btn {
-  flex-basis: 9rem;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #fff;
-  margin-right: 0.8rem;
-  padding: 0.6rem 0.8rem;
-}
-
-.boards-btn-icon {
-  font-size: 1.7rem;
-  padding-right: 1.2rem;
 }
 
 .board-search {
-  padding: 10px 0;
+  padding: 10px 20px;
   flex-basis: 18rem;
   position: relative;
-}
+  font-size: 18px;
 
-.board-search-input {
-  height: 3rem;
-  border:rgba(0, 0, 0, 0.3);
-  border-radius: 0.3rem;
-  background-color: #f8f9fa;
-  width: 100%;
-  padding: 0 3rem 0 1rem;
-  color: #fff;
-}
-
-
-.search-icon {
-  font-size: 1.5rem;
-  position: absolute;
-  top: 50%;
-  right: 0.8rem;
-  transform: translateY(-50%) rotate(90deg);
-  color: #fff;
-}
-
-.logo {
-  flex: 1;
-  font-family: "Courgette", cursive;
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.5);
-  margin: 0 2rem;
-  transition: color 150ms;
-  text-align: center;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-.logo:hover {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.logo-icon {
-  padding-right: 0.4rem;
-}
-
-.user-settings {
-  display: flex;
-  color: #fff;
-}
-
-.user-settings-btn {
-  color: #fff;
-  padding: 0 0 0 10px;
-  text-decoration: none;
-  font-size: 1.5rem;
-  margin-right: 0.8rem;
-  &:hover {
-    color: #838c91;
-  }
-}
-
-.user-settings-btn:last-of-type {
-  margin-right: 0;
-}
-
-.label-add {
-  justify-content: center;
-}
-
-/* Board info bar */
-
-.board-info-bar {
-  flex-basis: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0.8rem 0;
-  padding: 0 1rem;
-  color: #f6f6f6;
-}
-
-.board-controls {
-  display: flex;
-}
-
-.board-controls .btn-cl {
-  margin-right: 1rem;
-}
-
-.board-controls .btn-cl:last-of-type {
-  margin-right: 0;
-}
-
-.board-info-bar .btn-cl {
-  font-size: 1.4rem;
-  font-weight: 400;
-  transition: background-color 150ms;
-  padding: 0 0.6rem;
-  border-radius: 0.3rem;
-  height: 3rem;
-}
-
-
-.private-btn-icon,
-.menu-btn-icon {
-  padding-right: 0.6rem;
-  white-space: nowrap;
-}
-
-.board-title h2 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  white-space: nowrap;
 }
 
 /* Lists */
@@ -177,8 +110,8 @@
 }
 
 .lists-container::-webkit-scrollbar-thumb {
-  background-color: #000000;
-  border: 1rem solid #000000;
+  // background-color: #f80404;
+  border: 1rem solid #909090;
   border-top-width: 0;
 }
 
@@ -187,17 +120,18 @@
   align-items: start;
   padding: 0 0.8rem 0.8rem;
   overflow-x: auto;
-  height: calc(100vh - 8.6rem);
+  height: calc(100vh - 6rem);
 }
 
 .list {
+  box-shadow: 0 2px 2px 2px #989696;
   flex: 0 0 27rem;
   display: flex;
   flex-direction: column;
-  background-color: #e2e4e6;
+  background-color: #a8d3d7;
   max-height: calc(100vh - 11.8rem);
-  border-radius: 0.3rem;
-  margin-right: 1rem;
+  border-radius: 0.2rem;
+  margin-right: 0.6rem;
 }
 
 .list:last-of-type {
@@ -225,18 +159,17 @@
 }
 
 .list-items::-webkit-scrollbar-thumb {
-  background-color: #c4c9cc;
-  border-right: 0.6rem solid #e2e4e6;
+  border-right: 0.8rem solid #e2e4e6;
 }
 
 .list-items li {
+  box-shadow: 0 2px 2px 2px #989696;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.3;
-  background-color: #fff;
+  background-color: #eeeeee;
   padding: 0.65rem 0.6rem;
   color: #4d4d4d;
-  border-bottom: 0.1rem solid #ccc;
   border-radius: 0.3rem;
   margin-bottom: 0.6rem;
   word-wrap: break-word;
@@ -248,61 +181,26 @@
 }
 
 .list-items li:hover {
-  background-color: #eee;
+  background-color: #d0d0d0;
 }
 
-.add-card-btn {
-  display: block;
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: #838c91;
-  padding: 1rem;
-  text-align: left;
-  cursor: pointer;
+.list-item > p{
+  font-size: 16px;
+  margin-bottom: 9px;
 }
-
-.add-card-btn:hover {
-  background-color: #cdd2d4;
-  color: #4d4d4d;
-  text-decoration: underline;
-}
-
-.add-list-btn {
-  flex: 0 0 27rem;
-  display: block;
-  font-size: 1.4rem;
-  font-weight: 400;
-  background-color: #000000;
-  color: #fefefe;
-  padding: 1rem;
-  border-radius: 0.3rem;
-  cursor: pointer;
-  transition: background-color 150ms;
-  text-align: left;
-}
-
-.add-list-btn:hover {
-  background-color: #000000;
-}
-
-.add-card-btn::after,
-.add-list-btn::after {
-  content: '...';
-}
-
 /*
 
 The following rule will only run if your browser supports CSS grid.
 
-Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling.
 
 */
 
 @supports (display: grid) {
 
   .boards-menu {
-      display: grid;
-      grid-template-columns: 9rem 18rem;
+      display: flex;
+      grid-template-columns: 7rem 16rem;
       grid-column-gap: 0.8rem;
   }
 
@@ -313,9 +211,9 @@ Remove or comment-out the code block below to see how the browser will fall-back
   }
 
   .lists-container {
-      border: 5px solid black;
+      // border: 5px solid black;
       display: grid;
-      grid-auto-columns: 27rem;
+      grid-auto-columns: minmax(18rem, 24rem);
       grid-auto-flow: column;
       grid-column-gap: 1rem;
   }
@@ -330,13 +228,4 @@ Remove or comment-out the code block below to see how the browser will fall-back
       grid-row-gap: 0.6rem;
   }
 
-  .logo,
-  .list,
-  .list-items li,
-  .boards-btn,
-  .board-info-bar,
-  .board-controls .btn-cl,
-  .user-settings-btn {
-      margin: 0;
-  }
 }

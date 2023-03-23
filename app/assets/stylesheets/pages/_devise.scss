@@ -1,0 +1,97 @@
+.devise {
+  height: calc(120vh - 110px);
+  z-index: 100;
+  background-image: url(image_path("login.jpg"));
+  background-repeat: no-repeat;
+  background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+}
+
+.art {
+  background-color: #EAE8EB !important;
+  border-radius: 5px;
+}
+
+.btn-link:hover{
+  background: #3BB4C1;
+}
+
+.btn-cancel:hover {
+  background: #f90202;
+}
+
+/* Large desktop */
+@media only screen and (min-width: 1200px) {
+  .sect, .subSection {
+    font-size: 24px;
+    background-position: center center;
+  }
+  .subSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .sect, .subSection {
+    font-size: 20px;
+    background-position: center center;
+  }
+  .subSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .sect, .subSection {
+    font-size: 16px;
+    background-position: center center;
+  }
+  .subSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Smartphone */
+@media only screen and (max-width: 767px) {
+  .sect, .subSection {
+    font-size: 14px;
+    background-position: center center;
+  }
+  .subSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Force image to render */
+@media only screen and (max-width: 480px) {
+  .sect, .subSection {
+    background-attachment: scroll;
+    background-position: center center;
+  }
+  .subSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+}

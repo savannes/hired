@@ -1,0 +1,28 @@
+<li id="<%=job.id%>" column="<%= column.id %>" position="<%= job.position %>" class="list-item text-decoration-none"
+data-search-target="cards" data-keywords="<%= job.search_fields%>" data-role="<%= job.role%>"
+data-level="<%= job.level%>"
+data-job_type="<%= job.job_type%>"
+data-sortable-target="listItem">
+  <h5><strong><%= job.company %></strong></h5>
+  <p><%= job.role %> </p>
+  <p><%= job.level %> </p>
+  <p><%= job.job_type %> </p>
+  <p>R$ <%= job.salary %> </p>
+  <button type="button" class="add-card-button-edit float-end" data-action="click->sortable#editJob" data-sortable-target="button"
+    data-bs-toggle="modal"
+    data-bs-target="#jobModal"
+    data-bs-job-id="<%=job.id%>"
+    data-bs-job-company="<%=job.company%>"
+    data-bs-job-salary="<%=job.salary%>"
+    data-bs-job-role="<%=job.role%>"
+    data-bs-job-level="<%=job.level%>"
+    data-bs-job-description="<%=job.description%>"
+    data-bs-job-job-type="<%=job.job_type%>"
+    data-bs-job-application-link="<%=job.application_link%>"
+    data-bs-job-notes="<%=job.notes%>"
+    data-bs-route="edit"><i class="bi bi-pencil"></i>
+  </button>
+  <%= button_to job_path(job), class: "bi bi-trash3", method: :delete do %>
+    <i></i>
+  <% end %>
+</li>

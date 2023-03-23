@@ -51,7 +51,7 @@ gem "sassc-rails"
 gem "devise"
 gem "pundit"
 gem "autoprefixer-rails"
-gem "font-awesome-sass", "~> 6.1"
+gem "font-awesome-sass", "~> 6.3.0"
 gem "simple_form", github: "heartcombo/simple_form"
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -83,4 +83,8 @@ gem "chartkick"
 gem "cloudinary"
 
 gem "faker"
+
+gem "simple_calendar", "~> 2.4"
+
+gem 'acts_as_list'
 

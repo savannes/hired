@@ -5,7 +5,10 @@ export default class extends Controller {
   static targets = ["input", "cards"];
 
   connect() {
+    console.log("connected")
   }
+
+
 
   search() {
     const query = this.inputTarget.value.toLowerCase();
@@ -31,7 +34,29 @@ export default class extends Controller {
     const cards = this.cardsTargets;
     const query = event.target.value;
     cards.forEach((card) => {
-      if (card.dataset.role !== query) {
+      if (card.dataset.role !== query && query !== "") {
+        card.classList.add("d-none")
+      }
+    })
+  }
+
+  searchInputLevel(event) {
+    this.resetSearch();
+    const cards = this.cardsTargets;
+    const query = event.target.value;
+    cards.forEach((card) => {
+      if (card.dataset.level !== query && query !== "") {
+        card.classList.add("d-none")
+      }
+    })
+  }
+
+  searchJobType(event) {
+    this.resetSearch();
+    const cards = this.cardsTargets;
+    const query = event.target.value;
+    cards.forEach((card) => {
+      if (card.dataset.job_type !== query && query !== "") {
         card.classList.add("d-none")
       }
     })

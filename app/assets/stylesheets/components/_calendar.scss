@@ -1,0 +1,51 @@
+.container-calendar {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-top: 100px;
+}
+.simple-calendar {
+  table {
+    min-height: 80vh;
+  }
+  .today {
+    background-color: #FAF3DD;
+  }
+}
+
+.bt-cal {
+  color: #070707 !important;
+  border: none !important;
+  background: none;
+}
+
+.bt-cal:hover {
+  color: #ffffff !important;
+  // border: none;
+  // background: none;
+}
+
+.meeting {
+  color: black;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #a8d3d7;
+  transition: background 0.3s ease;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 2px 2px #989696;
+}
+
+.meeting:hover {
+  background: #989696;
+ 
+}
+
+.meeting > p{
+  margin-bottom: 8px;
+
+}
+.meeting > h5{
+  margin-bottom: 10px;
+  font-weight: bold  ;
+}

@@ -1,0 +1,23 @@
+<div class="container">
+          <br>
+          <br>
+        <div>
+          <%= month_calendar(events: @events, end_attribute: :ends_at, attribute: :starts_at) do |date, events| %>
+            <%= date %>
+
+            <% events.each do |event| %>
+              <div class="meeting">
+                <% start_hour = event.starts_at.hour - 3 %>
+                <% end_hour = event.ends_at.hour - 3 %>
+                <h5><%= event.name %></h5>
+                <p>Details: <%= event.description %></p>
+                <p>Start: <%= "#{start_hour}:#{event.starts_at.strftime("%M")}" %></p>
+                <p>Finish: <%= "#{end_hour}:#{event.ends_at.strftime("%M")}" %></p>
+                  <%= button_to calendar_event_path(event), class: "bt-cal", method: :delete do %>
+                  <i class="bi bi-trash3 bt-cal"></i>
+                  <% end %>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+</div>

@@ -1,6 +1,16 @@
+.hired {
+  color: #ffffff;
+  font-size: 37px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 .navbar-lewagon {
+  position: fixed;
+  width: 100%;
   justify-content: space-between;
-  background: #fafafa;
+  background: #000000;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,9 +22,45 @@
 }
 
 .nav-link {
-  color: #040404;
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.nav-link:hover {
+  color: #b0b0b0;
+}
+
+.nav-item {
+  margin: auto;
+  display: inline;
+}
+
+.dropdown-item:hover {
+  color: #000000;
+  background-color: rgba(59, 178, 191, 0.5);
+}
+
+.bi-kanban{
+  color: #ffffff;
+  font-size: 40px;
+  margin-right: 6px;
+}
+.bi-bar-chart-fill{
+  color: #ffffff;
+  font-size: 40px;
+  margin-right: 6px;
+}
+.bi-calendar3{
+  color: #ffffff;
+  font-size: 40px;
+  margin-right: 6px;
+}
+
+.bi-calendar3:hover{
+  color: #3BB4C1;
+}
+.bi-bar-chart-fill:hover{
+  color: #3BB4C1;
+}
+.bi-kanban:hover{
+  color: #3BB4C1;
 }

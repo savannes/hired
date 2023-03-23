@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_03_220608) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_21_235246) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,6 +42,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_03_220608) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "calendar_events", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "starts_at"
+    t.datetime "ends_at"
+    t.bigint "job_id"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["job_id"], name: "index_calendar_events_on_job_id"
+  end
+
   create_table "columns", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "name"
@@ -62,6 +73,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_03_220608) do
     t.string "application_link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "position"
+    t.text "notes"
     t.index ["column_id"], name: "index_jobs_on_column_id"
   end
 
@@ -86,6 +99,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_03_220608) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "calendar_events", "jobs"
   add_foreign_key "columns", "users"
   add_foreign_key "jobs", "columns"
 end

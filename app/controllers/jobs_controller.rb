@@ -9,14 +9,19 @@ class JobsController < ApplicationController
 
   def update
     @job = Job.find(params[:id])
-    @job.update(job_params)
     authorize @job
+    if @job.update(job_params)
+      redirect_to columns_path, notice: "Successfully edited"
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
     @job = Job.find(params[:id])
     @job.destroy
     authorize @job
+    redirect_to columns_path, notice: "Successfully deleted", status: :see_other
   end
 
   def index
@@ -40,6 +45,7 @@ class JobsController < ApplicationController
   def show
     @job = Job.find(params[:id])
     authorize @job
+    render json: @job
   end
 
   def new
@@ -50,18 +56,36 @@ class JobsController < ApplicationController
   def create
     @job = Job.new(job_params)
     @job.column = @column
+    last_job_position = Job.where(column: @column)&.maximum(:position)
+    last_job_position ||= 0
+    @job.position = last_job_position + 1
     authorize @job
-    if @job.save!
-      redirect_to columns_path
+    if @job.save
+      redirect_to columns_path, notice: "Successfully created"
     else
-      render :new
+      redirect_to columns_path, notice: "Revise your fields"
     end
+  end
+
+  def move
+    @job = Job.find(params[:id])
+    target_column = params[:column_id]
+    new_position = params[:new_position].to_i
+    authorize @job
+
+    if @job.column_id == target_column
+      @job.insert_at(new_position)
+    else
+      @job.update(column_id: target_column, position: new_position)
+    end
+
+    render json: { status: :ok }
   end
 
   private
 
   def job_params
-    params.require(:job).permit(:company, :description, :role, :level, :job_type, :salary, :application_link)
+    params.require(:job).permit(:company, :description, :role, :level, :job_type, :salary, :application_link, :notes)
   end
 
   def set_job
