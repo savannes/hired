@@ -22,5 +22,8 @@ export default class extends Controller {
 
     document.body.classList.toggle("dark", this.modeValue === "dark");
     document.body.classList.toggle("light", this.modeValue === "light");
+
+    // Add this line to toggle a class on the button
+    this.element.querySelector('.b-toggle').classList.toggle("dark", this.modeValue === "dark");
   }
 }
