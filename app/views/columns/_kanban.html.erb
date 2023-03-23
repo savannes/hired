@@ -29,7 +29,7 @@
             data-bs-column="<%=column.id%>" data-bs-column-name="<%=column.name%>"
             data-bs-route="add"><i class="bi bi-plus-square"></i></button></h3>
             <ul id="list-<%= column.id %>" class="list-items" data-sortable-target="button">
-            <div data-controller="sortable"></div>
+            <div data-controller="sortable">
               <% column.jobs.order(:position).each do |job| %>
                 <%= render "jobs/job", job: job, column: column %>
               <% end %>
