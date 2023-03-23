@@ -30,12 +30,22 @@
   color: black;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #3BB4C1;
+  background: #a8d3d7;
   transition: background 0.3s ease;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 2px 2px #989696;
 }
 
 .meeting:hover {
-  background: #3BB4C1;
-  color: white;
+  background: #989696;
+ 
+}
+
+.meeting > p{
+  margin-bottom: 8px;
+
+}
+.meeting > h5{
+  margin-bottom: 10px;
+  font-weight: bold  ;
 }
