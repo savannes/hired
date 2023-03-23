@@ -27,16 +27,15 @@
 }
 
 .meeting {
-  color: white;
+  color: black;
   padding: 8px 24px;
   border-radius: 4px;
   background: #3BB4C1;
   transition: background 0.3s ease;
+  margin-bottom: 5px;
 }
 
 .meeting:hover {
   background: #3BB4C1;
   color: white;
 }
-
-
