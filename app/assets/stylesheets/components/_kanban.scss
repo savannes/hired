@@ -31,6 +31,24 @@
 
 /* other styles */
 
+.navbar-dark-light {
+  display: inline-block;
+  margin-top: 1px;
+  padding: 7px 10px 7px 10px;
+  font-size: 25px;
+}
+
+body.light {
+  background-color: #ffffff !important;
+  color: #000 !important;
+}
+
+body.dark {
+  background-color: #000 !important;
+  color: #ffffff !important;
+}
+
+
 .role-filter {
   z-index: 100;
   display: flex;
