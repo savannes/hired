@@ -19,5 +19,8 @@ export default class extends Controller {
   modeValueChanged() {
     this.iconTarget.classList.toggle("bi-brightness-high", this.modeValue === "light");
     this.iconTarget.classList.toggle("bi-moon", this.modeValue === "dark");
+
+    document.body.classList.toggle("dark", this.modeValue === "dark");
+    document.body.classList.toggle("light", this.modeValue === "light");
   }
 }
