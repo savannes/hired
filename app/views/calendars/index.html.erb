@@ -9,7 +9,7 @@
               <div class="meeting">
                 <% start_hour = event.starts_at.hour - 3 %>
                 <% end_hour = event.ends_at.hour - 3 %>
-                <p>Title: <%= event.name %></p>
+                <h5><%= event.name %></h5>
                 <p>Description: <%= event.description %></p>
                 <p>Start: <%= "#{start_hour}:#{event.starts_at.strftime("%M")}" %></p>
                 <p>Finish: <%= "#{end_hour}:#{event.ends_at.strftime("%M")}" %></p>
